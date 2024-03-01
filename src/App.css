@@ -191,21 +191,21 @@ body {
   top: 0;
 }
 
-
 .wrapper .welcome-card {
   position: relative;
   align-items: center;
   justify-content: center;
   text-align: center;
   width: 100%;
-  max-height: 400px;
   background-color: #20598e;
 }
 
 .wrapper .welcome-card img {
+  position: relative;
   width: 100%;
   max-width: 1199px;
   max-height: 400px;
+  top: 20px;
   border: 2px solid transparent;
 }
 
@@ -249,7 +249,7 @@ body {
 
 .wrapper .card:hover {
   border-color: rgb(227, 224, 29);
-  border-width: 10px;
+  border-width: 5px;
 }
 
 h1 {
@@ -263,3 +263,278 @@ p {
   font-size: larger;
   font-weight: 700;
 }
+
+.wrapper .msg-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background-color: rgb(173, 200, 231);
+  padding: 30px;
+  
+}
+
+.wrapper .msg-container .contact {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  height: 100%;
+  background-color: rgb(173, 200, 231);
+  border: 2px solid black;
+  border-radius: 16px 0px 0px 16px;
+}
+
+.wrapper .msg-container .msg-section {
+  position: relative;
+  width: 100%;
+  max-width: 1460px;
+  height: 100%;
+  background-color: rgb(173, 200, 231);
+  border: 2px solid black;
+  border-radius: 0px 16px 16px 0px;
+}
+
+.wrapper .msg-container .msg-card-left {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1460px;
+  height: 100%;
+  max-height: 950px;
+  background: rgb(40, 134, 201);
+  border-radius: 16px 0px 0px 16px;
+  padding: 10px;
+  font-size: large;
+}
+
+.wrapper .msg-container .msg-card-left .msg-create {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 0px 0px 20px 0px;
+  border-radius: 8px;
+}
+
+.wrapper .msg-container .msg-card-left .msg-create button {
+  width: 100%;
+  max-width: 60px;
+  padding: 5px;
+  margin-left: 30px;
+  border-radius: 16px;
+  background: transparent;
+  font-size: 16px;
+  color: rgb(251, 255, 241);
+  font-weight: 700;
+  cursor: pointer;
+  font-size: large;
+  border: none;
+}
+
+.wrapper .msg-container .msg-card-left .msg-create button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.1ms;
+}
+
+
+.wrapper .msg-container .msg-card-left .msg {
+  position: relative;
+  padding: 2px 0px 2px 0px;
+}
+
+.wrapper .msg-container .msg-card-left .msg button {
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: rgb(40, 134, 201);
+  border: 2px solid black;
+  outline: none;
+  text-align: left;
+}
+
+.wrapper .msg-container .msg-card-left .msg button:hover {
+  background: white;
+  color: black;
+  border-width: 2px;
+}
+
+.wrapper .msg-container .msg-card-right {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1460px;
+  height: 100%;
+  max-height: 950px;
+  background: rgb(40, 134, 201);
+  border-radius: 0px 16px 16px 0px;
+  padding: 20px;
+  font-size: large;
+}
+
+.wrapper .vl-msg {
+  position: relative;
+  display: flex;
+  left: 200px;
+  border-left: 1px solid rgb(0, 0, 0);
+  height: 100%;
+  color: black;
+
+}
+
+h2 {
+  padding-right: 20px;
+  margin-left: 20px;
+}
+
+.wrapper .msg-container .msg-card {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1460px;
+  height: 100%;
+  max-height: 950px;
+  background: rgb(223, 227, 230);
+  border-radius: 16px;
+  padding: 15px;
+  font-size: large;
+}
+
+main.table {
+  position: relative;
+  width: 100%;
+  background-color: #fff5;
+  backdrop-filter: blur(7px);
+  box-shadow: 0 .4rem .8rem #0005;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.table__header {
+  width: 100%;
+  height: 8%;
+  background-color: rgb(73, 148, 208);
+  padding: .8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table__header .input-group {
+  width: 100%;
+  height: 100%;
+  background-color: #fff5;
+  padding: 0 .8rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s;
+}
+
+.table__header .input-group:hover {
+  width: 45%;
+  background-color: #fff8;
+  box-shadow: 0 .1rem .4rem #0002;
+}
+
+.table__header .input-group img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.table__header .input-group input {
+  width: 100%;
+  padding: 0 .5rem 0 .3rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.table__body {
+  width: 95%;
+  max-height: calc(89% - 1.6rem);
+  background-color: #fffb;
+  margin: .8rem auto;
+  border-radius: .6rem;
+  overflow: auto;
+  overflow: overlay;
+}
+
+.table__body::-webkit-scrollbar{
+  width: 0rem;
+  height: 0rem;
+}
+
+.table__body::-webkit-scrollbar-thumb{
+  border-radius: .5rem;
+  background-color: #0004;
+  visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb{ 
+  visibility: visible;
+}
+
+
+table {
+  width: 100%;
+}
+
+table tr {
+  animation: fadeIn 1.5s;
+}
+
+table, th, td {
+  border-collapse: collapse;
+  padding: 1rem;
+  text-align: left;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #3087f2d4;
+  cursor: pointer;
+  text-transform: capitalize;
+  background-color: rgb(73, 148, 208);
+}
+
+
+tbody tr:hover {
+  background-color: #fff6 !important;
+}
+
+tbody tr td,
+tbody tr td p,
+tbody tr td img {
+  transition: .2s ease-in-out;
+}
+
+tbody tr.hide td,
+tbody tr.hide td p {
+  padding: 0;
+  font: 0 / 0 sans-serif;
+  transition: .2s ease-in-out .5s;
+}
+
+tbody tr.hide td img {
+  width: 0;
+  height: 0;
+  transition: .2s ease-in-out .5s;
+}
+
+
+
+

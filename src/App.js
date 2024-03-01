@@ -1,6 +1,6 @@
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Sidebar from './Sidebar';
+
 import Home from './Pages/Home';
 import Messages from './Pages/Messages';
 import Login from './Pages/Login';
