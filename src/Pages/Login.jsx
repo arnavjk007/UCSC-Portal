@@ -33,6 +33,7 @@ export default function Login() {
                     height: "4px",
                     borderRadius: '16px',
                     marginTop: '15px',
+                    border: 'none',
                     }}
                     />
 

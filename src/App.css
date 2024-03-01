@@ -7,15 +7,19 @@
     transition: .3s;
 }
 
-body {
+
+.login-background {
     font-family: 'Poppins, sans-serif';
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background: transparent;
     background: url("https://api.coarchitects.com/wp-content/uploads/2022/08/COJ124_N1283_print.jpg");
+    width: 100%;
+    height: 100%;
+    
 }
-
 
 .wrapper-login {
     width: 450px;
@@ -25,6 +29,7 @@ body {
     color: rgb(255, 255, 255);
     padding: 40px 40px;
     border-radius: 16px;
+    
 }
 
 .wrapper-login img {
@@ -106,6 +111,15 @@ body {
   bottom: 0;
 }
 
+.wrapper .nav {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  border-right: 1px solid black;
+  height: 100%;
+  padding: 0px 0px 0px 0px;
+  background-color: rgb(40, 100, 150);
+}
 
 .wrapper .nav .image {
   align-items: center;
@@ -122,20 +136,25 @@ body {
   left: 25px;
 }
 
-.wrapper .nav {
-  position: relative;
-  width: 100%;
-  max-width: 250px;
-  height: 100%;
-  padding: 0px 0px 0px 0px;
-  background-color: rgb(40, 100, 150);
-}
-
 .wrapper .nav .btn {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2px 5px 5px 5px;
+}
+
+.wrapper .nav .dropdown-btn button {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
 }
 
 .wrapper .nav .btn button {
@@ -183,13 +202,6 @@ body {
   background-color: rgb(160, 1, 1);
 }
 
-.vl {
-  border-left: 1px solid rgb(0, 0, 0);
-  height: 100%;
-  position: absolute;
-  left: 250px;
-  top: 0;
-}
 
 .wrapper .welcome-card {
   position: relative;
@@ -197,7 +209,9 @@ body {
   justify-content: center;
   text-align: center;
   width: 100%;
+  max-height: 450px;
   background-color: #20598e;
+  border-bottom: 1px solid black;
 }
 
 .wrapper .welcome-card img {
@@ -205,7 +219,6 @@ body {
   width: 100%;
   max-width: 1199px;
   max-height: 400px;
-  top: 20px;
   border: 2px solid transparent;
 }
 
@@ -216,20 +229,6 @@ body {
   width: 100%;
   justify-content: space-around;
   background-color: rgb(173, 200, 231);
-}
-
-
-.wrapper .cardd {
-  width: 100%;
-  max-width: 400px;
-  max-height: 200px;
-  background: rgb(171, 21, 21);
-  border-radius: 16px;
-  padding: 10px;
-  margin:20px;
-  text-align: center;
-  font-size: large;
-  border: 2px solid transparent;
 }
 
 .wrapper .card {
@@ -264,7 +263,7 @@ p {
   font-weight: 700;
 }
 
-.wrapper .msg-container {
+.wrapper .container {
   position: relative;
   display: flex;
   width: 100%;
@@ -273,7 +272,7 @@ p {
   
 }
 
-.wrapper .msg-container .contact {
+.wrapper .container .contact {
   position: relative;
   width: 100%;
   max-width: 350px;
@@ -283,7 +282,7 @@ p {
   border-radius: 16px 0px 0px 16px;
 }
 
-.wrapper .msg-container .msg-section {
+.wrapper .container .msg-section {
   position: relative;
   width: 100%;
   max-width: 1460px;
@@ -293,7 +292,7 @@ p {
   border-radius: 0px 16px 16px 0px;
 }
 
-.wrapper .msg-container .msg-card-left {
+.wrapper .container .msg-card-left {
   position: relative;
   align-items: center;
   justify-content: center;
@@ -308,7 +307,7 @@ p {
   font-size: large;
 }
 
-.wrapper .msg-container .msg-card-left .msg-create {
+.wrapper .container .msg-card-left .msg-create {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -320,7 +319,7 @@ p {
   border-radius: 8px;
 }
 
-.wrapper .msg-container .msg-card-left .msg-create button {
+.wrapper .container .msg-card-left .msg-create button {
   width: 100%;
   max-width: 60px;
   padding: 5px;
@@ -335,19 +334,19 @@ p {
   border: none;
 }
 
-.wrapper .msg-container .msg-card-left .msg-create button:hover {
+.wrapper .container .msg-card-left .msg-create button:hover {
   background-color: white;
   color: black;
   transition: 0.1ms;
 }
 
 
-.wrapper .msg-container .msg-card-left .msg {
+.wrapper .container .msg-card-left .msg {
   position: relative;
   padding: 2px 0px 2px 0px;
 }
 
-.wrapper .msg-container .msg-card-left .msg button {
+.wrapper .container .msg-card-left .msg button {
   width: 100%;
   padding: 20px;
   margin: 10px 0px 10px 0px;
@@ -359,13 +358,13 @@ p {
   text-align: left;
 }
 
-.wrapper .msg-container .msg-card-left .msg button:hover {
+.wrapper .container .msg-card-left .msg button:hover {
   background: white;
   color: black;
   border-width: 2px;
 }
 
-.wrapper .msg-container .msg-card-right {
+.wrapper .container .msg-card-right {
   position: relative;
   align-items: center;
   justify-content: center;
@@ -395,7 +394,7 @@ h2 {
   margin-left: 20px;
 }
 
-.wrapper .msg-container .msg-card {
+.wrapper .container .msg-card {
   position: relative;
   align-items: center;
   justify-content: center;
@@ -418,6 +417,7 @@ main.table {
   box-shadow: 0 .4rem .8rem #0005;
   border-radius: 16px;
   overflow: hidden;
+  border: 1px solid black;
 }
 
 .table__header {
@@ -428,6 +428,7 @@ main.table {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid black;
 }
 
 .table__header .input-group {
@@ -471,22 +472,6 @@ main.table {
   overflow: overlay;
 }
 
-.table__body::-webkit-scrollbar{
-  width: 0rem;
-  height: 0rem;
-}
-
-.table__body::-webkit-scrollbar-thumb{
-  border-radius: .5rem;
-  background-color: #0004;
-  visibility: hidden;
-}
-
-.table__body:hover::-webkit-scrollbar-thumb{ 
-  visibility: visible;
-}
-
-
 table {
   width: 100%;
 }
@@ -499,6 +484,7 @@ table, th, td {
   border-collapse: collapse;
   padding: 1rem;
   text-align: left;
+  padding: 20px;
 }
 
 thead th {
@@ -513,26 +499,22 @@ thead th {
 
 
 tbody tr:hover {
-  background-color: #fff6 !important;
+  background-color: rgba(224, 195, 92, 0.623) !important;
 }
 
-tbody tr td,
-tbody tr td p,
-tbody tr td img {
-  transition: .2s ease-in-out;
+tbody tr td {
+  padding: 32px 17px 32px 17px;
 }
 
-tbody tr.hide td,
-tbody tr.hide td p {
-  padding: 0;
-  font: 0 / 0 sans-serif;
-  transition: .2s ease-in-out .5s;
-}
-
-tbody tr.hide td img {
-  width: 0;
-  height: 0;
-  transition: .2s ease-in-out .5s;
+.wrapper .hold-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgb(40, 134, 201);
+  border-radius: 16px;
+  text-align: center;
+  font-size: large;
+  border: 2px solid transparent;
 }
 
 

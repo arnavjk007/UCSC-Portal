@@ -15,15 +15,13 @@ import { BsPencilSquare } from "react-icons/bs";
 import '../App.css';
 import { useNavigate } from "react-router-dom";
 
+export default function Holds() {
 
-export default function Home() {
-    
     let navigate = useNavigate();
 
     return (
-       
+        
         <div className="wrapper">
-
             <div className="nav">
                     <div className="image">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/The_University_of_California_1868_UCSC.svg/640px-The_University_of_California_1868_UCSC.svg.png" alt="UCSC logo"></img>
@@ -48,7 +46,10 @@ export default function Home() {
                     </div>
 
                     <div className="btn">
-                        <button onClick={() => {navigate("/academics")}}><FaGraduationCap style={{position: 'relative', top: '2.5px'}}/> Academics</button>
+                        <button><FaGraduationCap style={{position: 'relative', top: '2.5px'}}/> Academics</button>
+                        <div className="dropdown-container">
+
+                        </div>
                     </div>
 
                     <div className="btn">
@@ -87,51 +88,43 @@ export default function Home() {
                         <button onClick={() => {navigate("/login")}}>Log out</button>
                     </div>
                     
+                    <div className="vl"></div>
             </div>
 
-            
+            <div className="container">
 
-            <div className="cards">
-                <div className="welcome-card">
-                    <img src='https://orientation.ucsc.edu/images/stay-safe-banner-final.png' alt="welcome"></img>
-
-                </div>
-                    <div className="card">
-                        <h1>Important Dates</h1>
-                        <p>These are Dates</p>
-                        <p>These are Dates</p>
-                        <p>These are Dates</p>
-                        <p>These are Dates</p>
-                    </div>
-
-                    <div className="card">
-                        <h1>Announcements</h1>
-                        <p>These are Announcements</p>
-                        <p>These are Announcements</p>
-                        <p>These are Announcements</p>
-                        <p>These are Announcements</p>
-                    </div>
-
-                    <div className="card">
-                        <h1>Class Schedule</h1>
-                        <p>Class 1</p>
-                        <p>Class 2</p>
-                        <p>Class 3</p>
-                    </div>
-            
-
+                <main class="table" id="table">
+                    <section class="table__header">
+                        <h1>Holds </h1>
+                    </section>
+                    <section class="table__body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th> From </th>
+                                    <th> Date Sent </th>
+                                    <th> Date Read </th>
+                                    <th> Expiration Date </th>
+                                    <th> Subject </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr onClick={() => navigate('/home')}>
+                                    <td> Student Housing Services</td>
+                                    <td> January 21</td>
+                                    <td> New Hold</td>
+                                    <td> 03/04/2024</td>
+                                    <td> PAY YO BILLS FOO</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </section>
+                </main>
             </div>
-
-            
-            
-                
-            
 
 
         </div>
-     
-            
-            
             
     )
 }
