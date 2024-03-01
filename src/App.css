@@ -1,38 +1,265 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Poppins, sans-serif';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("https://api.coarchitects.com/wp-content/uploads/2022/08/COJ124_N1283_print.jpg");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.wrapper-login {
+    width: 450px;
+    border: 2px solid rgb(0, 0, 0);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+    color: rgb(255, 255, 255);
+    padding: 40px 40px;
+    border-radius: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper-login img {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: transparent;
+}
+
+.wrapper-login h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper-login .input-box {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 40px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+.wrapper-login .forgot {
+    display: flex;
+    justify-content: right;
+    font-weight: 700;
+    font-size: 16px;
+    margin: -15px 0 15px; 
+}
+
+.forgot a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.wrapper-login button {
+    width: 100%;
+    height: 45px;
+    background: rgb(0, 0, 0);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.wrapper {
   display: flex;
-  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+.wrapper .nav .image {
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 250px;
+  background-color: transparent;
+  padding: 10px 10px 10px 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper .nav .image img {
+  position: relative;
+  width: 80%;
+  max-width: 250px;
+  left: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper .nav {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  padding: 0px 0px 0px 0px;
+  background-color: rgb(40, 100, 150);
+}
+
+.wrapper .nav .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 5px 5px 5px;
+}
+
+.wrapper .nav .btn button {
+  position: flex;
+  text-align: left;
+  width: 100%;
+  padding: 10.5px 8px 10.5px 8px;
+  border-radius: 16px;
+  background: transparent;
+  font-size: 16px;
+  color: rgb(251, 255, 241);
+  font-weight: 700;
+  cursor: pointer;
+  font-size: large;
+  border: none;
+  outline: none;
+  margin-left: 5px;
+}
+
+
+.wrapper .nav .logout-btn button {
+  width: 100%;
+  padding: 8px 8px 8px 8px;
+  border-radius: 16px;
+  background: rgb(227, 31, 5);
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: large;
+}
+
+.wrapper .nav .logout-btn  {
+  width: 100%;
+  padding: 60px 5px 5px 5px;
+}
+
+.wrapper .nav button:hover {
+  background-color: rgb(32, 83, 124);
+}
+
+.wrapper .nav .logout-btn button:hover {
+  background-color: rgb(160, 1, 1);
+}
+
+.vl {
+  border-left: 1px solid rgb(0, 0, 0);
+  height: 100%;
+  position: absolute;
+  left: 250px;
+  top: 0;
+}
+
+
+.wrapper .welcome-card {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-height: 400px;
+  background-color: #20598e;
+}
+
+.wrapper .welcome-card img {
+  width: 100%;
+  max-width: 1199px;
+  max-height: 400px;
+  border: 2px solid transparent;
+}
+
+.wrapper .cards {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  background-color: rgb(173, 200, 231);
+}
+
+
+.wrapper .cardd {
+  width: 100%;
+  max-width: 400px;
+  max-height: 200px;
+  background: rgb(171, 21, 21);
+  border-radius: 16px;
+  padding: 10px;
+  margin:20px;
+  text-align: center;
+  font-size: large;
+  border: 2px solid transparent;
+}
+
+.wrapper .card {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 400px;
+  background: rgb(40, 134, 201);
+  border-radius: 16px;
+  padding: 10px;
+  margin:20px;
+  text-align: center;
+  font-size: large;
+  border: 2px solid transparent;
+}
+
+.wrapper .card:hover {
+  border-color: rgb(227, 224, 29);
+  border-width: 10px;
+}
+
+h1 {
+  font: 100;
+  padding: 5px;
+}
+
+p {
+  text-align: left;
+  padding: 5px;
+  font-size: larger;
+  font-weight: 700;
 }
