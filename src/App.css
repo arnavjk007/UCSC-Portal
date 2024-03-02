@@ -7,9 +7,9 @@
     transition: .3s;
 }
 
-
 .login-background {
     font-family: 'Poppins, sans-serif';
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,6 +18,8 @@
     background: url("https://api.coarchitects.com/wp-content/uploads/2022/08/COJ124_N1283_print.jpg");
     width: 100%;
     height: 100%;
+    margin-top: -981px;
+    overflow-x: hidden;
     
 }
 
@@ -105,23 +107,24 @@
   background-color: white;
   position: absolute;
   width: 100%;
+  height: 100%;
+  margin-left: 250px;
+  max-width: 1460px;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 }
 
-.wrapper .nav {
-  position: relative;
+.nav {
   width: 100%;
+  height: 100%;
   max-width: 250px;
   border-right: 1px solid black;
-  height: 100%;
-  padding: 0px 0px 0px 0px;
   background-color: rgb(40, 100, 150);
 }
 
-.wrapper .nav .image {
+.nav .image {
   align-items: center;
   justify-content: center;
   max-width: 250px;
@@ -129,35 +132,22 @@
   padding: 10px 10px 10px 10px;
 }
 
-.wrapper .nav .image img {
+
+.nav .image img {
   position: relative;
   width: 80%;
   max-width: 250px;
   left: 25px;
 }
 
-.wrapper .nav .btn {
+.nav .btn {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2px 5px 5px 5px;
 }
 
-.wrapper .nav .dropdown-btn button {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #818181;
-  display: block;
-  border: none;
-  background: none;
-  width:100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
-}
-
-.wrapper .nav .btn button {
+.nav .btn button {
   position: flex;
   text-align: left;
   width: 100%;
@@ -175,7 +165,7 @@
 }
 
 
-.wrapper .nav .logout-btn button {
+ .nav .logout-btn button {
   width: 100%;
   padding: 8px 8px 8px 8px;
   border-radius: 16px;
@@ -189,16 +179,16 @@
   font-size: large;
 }
 
-.wrapper .nav .logout-btn  {
+.nav .logout-btn  {
   width: 100%;
-  padding: 60px 5px 5px 5px;
+  padding: 76px 5px 5px 5px;
 }
 
-.wrapper .nav button:hover {
+.nav button:hover {
   background-color: rgb(32, 83, 124);
 }
 
-.wrapper .nav .logout-btn button:hover {
+.nav .logout-btn button:hover {
   background-color: rgb(160, 1, 1);
 }
 
@@ -237,17 +227,20 @@
   max-width: 400px;
   height: 100%;
   max-height: 400px;
-  background: rgb(40, 134, 201);
   border-radius: 16px;
   padding: 10px;
   margin:20px;
   text-align: center;
   font-size: large;
   border: 2px solid transparent;
+  background: rgb(244, 237, 237);
+  font-size: large;
+  color: rgb(40, 100, 150);
+  text-align: center;
 }
 
 .wrapper .card:hover {
-  border-color: rgb(227, 224, 29);
+  border-color: rgb(29, 121, 227);
   border-width: 5px;
 }
 
@@ -429,6 +422,7 @@ main.table {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
+  font-size: x-large;
 }
 
 .table__header .input-group {
@@ -447,19 +441,6 @@ main.table {
   width: 45%;
   background-color: #fff8;
   box-shadow: 0 .1rem .4rem #0002;
-}
-
-.table__header .input-group img {
-  width: 1.2rem;
-  height: 1.2rem;
-}
-
-.table__header .input-group input {
-  width: 100%;
-  padding: 0 .5rem 0 .3rem;
-  background-color: transparent;
-  border: none;
-  outline: none;
 }
 
 .table__body {
@@ -506,15 +487,30 @@ tbody tr td {
   padding: 32px 17px 32px 17px;
 }
 
-.wrapper .hold-card {
+.wrapper .academic-card {
   position: relative;
   width: 100%;
+  max-width: 300px;
   height: 100%;
-  background: rgb(40, 134, 201);
+  max-height: 300px;
+  background: rgb(244, 237, 237);
   border-radius: 16px;
-  text-align: center;
+  padding: 15px;
+  margin: 15px 0px 0px 0px;
   font-size: large;
   border: 2px solid transparent;
+  color: rgb(40, 100, 150);
+  text-align: center;
+}
+
+.wrapper .academic-card:hover {
+  border-color: rgb(29, 121, 227);
+  border-width: 5px;
+}
+
+.wrapper .academic-card h1 {
+  text-align: left;
+  padding: 10px 10px 15px 10px;
 }
 
 

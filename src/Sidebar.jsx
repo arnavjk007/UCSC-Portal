@@ -81,10 +81,8 @@ const Sidebar = () => {
                     </div>
 
                     <div className="logout-btn">
-                        <button>Log out</button>
+                        <button onClick={() => {navigate("/login")}}>Log out</button>
                     </div>
-                    
-                    <div className="vl"></div>
             </div>
     )
 }
