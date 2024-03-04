@@ -12,7 +12,7 @@ export default function Home() {
         <div className="wrapper">
 
         
-            <div className="cards">
+            <div className="welcome-cards">
                 <div className="welcome-card">
                     <img src='https://orientation.ucsc.edu/images/stay-safe-banner-final.png' alt="welcome"></img>
 

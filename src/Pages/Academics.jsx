@@ -17,58 +17,76 @@ export default function Academics() {
     
     let navigate = useNavigate();
 
-    return (
-       
-        <div className="wrapper">
+    const academics_data = [
+        {
+            title: 'Advisors',
+            icon: <FaChalkboardTeacher size={150}/>,
+            link: "advisors"
+        },
+        {
+            title: "Academic Committees",
+            icon: <MdGroups size={150}/>,
+            link: 'committees'
+        }, 
+        {
+            title: "Course History",
+            icon: <MdOutlineClass size={150}/>,
+            link: 'coursehistory'
+        },
+        {
+            title: "Degree Progress",
+            icon: <FaChartLine size={150}/>,
+            link: 'degreeprogress'
+        },
+        {
+            title: "Evaluations",
+            icon: <PiListMagnifyingGlassBold size={150}/>,
+            link: 'evaluations'
+        },
+        {
+            title: "Grades",
+            icon: <GoChecklist size={150}/>,
+            link: 'grades'
+        },
+        {
+            title: "Planner",
+            icon: <GrPlan size={150}/>,
+            link: 'planner'
+        },
+        {
+            title: "Test Scores",
+            icon:  <PiExam size={150}/>,
+            link: 'testscores'
+        },
+        {
+            title: "Credit Report",
+            icon: <HiOutlineDocumentReport size={150}/>,
+            link: 'creditreport'
+        },
+        {
+            title: "Unofficial Transcript",
+            icon: <IoDocumentOutline size={150}/>,
+            link: 'unofficialtranscript'
+        },
+        {
+            title: "What-if Report",
+            icon: <FaFileCircleQuestion size={150}/>,
+            link: 'whatifreport'
+        },
+    ]
 
+    return (
+        <div className="wrapper">
             <div className="cards">
-                <div className="academic-card" onClick={() => {navigate("/academics/advisors")}}>
-                    <h1>Advisors</h1>
-                    <FaChalkboardTeacher size={150}/>
-                    </div>
-                <div className="academic-card" onClick={() => {navigate("/academics/committees")}}>
-                    <h1>Academic Committees</h1>
-                    <MdGroups size={150}/>
-                    </div>
-                <div className="academic-card" onClick={() => {navigate("/academics/coursehistory")}}>
-                    <h1>Course History</h1>
-                    <MdOutlineClass size={150}/>
-                    </div>
-                <div className="academic-card" onClick={() => {navigate("/academics/degreeprogress")}}>
-                    <h1>Degree Progress</h1>
-                    <FaChartLine size={150}/>
-                    </div>
-                <div className="academic-card" onClick={() => {navigate("/academics/evaluations")}}>
-                    <h1>Evaluations</h1>
-                    <PiListMagnifyingGlassBold size={150}/>
-                    </div>
-                <div className="academic-card" onClick={() => {navigate("/academics/grades")}}>
-                    <h1>Grades</h1>
-                    <GoChecklist size={150}/>
-                    </div>
-                <div className="academic-card" onClick={() => {navigate("/academics/planner")}}>
-                    <h1>Planner</h1>
-                    <GrPlan size={150}/>
-                    </div>
-                <div className="academic-card" onClick={() => {navigate("/academics/testscores")}}>
-                    <h1>Test Scores</h1>
-                    <PiExam size={150}/>
-                    </div>
-                <div className="academic-card" onClick={() => {navigate("/academics/creditreport")}}>
-                    <h1>Credit Report</h1>
-                    <HiOutlineDocumentReport size={150}/>
-                    </div>
-                <div className="academic-card" onClick={() => {navigate("/academics/unofficialtranscript")}}>
-                    <h1>Unofficial Transcript</h1>
-                    <IoDocumentOutline size={150}/>
-                    </div>
-                <div className="academic-card" onClick={() => {navigate("/academics/whatifreport")}}>
-                    <h1>What-if Report</h1>
-                    <FaFileCircleQuestion size={150}/>
-                    </div>
+                {academics_data.map((item) => {
+                    return (
+                        <div className="sub-card" onClick={() => {navigate(item.link)}}>
+                            <h1>{item.title}</h1>
+                            {item.icon}
+                        </div>
+                    );
+                })}
             </div>
-                
-        </div>
-            
+        </div>     
     )
 }

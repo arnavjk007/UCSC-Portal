@@ -7,6 +7,10 @@
     transition: .3s;
 }
 
+body {
+  height: 100%;
+}
+
 .login-background {
     font-family: 'Poppins, sans-serif';
     position: relative;
@@ -110,6 +114,7 @@
   height: 100%;
   margin-left: 250px;
   max-width: 1460px;
+  overflow: auto;
   top: 0;
   left: 0;
   right: 0;
@@ -190,8 +195,17 @@
 
 .nav .logout-btn button:hover {
   background-color: rgb(160, 1, 1);
+  color: rgba(255, 255, 255, 0.609);
 }
 
+.wrapper .welcome-cards {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  background-color: rgb(173, 200, 231);
+}
 
 .wrapper .welcome-card {
   position: relative;
@@ -213,39 +227,185 @@
 }
 
 .wrapper .cards {
-  display: flex;
   position: relative;
-  flex-wrap: wrap;
+  display: grid;
+  grid-gap: 3rem;
+  min-width: 1300px;
   width: 100%;
-  justify-content: space-around;
+  height: 100%;
+  grid-template-columns: repeat(auto-fit, 300px);
   background-color: rgb(173, 200, 231);
+  align-content: center;
+  justify-content: center;
 }
 
 .wrapper .card {
-  position: relative;
   width: 100%;
   max-width: 400px;
   height: 100%;
   max-height: 400px;
   border-radius: 16px;
   padding: 10px;
-  margin:20px;
+  margin: 20px;
   text-align: center;
   font-size: large;
-  border: 2px solid transparent;
+  border: 4px solid transparent;
   background: rgb(244, 237, 237);
-  font-size: large;
   color: rgb(40, 100, 150);
   text-align: center;
 }
 
 .wrapper .card:hover {
   border-color: rgb(29, 121, 227);
+  border-width: 4px;
+}
+
+.wrapper .sub-card {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  background: rgb(244, 237, 237);
+  border-radius: 16px;
+  padding: 15px;
+  font-size: large;
+  border: 5px solid transparent;
+  color: rgb(40, 100, 150);
+  text-align: center;
+}
+
+.wrapper .sub-card:hover {
+  border-color: rgb(29, 121, 227);
   border-width: 5px;
+  background: rgb(209, 209, 209);
+}
+
+.wrapper .sub-card h1 {
+  text-align: left;
+  padding: 10px;
+}
+
+.wrapper .container .enrollment-cards {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-height: 580px;
+  margin: 40px 0px 0px 0px;
+  background-color: rgb(173, 200, 231);
+  align-content: center;
+  justify-content: center;
+}
+
+.wrapper .container .enrollment-cards .search-card {
+  width: 50%;
+  height: 100%;
+  max-height: 560px;
+  border-radius: 16px 0px 0px 16px;;
+  padding: 10px;
+  font-size: large;
+  border: 4px solid transparent;
+  background: rgb(244, 237, 237);
+  color: rgb(40, 100, 150);
+  border-right: 2px solid black;
+}
+
+.row {
+  display: flex;
+  padding: 5px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.search {
+  width: 80%;
+  border-radius: 16px;
+  align-content: left;
+  padding: 5px;
+  border: solid black;
+  font-size: 18px;
+}
+
+.unit {
+  width: 10%;
+  padding: 5px;
+  border-radius: 16px;
+  align-content: left;
+  padding: 5px;
+}
+
+.term {
+  width: 15%;
+  padding: 5px;
+  border-radius: 16px;
+  align-content: left;
+  padding: 5px;
+}
+
+.status {
+  width: 10%;
+  padding: 5px;
+  border-radius: 16px;
+  align-content: left;
+  padding: 5px;
+}
+
+.subject {
+  width: 30%;
+  padding: 5px;
+  border-radius: 16px;
+  align-content: left;
+  padding: 5px;
+}
+
+.gen-ed {
+  width: 8%;
+  padding: 5px;
+  border-radius: 16px;
+  align-content: left;
+  padding: 5px;
+}
+
+.meeting-days {
+  width: 15%;
+  padding: 5px;
+  border-radius: 16px;
+  align-content: left;
+  padding: 5px;
+}
+
+.meeting-time {
+  width: 14.5%;
+  padding: 5px;
+  border-radius: 16px;
+  align-content: left;
+  padding: 5px;
+}
+
+.wrapper .container .enrollment-cards .cart-card {
+  width: 50%;
+  height: 100%;
+  max-height: 560px;
+  border-radius: 0px 16px 16px 0px;
+  padding: 10px;
+  text-align: center;
+  font-size: large;
+  border: 4px solid transparent;
+  background: rgb(244, 237, 237);
+  color: rgb(40, 100, 150);
+  border-left: 2px solid black;
 }
 
 h1 {
   font: 100;
+  padding: 5px;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
   padding: 5px;
 }
 
@@ -275,133 +435,6 @@ p {
   border-radius: 16px 0px 0px 16px;
 }
 
-.wrapper .container .msg-section {
-  position: relative;
-  width: 100%;
-  max-width: 1460px;
-  height: 100%;
-  background-color: rgb(173, 200, 231);
-  border: 2px solid black;
-  border-radius: 0px 16px 16px 0px;
-}
-
-.wrapper .container .msg-card-left {
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  max-width: 1460px;
-  height: 100%;
-  max-height: 950px;
-  background: rgb(40, 134, 201);
-  border-radius: 16px 0px 0px 16px;
-  padding: 10px;
-  font-size: large;
-}
-
-.wrapper .container .msg-card-left .msg-create {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  margin: 0px 0px 20px 0px;
-  border-radius: 8px;
-}
-
-.wrapper .container .msg-card-left .msg-create button {
-  width: 100%;
-  max-width: 60px;
-  padding: 5px;
-  margin-left: 30px;
-  border-radius: 16px;
-  background: transparent;
-  font-size: 16px;
-  color: rgb(251, 255, 241);
-  font-weight: 700;
-  cursor: pointer;
-  font-size: large;
-  border: none;
-}
-
-.wrapper .container .msg-card-left .msg-create button:hover {
-  background-color: white;
-  color: black;
-  transition: 0.1ms;
-}
-
-
-.wrapper .container .msg-card-left .msg {
-  position: relative;
-  padding: 2px 0px 2px 0px;
-}
-
-.wrapper .container .msg-card-left .msg button {
-  width: 100%;
-  padding: 20px;
-  margin: 10px 0px 10px 0px;
-  border-radius: 8px;
-  cursor: pointer;
-  background: rgb(40, 134, 201);
-  border: 2px solid black;
-  outline: none;
-  text-align: left;
-}
-
-.wrapper .container .msg-card-left .msg button:hover {
-  background: white;
-  color: black;
-  border-width: 2px;
-}
-
-.wrapper .container .msg-card-right {
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  max-width: 1460px;
-  height: 100%;
-  max-height: 950px;
-  background: rgb(40, 134, 201);
-  border-radius: 0px 16px 16px 0px;
-  padding: 20px;
-  font-size: large;
-}
-
-.wrapper .vl-msg {
-  position: relative;
-  display: flex;
-  left: 200px;
-  border-left: 1px solid rgb(0, 0, 0);
-  height: 100%;
-  color: black;
-
-}
-
-h2 {
-  padding-right: 20px;
-  margin-left: 20px;
-}
-
-.wrapper .container .msg-card {
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  max-width: 1460px;
-  height: 100%;
-  max-height: 950px;
-  background: rgb(223, 227, 230);
-  border-radius: 16px;
-  padding: 15px;
-  font-size: large;
-}
-
 main.table {
   position: relative;
   width: 100%;
@@ -423,6 +456,7 @@ main.table {
   align-items: center;
   border-bottom: 1px solid black;
   font-size: x-large;
+  
 }
 
 .table__header .input-group {
@@ -457,10 +491,6 @@ table {
   width: 100%;
 }
 
-table tr {
-  animation: fadeIn 1.5s;
-}
-
 table, th, td {
   border-collapse: collapse;
   padding: 1rem;
@@ -486,33 +516,3 @@ tbody tr:hover {
 tbody tr td {
   padding: 32px 17px 32px 17px;
 }
-
-.wrapper .academic-card {
-  position: relative;
-  width: 100%;
-  max-width: 300px;
-  height: 100%;
-  max-height: 300px;
-  background: rgb(244, 237, 237);
-  border-radius: 16px;
-  padding: 15px;
-  margin: 15px 0px 0px 0px;
-  font-size: large;
-  border: 2px solid transparent;
-  color: rgb(40, 100, 150);
-  text-align: center;
-}
-
-.wrapper .academic-card:hover {
-  border-color: rgb(29, 121, 227);
-  border-width: 5px;
-}
-
-.wrapper .academic-card h1 {
-  text-align: left;
-  padding: 10px 10px 15px 10px;
-}
-
-
-
-
