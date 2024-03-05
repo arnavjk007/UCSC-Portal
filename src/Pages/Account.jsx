@@ -51,9 +51,9 @@ export default function Account() {
             link: 'student-permissions'
         },
         {
-            title: "1098-T Tax Form",
+            title: "Forms & FAQs",
             icon: <FaWpforms size={150}/>,
-            link: 'tax-form'
+            link: 'forms'
         },
     ]
 
@@ -66,7 +66,7 @@ export default function Account() {
                             <h1>{item.title}</h1>
                             {item.icon}
                         </div>
-                    );
+                    )
                 })}
             </div>
         </div>     

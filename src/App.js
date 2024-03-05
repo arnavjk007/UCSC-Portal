@@ -48,7 +48,7 @@ function App() {
                 <Route path="unofficialtranscript" element={<Unofficial />} />
                 <Route path="whatifreport" element={<Whatif />} />
             <Route path="/account" element={<Account />} />
-            <Route path="/enrollment" element={<Enrollment/>} />
+            <Route path="/enrollment" element={<Enrollment />} />
           </Routes>
         
   </Router>

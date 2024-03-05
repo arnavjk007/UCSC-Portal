@@ -184,7 +184,7 @@ body {
 }
 
 .nav .logout-btn  {
-  margin-top: 40px;
+  margin-top: 20px;
   width: 100%;
   padding: 5px 5px 5px 5px;
 }
@@ -232,7 +232,7 @@ body {
 .wrapper .cards {
   position: relative;
   display: grid;
-  grid-gap: 3rem;
+  grid-gap: 2rem;
   min-width: 1300px;
   width: 100%;
   height: 100%;
@@ -527,6 +527,10 @@ table, th, td {
   padding: 20px;
 }
 
+td {
+  font-weight: 500;
+}
+
 thead th {
   position: sticky;
   top: 0;
@@ -547,4 +551,59 @@ tbody tr:hover {
 
 tbody tr td  {
   padding: 32px 17px 32px 17px;
+}
+
+.enrollment-container {
+  width: 100%;
+  height: 100%;
+}
+.search-bar {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  justify-content: center;
+  padding: 20px;
+}
+
+.bar {
+  padding: 25px;
+  width: 90%;
+  height: 5vh;
+  border: 2px solid black;
+  border-radius: 16px;
+  font-size: large;
+  color: solid black;
+  background-color: rgb(234, 229, 229);
+}
+
+.enroll-cards {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: space-between;
+  max-height: 45vh;
+}
+
+.shopping-cart {
+  width: 50%;
+  height: fit-content;
+  margin: 10px 30px 30px 30px;
+}
+
+.schedule {
+  width: 50%;
+  height: fit-content;
+  margin: 10px 30px 30px 30px;
+}
+
+.calendar {
+  display: flex;
+  width: 100%;
+  height: 45vh;
+  max-height: 45vh;
+  justify-content: center;
+}
+
+.google-calendar {
+  display: flex;
 }
