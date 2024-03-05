@@ -17,6 +17,8 @@ export default function Home() {
                     <img src='https://orientation.ucsc.edu/images/stay-safe-banner-final.png' alt="welcome"></img>
 
                 </div>
+            </div>
+                <div className="wcards">
                     <div className="card">
                         <h1>Important Dates</h1>
                         <p>These are Dates</p>
@@ -39,9 +41,10 @@ export default function Home() {
                         <p>Class 2</p>
                         <p>Class 3</p>
                     </div>
+                </div>
             
 
-            </div>
+            
 
             
             

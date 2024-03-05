@@ -24,8 +24,8 @@ import Enrollment from './Pages/Enrollment';
 
 function App() {
   return (
-    <>
     
+    <div className='original_container' style={{display:'flex', flexDirection:'row'}}>
     <Router>
           <Sidebar />
           <Routes>
@@ -49,11 +49,10 @@ function App() {
                 <Route path="whatifreport" element={<Whatif />} />
             <Route path="/account" element={<Account />} />
             <Route path="/enrollment" element={<Enrollment/>} />
-          
           </Routes>
         
   </Router>
-  </>
+  </div>
   
   );
 }

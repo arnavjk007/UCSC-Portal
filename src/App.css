@@ -4,11 +4,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: .3s;
+    transition: .1s;
 }
 
 body {
-  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .login-background {
@@ -107,26 +108,24 @@ body {
 }
 
 .wrapper {
-  display: flex;
+  position: relative;
   background-color: white;
-  position: absolute;
   width: 100%;
-  height: 100%;
-  margin-left: 250px;
-  max-width: 1460px;
+  height: 100vh;
   overflow: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+}
+
+.orgiginal-container {
+  display: inline-flex;
 }
 
 .nav {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   max-width: 250px;
   border-right: 1px solid black;
   background-color: rgb(40, 100, 150);
+  overflow: auto;
 }
 
 .nav .image {
@@ -185,8 +184,9 @@ body {
 }
 
 .nav .logout-btn  {
+  margin-top: 40px;
   width: 100%;
-  padding: 76px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
 }
 
 .nav button:hover {
@@ -203,6 +203,7 @@ body {
   position: relative;
   flex-wrap: wrap;
   width: 100%;
+  height: 50vh;
   justify-content: space-around;
   background-color: rgb(173, 200, 231);
 }
@@ -213,6 +214,7 @@ body {
   justify-content: center;
   text-align: center;
   width: 100%;
+  height: 50vh;
   max-height: 450px;
   background-color: #20598e;
   border-bottom: 1px solid black;
@@ -221,6 +223,7 @@ body {
 .wrapper .welcome-card img {
   position: relative;
   width: 100%;
+  height: 50vh;
   max-width: 1199px;
   max-height: 400px;
   border: 2px solid transparent;
@@ -237,6 +240,14 @@ body {
   background-color: rgb(173, 200, 231);
   align-content: center;
   justify-content: center;
+}
+
+.wrapper .wcards {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  justify-content: center;
+  background-color: rgb(173, 200, 231);
 }
 
 .wrapper .card {
@@ -289,8 +300,6 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  max-height: 580px;
-  margin: 40px 0px 0px 0px;
   background-color: rgb(173, 200, 231);
   align-content: center;
   justify-content: center;
@@ -299,20 +308,53 @@ body {
 .wrapper .container .enrollment-cards .search-card {
   width: 50%;
   height: 100%;
-  max-height: 560px;
   border-radius: 16px 0px 0px 16px;;
-  padding: 10px;
   font-size: large;
   border: 4px solid transparent;
   background: rgb(244, 237, 237);
   color: rgb(40, 100, 150);
-  border-right: 2px solid black;
+  border-right: 1px solid black;
+}
+
+.inner-search-inputs {
+  width: 100%;
+  height: fit-content;
+  border-radius: 16px;
+  padding: 5px;
+  text-align: center;
+  font-size: large;
+  border: 4px solid transparent;
+  background: rgb(244, 237, 237);
+  color: rgb(40, 100, 150);
+  text-align: center;
+}
+
+.inner-search-results {
+  width: 100%;
+  height: 70vh;
+  border-radius: 16px;
+  padding: 5px;
+  text-align: center;
+  font-size: large;
+  border: 4px transparent;
+  background: rgb(244, 237, 237);
+  color: rgb(40, 100, 150);
+  text-align: center;
+}
+
+.xbtn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.xbtn:hover {
+  color: red;
 }
 
 .row {
   display: flex;
   padding: 5px;
-  margin: 5px;
   align-items: center;
   justify-content: center;
 }
@@ -331,7 +373,6 @@ body {
   padding: 5px;
   border-radius: 16px;
   align-content: left;
-  padding: 5px;
 }
 
 .term {
@@ -339,7 +380,6 @@ body {
   padding: 5px;
   border-radius: 16px;
   align-content: left;
-  padding: 5px;
 }
 
 .status {
@@ -347,7 +387,6 @@ body {
   padding: 5px;
   border-radius: 16px;
   align-content: left;
-  padding: 5px;
 }
 
 .subject {
@@ -355,7 +394,6 @@ body {
   padding: 5px;
   border-radius: 16px;
   align-content: left;
-  padding: 5px;
 }
 
 .gen-ed {
@@ -363,7 +401,6 @@ body {
   padding: 5px;
   border-radius: 16px;
   align-content: left;
-  padding: 5px;
 }
 
 .meeting-days {
@@ -371,7 +408,6 @@ body {
   padding: 5px;
   border-radius: 16px;
   align-content: left;
-  padding: 5px;
 }
 
 .meeting-time {
@@ -379,13 +415,11 @@ body {
   padding: 5px;
   border-radius: 16px;
   align-content: left;
-  padding: 5px;
 }
 
 .wrapper .container .enrollment-cards .cart-card {
   width: 50%;
   height: 100%;
-  max-height: 560px;
   border-radius: 0px 16px 16px 0px;
   padding: 10px;
   text-align: center;
@@ -393,7 +427,7 @@ body {
   border: 4px solid transparent;
   background: rgb(244, 237, 237);
   color: rgb(40, 100, 150);
-  border-left: 2px solid black;
+  border-left: 1px solid black;
 }
 
 h1 {
@@ -407,6 +441,7 @@ h2 {
 
 h3 {
   padding: 5px;
+  font-size: 20px;
 }
 
 p {
@@ -422,7 +457,7 @@ p {
   width: 100%;
   background-color: rgb(173, 200, 231);
   padding: 30px;
-  
+  height: 100vh;
 }
 
 .wrapper .container .contact {
@@ -471,12 +506,6 @@ main.table {
   transition: .2s;
 }
 
-.table__header .input-group:hover {
-  width: 45%;
-  background-color: #fff8;
-  box-shadow: 0 .1rem .4rem #0002;
-}
-
 .table__body {
   width: 95%;
   max-height: calc(89% - 1.6rem);
@@ -508,11 +537,14 @@ thead th {
   background-color: rgb(73, 148, 208);
 }
 
-
 tbody tr:hover {
   background-color: rgba(224, 195, 92, 0.623) !important;
 }
 
-tbody tr td {
+.no-hover tr:hover {
+  background-color:  rgba(255, 255, 255, 0) !important;
+}
+
+tbody tr td  {
   padding: 32px 17px 32px 17px;
 }

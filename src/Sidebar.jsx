@@ -19,71 +19,89 @@ const Sidebar = () => {
 
     let navigate = useNavigate();
 
+    const sidebar_data = [
+        {
+            name: 'Home',
+            path: '/home',
+            icon: <IoHome size={20} style={{position:"relative", top:'2.5px'}}/>
+        },
+        {
+            name: 'Messages',
+            path: '/messages',
+            icon: <MdEmail size={20} style={{position:"relative", top:'2.5px'}}/>
+        },
+        {
+            name: 'Holds',
+            path: '/holds',
+            icon: <FaLock size={20} style={{position:"relative", top:'2.5px'}}/>
+        },
+        {
+            name: 'Tasks',
+            path: '/tasks',
+            icon: <FaList size={20} style={{position:"relative", top:'2.5px'}}/>
+        },
+        {
+            name: 'Academics',
+            path: '/academics',
+            icon: <FaGraduationCap size={20} style={{position:"relative", top:'2.5px'}}/>
+        },
+        {
+            name: 'Account',
+            path: '/account',
+            icon: <FaDollarSign size={20} style={{position:"relative", top:'2.5px'}}/>
+        },
+        {
+            name: 'Enrollment',
+            path: '/enrollment',
+            icon: <IoMdCheckboxOutline size={20} style={{position:"relative", top:'2.5px'}}/>
+        },
+        {
+            name: 'Financial Aid',
+            path: '/financialaid',
+            icon: <FaRegMoneyBillAlt size={20} style={{position:"relative", top:'2.5px'}}/>
+        },
+        {
+            name: 'Personal Info',
+            path: '/personalinfo',
+            icon: <FaUser size={20} style={{position:"relative", top:'2.5px'}}/>
+        },
+        {
+            name: 'Resources',
+            path: '/resources',
+            icon: <TfiNewWindow size={20} style={{position:"relative", top:'2.5px'}}/>
+        },
+        {
+            name: 'Passphrase',
+            path: '/passphrase',
+            icon: <FaIdCard size={20} style={{position:"relative", top:'2.5px'}}/>
+        },
+        {
+            name: 'Student Center',
+            path: '/studentcenter',
+            icon: <FaBuildingColumns size={20} style={{position:"relative", top:'2.5px'}}/>
+        },
+        {
+            name: 'eForms',
+            path: '/eforms',
+            icon: <BsPencilSquare size={20} style={{position:"relative", top:'2.5px'}}/>
+        },
+    ]
     return (
-
-            <div className="nav">
-                    <div className="image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/The_University_of_California_1868_UCSC.svg/640px-The_University_of_California_1868_UCSC.svg.png" alt="UCSC logo"></img>
-                    </div>
-                
-                    <div className="btn">
-                
-                        <button onClick={() => {navigate("/home")}}><IoHome style={{position: 'relative', top: '1.5px'}} /> Home</button>
-            
-                    </div>
-
-                    <div className="btn">
-                        <button onClick={() => {navigate("/messages")}}><MdEmail style={{position: 'relative', top: '2.5px'}}/> Messages</button>
-                    </div>
-
-                    <div className="btn">
-                        <button onClick={() => {navigate("/holds")}}><FaLock style={{position: 'relative', top: '2.5px'}}/> Holds</button>
-                    </div>
-
-                    <div className="btn">
-                        <button onClick={() => {navigate("/tasks")}}><FaList style={{position: 'relative', top: '2.5px'}}/> Tasks</button>
-                    </div>
-
-                    <div className="btn">
-                        <button onClick={() => {navigate("/academics")}}><FaGraduationCap style={{position: 'relative', top: '2.5px'}}/> Academics</button>
-                    </div>
-
-                    <div className="btn">
-                        <button onClick={() => {navigate("/account")}}><FaDollarSign style={{position: 'relative', top: '2.5px'}}/> Account</button>
-                    </div>
-
-                    <div className="btn">
-                        <button onClick={() => {navigate("/enrollment")}}><IoMdCheckboxOutline style={{position: 'relative', top: '2.5px'}}/> Enrollment</button>
-                    </div>
-
-                    <div className="btn">
-                        <button onClick={() => {navigate("/financialaid")}}><FaRegMoneyBillAlt style={{position: 'relative', top: '2.5px'}}/> Financial Aid</button>
-                    </div>
-
-                    <div className="btn">
-                        <button onClick={() => {navigate("/personalinfo")}}><FaUser style={{position: 'relative', top: '2.5px'}}/> Personal Info</button>
-                    </div>
-
-                    <div className="btn">
-                        <button onClick={() => {navigate("/resources")}}><TfiNewWindow style={{position: 'relative', top: '2.5px'}}/> Resources</button>
-                    </div>
-
-                    <div className="btn">
-                        <button onClick={() => {navigate("/passphrase")}}><FaIdCard style={{position: 'relative', top: '2.5px'}}/> Passphrase</button>
-                    </div>
-
-                    <div className="btn">
-                        <button onClick={() => {navigate("/studentcenter")}}><FaBuildingColumns style={{position: 'relative', top: '2.5px'}}/> Student Center</button>
-                    </div>
-
-                    <div className="btn">
-                        <button onClick={() => {navigate("/eforms")}}><BsPencilSquare style={{position: 'relative', top: '2.5px'}}/> eForms</button>
-                    </div>
-
-                    <div className="logout-btn">
-                        <button onClick={() => {navigate("/login")}}>Log out</button>
-                    </div>
-            </div>
+                <div className="nav">
+                        <div className="image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/The_University_of_California_1868_UCSC.svg/640px-The_University_of_California_1868_UCSC.svg.png" alt="UCSC logo"></img>
+                        </div>
+                        {sidebar_data.map((item) => {
+                            return (
+                                <div className="btn">
+                                    <button onClick={() => {navigate(item.path)}}>{item.icon} {item.name}</button>
+                                </div>
+                            )
+                        })}
+                        <div className="logout-btn">
+                            <button onClick={() => {navigate("/login")}}>Log out</button>
+                        </div>
+                </div>
     )
 }
 

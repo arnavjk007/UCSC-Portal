@@ -1,25 +1,81 @@
 import React from "react";
 import '../App.css';
 import { useNavigate } from "react-router-dom";
+import { FaRegCircleXmark } from "react-icons/fa6";
 
 export default function Enrollment() {
     
     let navigate = useNavigate();
 
+    function deleteClass(index) {
+        document.getElementById(index).remove();
+    }
+
     const enrollment_data = [
         {
+            index: '0',
             id: 'CSE 13S',
             name: 'Comp Sys & C Prog',
-            professor: 'Kerry Scott Veenstra',
-            credits: '7.00',
+            professor: 'K. Veenstra',
+            credits: '7',
             time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
             lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
         },
         {
+            index: '0',
             id: 'CSE 13S',
             name: 'Comp Sys & C Prog',
-            professor: 'Kerry Scott Veenstra',
-            credits: '7.00',
+            professor: 'K. Veenstra',
+            credits: '7',
+            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
+            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+        },
+        {
+            index: '0',
+            id: 'CSE 13S',
+            name: 'Comp Sys & C Prog',
+            professor: 'K. Veenstra',
+            credits: '7',
+            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
+            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+        },
+        {
+            index: '0',
+            id: 'CSE 13S',
+            professor: 'K. Veenstra',
+            credits: '7',
+            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
+            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+        },
+        {
+            index: '1',
+            id: 'CSE 13S',
+            professor: 'K. Veenstra',
+            credits: '7',
+            time: ' Earth&Marine B206',
+            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+        },
+        {
+            index: '0',
+            id: 'CSE 13S',
+            professor: 'K. Veenstra',
+            credits: '7',
+            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
+            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+        },
+        {
+            index: '0',
+            id: 'CSE 13S',
+            professor: 'K. Veenstra',
+            credits: '7',
+            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
+            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+        },
+        {
+            index: '0',
+            id: 'CSE 13S',
+            professor: 'K. Veenstra',
+            credits: '7',
             time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
             lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
         },
@@ -131,45 +187,97 @@ export default function Enrollment() {
         },
     ]
 
+    var cart_data = [
+        {
+            index: '0',
+            id: 'CSE 13S',
+            name: 'Comp Sys & C Prog',
+            professor: 'K. Veenstra',
+            credits: '7',
+            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
+            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+        },
+        {
+            index: '1',
+            id: 'CSE 13S',
+            name: 'Comp Sys & C Prog',
+            professor: 'K. Veenstra',
+            credits: '7',
+            time: ' Earth&Marine B206',
+            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+        },
+        {
+            index: '0',
+            id: 'CSE 13S',
+            name: 'Comp Sys & C Prog',
+            professor: 'K. Veenstra',
+            credits: '7',
+            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
+            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+        },
+        {
+            index: '0',
+            id: 'CSE 13S',
+            name: 'Comp Sys & C Prog',
+            professor: 'K. Veenstra',
+            credits: '7',
+            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
+            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+        },
+        {
+            index: '0',
+            id: 'CSE 13S',
+            name: 'Comp Sys & C Prog',
+            professor: 'K. Veenstra',
+            credits: '7',
+            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
+            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+        },
+        {
+            index: '0',
+            id: 'CSE 13S',
+            name: 'Comp Sys & C Prog',
+            professor: 'K. Veenstra',
+            credits: '7',
+            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
+            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+        },
+        {
+            index: '0',
+            id: 'CSE 13S',
+            name: 'Comp Sys & C Prog',
+            professor: 'K. Veenstra',
+            credits: '7',
+            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
+            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+        },
+        {
+            index: '0',
+            id: 'CSE 13S',
+            name: 'Comp Sys & C Prog',
+            professor: 'K. Veenstra',
+            credits: '7',
+            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
+            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+        },
+        {
+            index: '0',
+            id: 'CSE 13S',
+            name: 'Comp Sys & C Prog',
+            professor: 'K. Veenstra',
+            credits: '7',
+            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
+            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+        },
+    ]
     return (
         <div className="wrapper">
             <div className="container" style={{display: 'block'}}>
-                <main class="table" id="table" style={{height: 'fit-content'}}>
-                    <section class="table__header" style={{padding: '10px'}}>
-                        <h1>Class Schedule</h1>
-                    </section>
-                    <section class="table__body">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th style={{padding:'10px'}}> ID </th>
-                                    <th style={{padding:'10px'}}> Name </th>
-                                    <th style={{padding:'10px'}}> Professor </th>
-                                    <th style={{padding:'10px'}}> Credits </th>
-                                    <th style={{padding:'10px'}}> Time </th>
-                                    <th style={{padding:'10px'}}> Lab </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {enrollment_data.map((item) => {
-                                    return (
-                                        <tr>
-                                            <td style={{padding:'15px'}}> {item.id} </td>
-                                            <td style={{padding:'15px'}}> {item.name} </td>
-                                            <td style={{padding:'15px'}}> {item.professor} </td>
-                                            <td style={{padding:'15px'}}> {item.credits} </td>
-                                            <td style={{padding:'15px'}}> {item.time} </td>
-                                            <td style={{padding:'15px'}}> {item.lab} </td>
-                                        </tr>
-                                    );
-                                })}
-                            </tbody>
-                        </table>
-                    </section>
-                </main>
+                
                 
                 <div className="enrollment-cards">
                     <div className="search-card">
+                        <div className="inner-search-inputs">
                         <h2>Class Search</h2>
                         <div className="row">
                             <input className="search"type="text" placeholder="Search.."></input>
@@ -241,11 +349,108 @@ export default function Enrollment() {
 
                     </div>
 
+                    <div className="inner-search-results">
+                    <section class="table__body" style={{width:'100%', fontSize:'15px', border:'2px solid black'}}>
+                                <table id="table">
+                                    <thead>
+                                        <tr style={{color: 'black'}}>
+                                            <th style={{padding:'10px'}}> ID </th>
+                                            <th style={{padding:'10px'}}> Professor </th>
+                                            <th style={{padding:'10px'}}> Units </th>
+                                            <th style={{padding:'10px'}}> Lecture </th>
+                                            <th style={{padding:'10px'}}> Lab </th>
+                                            <th style={{padding:'10px'}}> Drop </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="no-hover">
+                                        {cart_data.map((item) => {
+                                            return (
+                                                <tr id={item.index} style={{borderTop: '2px solid black'}}>
+                                                    <td style={{padding:'10px'}}> {item.id} </td>
+                                                    <td style={{padding:'10px'}}> {item.professor} </td>
+                                                    <td style={{padding:'10px'}}> {item.credits} </td>
+                                                    <td style={{padding:'10px'}}> {item.time} </td>
+                                                    <td style={{padding:'10px'}}> {item.lab} </td>
+                                                    <td style={{padding:'10px'}}><FaRegCircleXmark className="xbtn"onClick={() => deleteClass(item.index)} size={25}/></td>
+                                                </tr>
+                                            );
+                                        })}
+                                    </tbody>
+                                </table>
+                            </section>
+                    </div>
+                    </div>
+
 
                     <div className="cart-card">
-                        <h2>Shopping Cart</h2>
+                        <div className="shopping-cart">
+                            <h2>Shopping Cart</h2>
                         
+                            <section class="table__body" style={{maxHeight: '400px',width:'100%', fontSize:'15px', border:'2px solid black'}}>
+                                <table id="table">
+                                    <thead>
+                                        <tr style={{color: 'black'}}>
+                                            <th style={{padding:'10px'}}> ID </th>
+                                            <th style={{padding:'10px'}}> Professor </th>
+                                            <th style={{padding:'10px'}}> Units </th>
+                                            <th style={{padding:'10px'}}> Lecture </th>
+                                            <th style={{padding:'10px'}}> Lab </th>
+                                            <th style={{padding:'10px'}}> Drop </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="no-hover">
+                                        {cart_data.map((item) => {
+                                            return (
+                                                <tr id={item.index} style={{borderTop: '2px solid black'}}>
+                                                    <td style={{padding:'10px'}}> {item.id} </td>
+                                                    <td style={{padding:'10px'}}> {item.professor} </td>
+                                                    <td style={{padding:'10px'}}> {item.credits} </td>
+                                                    <td style={{padding:'10px'}}> {item.time} </td>
+                                                    <td style={{padding:'10px'}}> {item.lab} </td>
+                                                    <td style={{padding:'10px'}}><FaRegCircleXmark className="xbtn"onClick={() => deleteClass(item.index)} size={25}/></td>
+                                                </tr>
+                                            );
+                                        })}
+                                    </tbody>
+                                </table>
+                            </section>
+                        </div>
+
+                        <div className="schedule">
+                            <h2> Class Schedule </h2>
+                                <section class="table__body" style={{maxHeight: '400px', width:'100%', fontSize:'15px', border:'2px solid black'}}>
+                                <table>
+                                    <thead>
+                                        <tr style={{color: 'black'}}>
+                                            <th style={{padding:'10px'}}> ID </th>
+                                            <th style={{padding:'10px'}}> Professor </th>
+                                            <th style={{padding:'10px'}}> Units </th>
+                                            <th style={{padding:'10px'}}> Lecture </th>
+                                            <th style={{padding:'10px'}}> Lab </th>
+                                            <th style={{padding:'10px'}}> Drop </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="no-hover">
+                                        {enrollment_data.map((item) => {
+                                            return (
+                                                <tr id={item.index}style={{borderTop: '2px solid black'}}>
+                                                    <td style={{padding:'10px'}}> {item.id} </td>
+                                                    <td style={{padding:'10px'}}> {item.professor} </td>
+                                                    <td style={{padding:'10px'}}> {item.credits} </td>
+                                                    <td style={{padding:'10px'}}> {item.time} </td>
+                                                    <td style={{padding:'10px'}}> {item.lab} </td>
+                                                    <td style={{padding:'10px'}}><FaRegCircleXmark className="xbtn"onClick={() => deleteClass(item.index)} size={25}/></td>
+                                                </tr>
+                                            );
+                                        })}
+                                    </tbody>
+                                </table>
+                            </section>
+                        </div>
+
+                            
                     </div>
+
                 </div>
 
 
@@ -255,3 +460,37 @@ export default function Enrollment() {
         </div>     
     )
 }
+
+{/*<main class="table" id="table" style={{height: 'fit-content'}}>
+                    <section class="table__header" style={{padding: '10px'}}>
+                        <h1>Class Schedule</h1>
+                    </section>
+                    <section class="table__body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style={{padding:'10px'}}> ID </th>
+                                    <th style={{padding:'10px'}}> Name </th>
+                                    <th style={{padding:'10px'}}> Professor </th>
+                                    <th style={{padding:'10px'}}> Units </th>
+                                    <th style={{padding:'10px'}}> Time </th>
+                                    <th style={{padding:'10px'}}> Lab </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {enrollment_data.map((item) => {
+                                    return (
+                                        <tr>
+                                            <td style={{padding:'15px'}}> {item.id} </td>
+                                            <td style={{padding:'15px'}}> {item.name} </td>
+                                            <td style={{padding:'15px'}}> {item.professor} </td>
+                                            <td style={{padding:'15px'}}> {item.credits} </td>
+                                            <td style={{padding:'15px'}}> {item.time} </td>
+                                            <td style={{padding:'15px'}}> {item.lab} </td>
+                                        </tr>
+                                    );
+                                })}
+                            </tbody>
+                        </table>
+                    </section>
+                            </main>*/}
