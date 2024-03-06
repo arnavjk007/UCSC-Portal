@@ -20,57 +20,57 @@ export default function Academics() {
     const academics_data = [
         {
             title: 'Advisors',
-            icon: <FaChalkboardTeacher size={150}/>,
+            icon: <FaChalkboardTeacher size={125}/>,
             link: "advisors"
         },
         {
             title: "Academic Committees",
-            icon: <MdGroups size={150}/>,
+            icon: <MdGroups size={125}/>,
             link: 'committees'
         }, 
         {
             title: "Course History",
-            icon: <MdOutlineClass size={150}/>,
+            icon: <MdOutlineClass size={125}/>,
             link: 'coursehistory'
         },
         {
             title: "Degree Progress",
-            icon: <FaChartLine size={150}/>,
+            icon: <FaChartLine size={125}/>,
             link: 'degreeprogress'
         },
         {
             title: "Evaluations",
-            icon: <PiListMagnifyingGlassBold size={150}/>,
+            icon: <PiListMagnifyingGlassBold size={125}/>,
             link: 'evaluations'
         },
         {
             title: "Grades",
-            icon: <GoChecklist size={150}/>,
+            icon: <GoChecklist size={125}/>,
             link: 'grades'
         },
         {
             title: "Planner",
-            icon: <GrPlan size={150}/>,
+            icon: <GrPlan size={125}/>,
             link: 'planner'
         },
         {
             title: "Test Scores",
-            icon:  <PiExam size={150}/>,
+            icon:  <PiExam size={125}/>,
             link: 'testscores'
         },
         {
             title: "Credit Report",
-            icon: <HiOutlineDocumentReport size={150}/>,
+            icon: <HiOutlineDocumentReport size={125}/>,
             link: 'creditreport'
         },
         {
             title: "Unofficial Transcript",
-            icon: <IoDocumentOutline size={150}/>,
+            icon: <IoDocumentOutline size={125}/>,
             link: 'unofficialtranscript'
         },
         {
             title: "What-if Report",
-            icon: <FaFileCircleQuestion size={150}/>,
+            icon: <FaFileCircleQuestion size={125}/>,
             link: 'whatifreport'
         },
     ]
@@ -81,7 +81,7 @@ export default function Academics() {
                 {academics_data.map((item) => {
                     return (
                         <div className="sub-card" onClick={() => {navigate(item.link)}}>
-                            <h1>{item.title}</h1>
+                            <h1 style={{fontSize:'30px'}}>{item.title}</h1>
                             {item.icon}
                         </div>
                     );

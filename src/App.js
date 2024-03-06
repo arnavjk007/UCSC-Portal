@@ -20,6 +20,7 @@ import Unofficial from './Acad-Pages/Unofficial';
 import Whatif from './Acad-Pages/Whatif';
 import Account from './Pages/Account';
 import Enrollment from './Pages/Enrollment';
+import FinancialAid from './Pages/FinancialAid';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
                 <Route path="whatifreport" element={<Whatif />} />
             <Route path="/account" element={<Account />} />
             <Route path="/enrollment" element={<Enrollment />} />
+            <Route path="/financialaid" element={<FinancialAid />} />
           </Routes>
         
   </Router>

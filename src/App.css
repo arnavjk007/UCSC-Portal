@@ -115,7 +115,7 @@ body {
   overflow: auto;
 }
 
-.orgiginal-container {
+.orginal-container {
   display: inline-flex;
 }
 
@@ -184,9 +184,11 @@ body {
 }
 
 .nav .logout-btn  {
-  margin-top: 20px;
   width: 100%;
+  max-width: 225px;
   padding: 5px 5px 5px 5px;
+  position: absolute;
+  bottom: 0;
 }
 
 .nav button:hover {
@@ -274,7 +276,8 @@ body {
 .wrapper .sub-card {
   position: relative;
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
+  max-height: 250px;
   background: rgb(244, 237, 237);
   border-radius: 16px;
   padding: 15px;

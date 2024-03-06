@@ -17,42 +17,42 @@ export default function Account() {
     const account_data = [
         {
             title: 'Charges Due',
-            icon: <TbClockDollar size={150}/>,
+            icon: <TbClockDollar size={125}/>,
             link: "charges-due"
         },
         {
             title: "eBill/ePay",
-            icon: <MdOutlinePayment size={150}/>,
+            icon: <MdOutlinePayment size={125}/>,
             link: 'epay'
         }, 
         {
             title: "Direct Deposit",
-            icon: <LiaMoneyCheckAltSolid size={150}/>,
+            icon: <LiaMoneyCheckAltSolid size={125}/>,
             link: 'direct-deposit'
         },
         {
             title: "Billing Statements",
-            icon: <IoDocumentsOutline size={150}/>,
+            icon: <IoDocumentsOutline size={125}/>,
             link: 'billing-statements'
         },
         {
             title: "Summary & Activity",
-            icon: <FaFileInvoiceDollar size={150}/>,
+            icon: <FaFileInvoiceDollar size={125}/>,
             link: 'summary'
         },
         {
             title: "Payments",
-            icon: <SiContactlesspayment size={150}/>,
+            icon: <SiContactlesspayment size={125}/>,
             link: 'payments'
         },
         {
             title: "Student Permissions",
-            icon:  <PiStudent size={150}/>,
+            icon:  <PiStudent size={125}/>,
             link: 'student-permissions'
         },
         {
             title: "Forms & FAQs",
-            icon: <FaWpforms size={150}/>,
+            icon: <FaWpforms size={125}/>,
             link: 'forms'
         },
     ]
@@ -63,7 +63,7 @@ export default function Account() {
                 {account_data.map((item) => {
                     return (
                         <div className="sub-card" onClick={() => {navigate(item.link)}}>
-                            <h1>{item.title}</h1>
+                            <h1 style={{fontSize:'30px'}}>{item.title}</h1>
                             {item.icon}
                         </div>
                     )
