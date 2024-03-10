@@ -31,23 +31,23 @@ function App() {
           <Sidebar />
           <Routes>
             {/*<Route index element={<Login />} /> */}
-            <Route path="/home" element={<Home />} />
+            <Route index element={<Home />} />
             <Route path="/messages" element={<Messages />} />
             <Route path="/login" element={<Login />} />
             <Route path="/holds" element={<Holds />} />
             <Route path="/tasks" element={<Tasks />} />
             <Route path="/academics" element={<Academics />} />
-                <Route path="advisors" element={<Advisors />} />
-                <Route path="committees" element={<Committee />} />
-                <Route path="coursehistory" element={<Course />} />
-                <Route path="degreeprogress" element={<Degree />} />
-                <Route path="evaluations" element={<Evaluations />} />
-                <Route path="grades" element={<Grades />} />
-                <Route path="planner" element={<Planner />} />
-                <Route path="testscores" element={<Test />} />
-                <Route path="creditreport" element={<Credit />} />
-                <Route path="unofficialtranscript" element={<Unofficial />} />
-                <Route path="whatifreport" element={<Whatif />} />
+                <Route path="/academics/advisors" element={<Advisors />} />
+                <Route path="/academics/committees" element={<Committee />} />
+                <Route path="/academics/coursehistory" element={<Course />} />
+                <Route path="/academics/degreeprogress" element={<Degree />} />
+                <Route path="/academics/evaluations" element={<Evaluations />} />
+                <Route path="/academics/grades" element={<Grades />} />
+                <Route path="/academics/planner" element={<Planner />} />
+                <Route path="/academics/testscores" element={<Test />} />
+                <Route path="/academics/creditreport" element={<Credit />} />
+                <Route path="/academics/unofficialtranscript" element={<Unofficial />} />
+                <Route path="/academics/whatifreport" element={<Whatif />} />
             <Route path="/account" element={<Account />} />
             <Route path="/enrollment" element={<Enrollment />} />
             <Route path="/financialaid" element={<FinancialAid />} />

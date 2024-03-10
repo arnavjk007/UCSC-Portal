@@ -16,21 +16,17 @@ export default function Advisors() {
                     <section class="table__header">
                         <h1>Advisors </h1>
                     </section>
-                    <section class="table__body">
-                        <table>
-                            <thead>
-                                <tr>
-                                
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                    </section>
+
+                    <div className="advisor-card-container">
+                        <div className="advisor-card-1">
+                            <h1>JOE</h1>
+                        </div>
+
+                        <div className="advisor-card-2">
+                            <h1>MAMA</h1>
+                        </div>
+                    </div>
+                    
                 </main>
             </div>
 

@@ -22,7 +22,7 @@ const Sidebar = () => {
     const sidebar_data = [
         {
             name: 'Home',
-            path: '/home',
+            path: '/',
             icon: <IoHome size={20} style={{position:"relative", top:'2.5px'}}/>
         },
         {
