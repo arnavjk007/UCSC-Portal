@@ -12,26 +12,43 @@ export default function Committee() {
 
             <div className="container">
 
-                <main class="table" id="table">
-                    <section class="table__header">
-                        <h1>Academic Committees </h1>
-                    </section>
-                    <section class="table__body">
-                        <table>
-                            <thead>
-                                <tr>
-                                
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                    </section>
-                </main>
+                    <div className="advisor-card-container">
+                        <div className="advisor-card">
+                            <h1>Academic Committees</h1>
+                            <hr></hr>
+                            
+                            <div className="advisor-body">
+                                <div className="major">
+                                    <h2>Major Advisors</h2>
+                                    <h3 style={{padding: '10px'}}>Academic Program: </h3>
+                                    <h3 style={{padding: '10px'}}>Academic Plan: </h3>
+                                </div>
+                
+    
+                                <section class="table__body" style={{maxHeight: '35vh', width:'100%', fontSize:'15px', border:'2px solid black'}}>
+                                    <table className="table">
+                                        <thead>
+                                            <tr>
+                                                <th style={{padding:'10px'}}> Committee </th>
+                                                <th style={{padding:'10px'}}> Member Role </th>
+                                                <th style={{padding:'10px'}}> Name </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr onClick={() => navigate('/home')}>
+                                                <td style={{padding:'10px'}}> Student Housing Services</td>
+                                                <td style={{padding:'10px'}}> January 21</td>
+                                                <td style={{padding:'10px'}}> New Hold</td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                </section>
+                   
+                            </div>
+                        </div>
+
+                    </div>
             </div>
 
 

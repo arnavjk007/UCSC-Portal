@@ -12,22 +12,28 @@ export default function Advisors() {
 
             <div className="container">
 
-                <main class="table" id="table">
-                    <section class="table__header">
-                        <h1>Advisors </h1>
-                    </section>
-
                     <div className="advisor-card-container">
-                        <div className="advisor-card-1">
-                            <h1>JOE</h1>
+                        <div className="advisor-card">
+                            <h1>Advisors</h1>
+                            <hr></hr>
+                            
+                            <div className="advisor-body">
+                                <div className="major">
+                                    <h2>Major Advisors</h2>
+                                    <h3 style={{padding: '10px'}}>Academic Program: Undergraduate</h3>
+                                    <h3 style={{padding: '10px'}}>Proposed Major: Computer Science</h3>
+                                    <h3 style={{padding: '10px'}}>Contact: <a href="mailto:advising@soe.ucsc.edu">advising@soe.ucsc.edu</a></h3>
+                                </div>
+                                <div className="college">
+                                    <h2>College Advisors</h2>
+                                    <h3 style={{padding: '10px'}}>Academic Program: Undergraduate</h3>
+                                    <h3 style={{padding: '10px'}}>College: Merrill</h3>
+                                    <h3 style={{padding: '10px'}}>Contact: <a href="mailto:merrilladvising@ucsc.edu">merrilladvising@ucsc.edu </a></h3>
+                                </div>
+                            </div>
                         </div>
 
-                        <div className="advisor-card-2">
-                            <h1>MAMA</h1>
-                        </div>
                     </div>
-                    
-                </main>
             </div>
 
 
