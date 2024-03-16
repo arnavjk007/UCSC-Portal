@@ -1,17 +1,4 @@
 import React from "react";
-import { IoHome } from "react-icons/io5";
-import { MdEmail } from "react-icons/md";
-import { FaLock } from "react-icons/fa";
-import { FaList } from "react-icons/fa";
-import { FaGraduationCap } from "react-icons/fa6";
-import { FaDollarSign } from "react-icons/fa";
-import { IoMdCheckboxOutline } from "react-icons/io";
-import { FaRegMoneyBillAlt } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
-import { TfiNewWindow } from "react-icons/tfi";
-import { FaIdCard } from "react-icons/fa";
-import { FaBuildingColumns } from "react-icons/fa6";
-import { BsPencilSquare } from "react-icons/bs";
 import '../App.css';
 import { useNavigate } from "react-router-dom";
 

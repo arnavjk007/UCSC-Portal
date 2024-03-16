@@ -2,6 +2,7 @@ import React from "react";
 import '../App.css';
 import { useNavigate } from "react-router-dom";
 import { FaRegCircleXmark } from "react-icons/fa6";
+import { IoMdMore } from "react-icons/io";
 
 export default function Enrollment() {
 
@@ -12,215 +13,46 @@ export default function Enrollment() {
     var cart_data = [
         {
             index: '0',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
+            id: 'AM 10',
+            name: 'Mathematical Methods for Engineers 1',
+            professor: 'Katznelson,J.R.',
             credits: '7',
-            status: 'Open 100/200',
-            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '1',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            status: 'Closed 200/200',
-            time: ' Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '1',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            status: 'Closed 200/200',
-            time: ' Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '1',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            status: 'Closed 200/200',
-            time: ' Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '1',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            status: 'Closed 200/200',
-            time: ' Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '1',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            status: 'Closed 200/200',
-            time: ' Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '1',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            status: 'Closed 200/200',
-            time: ' Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '1',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            status: 'Closed 200/200',
-            time: ' Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '1',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            status: 'Closed 200/200',
-            time: ' Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '1',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            status: 'Closed 200/200',
-            time: ' Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '1',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            status: 'Closed 200/200',
-            time: ' Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+            status: 'Closed 290/290',
+            time: 'MWF 09:20AM-10:25AM @ ClassroomUnit 002',
+            lab: 'M 04:00PM-05:05PM @ Earth&Marine B210',
         },
     ]
 
     var enrollment_data = [
         {
+            index: '0',
+            id: 'CSE 13S',
+            name: 'Comp Sys & C Prog',
+            professor: 'Veenstra, K.',
+            credits: '7',
+            status: 'Open 129/240',
+            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
+            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+        },
+        {
             index: '1',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+            id: 'THEA 80N',
+            name: 'Walt Disney',
+            professor: 'Valdez, K.',
+            credits: '5',
+            status: 'Closed 380/380',
+            time: 'Online',
+            lab: 'TBA',
         },
         {
             index: '2',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '2',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '2',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '2',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '2',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '2',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '2',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '2',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '2',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-        },
-        {
-            index: '2',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'K. Veenstra',
-            credits: '7',
-            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
+            id: 'COWL 168',
+            name: 'Social Change',
+            professor: 'Stinneford, C.',
+            credits: '2',
+            status: 'Closed 90/90',
+            time: 'Online',
+            lab: 'TBA',
         },
     ]
 
@@ -233,13 +65,13 @@ export default function Enrollment() {
                 </div>
 
                 <div className="enroll-cards">
-                    <div className="shopping-cart">
+                    <div className="enrollment-table">
                         <h1 style={{textAlign:'center'}}>Shopping Cart</h1>
                     
-                        <section class="table__body" style={{maxHeight: '35vh', width:'100%', fontSize:'15px', border:'2px solid black'}}>
-                            <table id="table">
+                        <section class="table__body" style={{height: '35vh', width:'100%', fontSize:'15px', border:'1px solid black'}}>
+                            <table id="table" >
                                 <thead>
-                                    <tr style={{color: 'black'}}>
+                                    <tr style={{color: 'black', borderBottom:'2px solid black'}}>
                                         <th style={{padding:'5px'}}> ID </th>
                                         <th style={{padding:'5px'}}> Professor </th>
                                         <th style={{padding:'5px'}}> Units </th>
@@ -252,14 +84,14 @@ export default function Enrollment() {
                                 <tbody className="no-hover"> 
                                             {cart_data.map((item) => {
                                                 return (
-                                                    <tr  id={item.index}style={{borderTop: '2px solid black'}}>
+                                                    <tr  id={item.index} style={{borderTop: '1px solid black', borderBottom:'1px solid black', fontSize:'13px'}}>
                                                         <td style={{padding:'5px'}}> {item.id} </td>
                                                         <td style={{padding:'5px'}}> {item.professor} </td>
                                                         <td style={{padding:'5px'}}> {item.credits} </td>
                                                         <td style={{padding:'5px'}}> {item.status} </td>
                                                         <td style={{padding:'5px'}}> {item.time} </td>
                                                         <td style={{padding:'5px'}}> {item.lab} </td>
-                                                        <td style={{padding:'5px'}}><FaRegCircleXmark className="xbtn"onClick={() => deleteClass(item.index)} size={25}/></td>
+                                                        <td style={{padding:'5px'}}><IoMdMore className="more-btn"onClick={() => deleteClass(item.index)} size={25}/></td>
                                                     </tr>
                                                     )
                                             })}    
@@ -268,25 +100,25 @@ export default function Enrollment() {
                         </section>
                     </div>
 
-                    <div className="schedule">
+                    <div className="enrollment-table">
                         <h1 style={{textAlign:'center'}}> Class Schedule </h1>
-                            <section class="table__body" style={{maxHeight: '35vh', width:'100%', fontSize:'15px', border:'2px solid black'}}>
+                            <section class="table__body" style={{height: '35vh', width:'100%', fontSize:'15px', border:'1px solid black'}}>
                                 <table>
                                     <thead>
-                                        <tr style={{color: 'black'}}>
+                                        <tr style={{color: 'black', borderBottom:'2px solid black'}}>
                                             <th style={{padding:'5px'}}> ID </th>
                                             <th style={{padding:'5px'}}> Professor </th>
                                             <th style={{padding:'5px'}}> Units </th>
                                             <th style={{padding:'5px'}}> Lecture </th>
                                             <th style={{padding:'5px'}}> Lab </th>
-                                            <th style={{padding:'5px'}}> Drop </th>
+                                            <th style={{padding:'5px'}}></th>
                                         </tr>
                                     </thead>
 
                                     <tbody className="no-hover">
                                     {enrollment_data.map((item) => {
                                                             return (
-                                                                <tr  id={item.index}style={{borderTop: '2px solid black'}}>
+                                                                <tr  id={item.index}style={{borderTop: '1px solid black', borderBottom:'1px solid black', fontSize:'13px'}}>
                                                                     <td style={{padding:'5px'}}> {item.id} </td>
                                                                     <td style={{padding:'5px'}}> {item.professor} </td>
                                                                     <td style={{padding:'5px'}}> {item.credits} </td>
