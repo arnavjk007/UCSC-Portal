@@ -12,12 +12,12 @@ export default function Committee() {
 
             <div className="container">
 
-                    <div className="advisor-card-container">
-                        <div className="advisor-card">
+                    <div className="info-card-container">
+                        <div className="info-card">
                             <h1>Academic Committees</h1>
                             <hr></hr>
                             
-                            <div className="advisor-body">
+                            <div className="info-body">
                                 <div className="major">
                                     <h2>Major Advisors</h2>
                                     <h3 style={{padding: '10px'}}>Academic Program: </h3>

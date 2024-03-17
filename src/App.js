@@ -21,6 +21,10 @@ import Whatif from './Acad-Pages/Whatif';
 import Account from './Pages/Account';
 import Enrollment from './Pages/Enrollment';
 import FinancialAid from './Pages/FinancialAid';
+import Personal from './Pages/Personal';
+import Resources from './Pages/Resources';
+import LoginS from './Resource-Pages/LoginS';
+import Passphrase from './Pages/Passphrase';
 
 
 function App() {
@@ -50,7 +54,11 @@ function App() {
                 <Route path="/academics/whatifreport" element={<Whatif />} />
             <Route path="/account" element={<Account />} />
             <Route path="/enrollment" element={<Enrollment />} />
-            <Route path="/financialaid" element={<FinancialAid />} />
+            <Route path="/financial-aid" element={<FinancialAid />} />
+            <Route path="/personal-info" element={<Personal />} />
+            <Route path="/resources" element={<Resources />} />
+              <Route path="/resources/login-services" element={<LoginS />} />
+            <Route path="/passphrase" element={<Passphrase />} />
           </Routes>
         
   </Router>

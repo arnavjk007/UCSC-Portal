@@ -23,68 +23,68 @@ const Sidebar = () => {
         {
             name: 'Home',
             path: '/',
-            icon: <IoHome size={20} style={{position:"relative", top:'2.5px'}}/>
+            icon: IoHome
         },
         {
             name: 'Messages',
             path: '/messages',
-            icon: <MdEmail size={20} style={{position:"relative", top:'2.5px'}}/>
+            icon: MdEmail 
         },
         {
             name: 'Holds',
             path: '/holds',
-            icon: <FaLock size={20} style={{position:"relative", top:'2.5px'}}/>
+            icon: FaLock
         },
         {
             name: 'Tasks',
             path: '/tasks',
-            icon: <FaList size={20} style={{position:"relative", top:'2.5px'}}/>
+            icon: FaList 
         },
         {
             name: 'Academics',
             path: '/academics',
-            icon: <FaGraduationCap size={20} style={{position:"relative", top:'2.5px'}}/>
+            icon: FaGraduationCap
         },
         {
             name: 'Account',
             path: '/account',
-            icon: <FaDollarSign size={20} style={{position:"relative", top:'2.5px'}}/>
+            icon: FaDollarSign 
         },
         {
             name: 'Enrollment',
             path: '/enrollment',
-            icon: <IoMdCheckboxOutline size={20} style={{position:"relative", top:'2.5px'}}/>
+            icon: IoMdCheckboxOutline
         },
         {
             name: 'Financial Aid',
-            path: '/financialaid',
-            icon: <FaRegMoneyBillAlt size={20} style={{position:"relative", top:'2.5px'}}/>
+            path: '/financial-aid',
+            icon: FaRegMoneyBillAlt 
         },
         {
             name: 'Personal Info',
-            path: '/personalinfo',
-            icon: <FaUser size={20} style={{position:"relative", top:'2.5px'}}/>
+            path: '/personal-info',
+            icon: FaUser
         },
         {
             name: 'Resources',
             path: '/resources',
-            icon: <TfiNewWindow size={20} style={{position:"relative", top:'2.5px'}}/>
+            icon: TfiNewWindow
         },
         {
             name: 'Passphrase',
             path: '/passphrase',
-            icon: <FaIdCard size={20} style={{position:"relative", top:'2.5px'}}/>
+            icon: FaIdCard 
         },
         {
             name: 'Student Center',
             path: '/studentcenter',
-            icon: <FaBuildingColumns size={20} style={{position:"relative", top:'2.5px'}}/>
+            icon: FaBuildingColumns
         },
         {
             name: 'eForms',
             path: '/eforms',
-            icon: <BsPencilSquare size={20} style={{position:"relative", top:'2.5px'}}/>
-        },
+            icon: BsPencilSquare
+        }
     ]
     return (
                 <div className="nav">
@@ -94,7 +94,7 @@ const Sidebar = () => {
                         {sidebar_data.map((item) => {
                             return (
                                 <div className="btn">
-                                    <button onClick={() => {navigate(item.path)}}>{item.icon} {item.name}</button>
+                                    <button onClick={() => {navigate(item.path)}}><item.icon size={20} style={{position:"relative", top:'2.5px'}} />  {item.name}</button>
                                 </div>
                             )
                         })}

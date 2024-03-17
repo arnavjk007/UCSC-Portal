@@ -14,55 +14,55 @@ export default function Account() {
     
     let navigate = useNavigate();
 
-    const account_data = [
+    const account_titles = [
         {
             title: 'Charges Due',
             icon: <TbClockDollar size={125}/>,
-            link: "charges-due"
+            path: "charges-due"
         },
         {
             title: "eBill/ePay",
             icon: <MdOutlinePayment size={125}/>,
-            link: 'epay'
+            path: 'epay'
         }, 
         {
             title: "Direct Deposit",
             icon: <LiaMoneyCheckAltSolid size={125}/>,
-            link: 'direct-deposit'
+            path: 'direct-deposit'
         },
         {
             title: "Billing Statements",
             icon: <IoDocumentsOutline size={125}/>,
-            link: 'billing-statements'
+            path: 'billing-statements'
         },
         {
             title: "Summary & Activity",
             icon: <FaFileInvoiceDollar size={125}/>,
-            link: 'summary'
+            path: 'summary'
         },
         {
             title: "Payments",
             icon: <SiContactlesspayment size={125}/>,
-            link: 'payments'
+            path: 'payments'
         },
         {
             title: "Student Permissions",
             icon:  <PiStudent size={125}/>,
-            link: 'student-permissions'
+            path: 'student-permissions'
         },
         {
             title: "Forms & FAQs",
             icon: <FaWpforms size={125}/>,
-            link: 'forms'
+            path: 'forms'
         },
     ]
 
     return (
         <div className="wrapper">
             <div className="cards">
-                {account_data.map((item) => {
+                {account_titles.map((item) => {
                     return (
-                        <div className="sub-card" onClick={() => {navigate(item.link)}}>
+                        <div className="sub-card" onClick={() => {navigate(item.path)}}>
                             <h1 style={{fontSize:'30px'}}>{item.title}</h1>
                             {item.icon}
                         </div>

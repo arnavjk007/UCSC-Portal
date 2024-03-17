@@ -11,7 +11,6 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import Accordion from '@mui/material/Accordion';
-import AccordionActions from '@mui/material/AccordionActions';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { IoIosArrowDropdown } from "react-icons/io";
@@ -63,6 +62,10 @@ var genData = [
     },
     {
         title: ' GE C: Composition '
+    },
+    {
+        title: ' GE DC: Disciplinary Communication ',
+        info: 'All students must satisfy the DC requirement of each of their chosen majors. The DC requirement can be found in the Upper-Division Requirements section for each major below (R539)'
     }
 ]
 
@@ -82,19 +85,19 @@ var innerMajorData = [[
             index: '0',
             id: 'CSE 30',
             title: 'Programming Abs',
-            status: <FaCheck style={{color:'green'}} size={20}/>
+            status: <FaCheck style={{color:'green'}} size={17}/>
         },
         {
             index: '1',
             id: 'CSE 12',
             title:'Comp Sys/Assembly Lang',
-            status:<FaDiamond style={{color:'rgb(232, 171, 16)'}} size={20}/>
+            status:<FaDiamond style={{color:'rgb(232, 171, 16)'}} size={17}/>
         },
         {
             index: '2',
             id: 'CSE 16',
             title: 'Discrete Mathematics',
-            status:<FaDiamond style={{color:'rgb(232, 171, 16)'}} size={20}/>
+            status:<FaDiamond style={{color:'rgb(232, 171, 16)'}} size={17}/>
         }
     ],
     // ABOVE are LOWER divisoin courses list
@@ -104,13 +107,13 @@ var innerMajorData = [[
             index: '0',
             id: 'CSE 101',
             title: 'Introduction to Data Structures and Algorithms',
-            status: <ImCross style={{color:'red'}} size={20}/>
+            status: <ImCross style={{color:'red'}} size={17}/>
         },
         {
             index: '1',
             id: 'CSE 120',
             title: 'Computer Architecture',
-            status: <ImCross style={{color:'red'}} size={20}/>
+            status: <ImCross style={{color:'red'}} size={17}/>
         },
         {
             index: '2',
@@ -130,7 +133,7 @@ function universityReq() {
                     <div>
                         <Accordion style={{background:'rgb(40, 100, 150)', margin:'1%', color:"yellow", borderRadius:'16px'}}>
                             <AccordionSummary
-                            expandIcon={<IoIosArrowDropdown color="yellow" size={25}/>}
+                            expandIcon={<IoIosArrowDropdown color="yellow" size={30}/>}
                             aria-controls="panel1-content"
                             id="panel1-header"
                             >
@@ -156,15 +159,14 @@ function generalReq() {
                     <div>
                         <Accordion style={{background:'rgb(40, 100, 150)', margin:'1%', color:"yellow", borderRadius:'16px'}}>
                             <AccordionSummary
-                            expandIcon={<IoIosArrowDropdown color="yellow" size={25}/>}
+                            expandIcon={<IoIosArrowDropdown color="yellow" size={30}/>}
                             aria-controls="panel1-content"
                             id="panel1-header"
                             >
                             <h3>{item.title}</h3>
                             </AccordionSummary>
                             <AccordionDetails style={{color:'white'}}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                            malesuada lacus ex, sit amet blandit leo lobortis eget.
+                            {item.info}
                             </AccordionDetails>
                         </Accordion>
                     </div>
@@ -177,12 +179,27 @@ function generalReq() {
 function majorReq() {
     return (
         <div className="req-container">
+            <Accordion style={{background:'rgb(40, 100, 150)', margin:'1%', color:"yellow", borderRadius:'16px'}}>
+                <AccordionSummary
+                expandIcon={<IoIosArrowDropdown color="yellow" size={30}/>}
+                aria-controls="panel1-content"
+                id="panel1-header"
+                >
+                <h3>Major Qualification GPA Requirement</h3>
+                </AccordionSummary>
+                <AccordionDetails style={{color:'white'}}>
+                A GPA of 3.0 is required in major qualification courses. 
+                The DPR does not calculate major qualification GPA but tracks your progress toward completion of these courses and non-passing attempts. 
+                Contact your advisor if you have questions. (R2331)
+                </AccordionDetails>
+            </Accordion>
+
             {majorData.map((item) => {
                 return (
                     <div>
                         <Accordion style={{background:'rgb(40, 100, 150)', margin:'1%', color:"yellow", borderRadius:'16px'}}>
                             <AccordionSummary
-                            expandIcon={<IoIosArrowDropdown color="yellow" size={25}/>}
+                            expandIcon={<IoIosArrowDropdown color="yellow" size={30}/>}
                             aria-controls="panel1-content"
                             id="panel1-header"
                             >
@@ -207,7 +224,7 @@ function innerMajorReq(index) {
                 <div>
                     <Accordion style={{background:'rgb(173, 200, 231)', margin:'1%', color:"black", borderRadius:'16px'}}>
                         <AccordionSummary
-                        expandIcon={<IoIosArrowDropdown color="black" size={25}/>}
+                        expandIcon={<IoIosArrowDropdown color="black" size={30}/>}
                         aria-controls="panel1-content"
                         id="panel1-header"
                         >
@@ -224,6 +241,28 @@ function innerMajorReq(index) {
     )
 }
 
+function affiliateReq() {
+    return (
+        <div className="req-container">
+            
+            <div>
+                <Accordion style={{background:'rgb(40, 100, 150)', margin:'1%', color:"yellow", borderRadius:'16px'}}>
+                    <AccordionSummary
+                    expandIcon={<IoIosArrowDropdown color="yellow" size={30}/>}
+                    aria-controls="panel1-content"
+                    id="panel1-header"
+                    >
+                    <h3>Merrill Reqs</h3>
+                    </AccordionSummary>
+                    <AccordionDetails style={{color:'white'}}>
+                    Here are req courses
+                    </AccordionDetails>
+                </Accordion>
+            </div>
+        
+        </div>
+    )
+}
 
 export default function Degree() {
 
@@ -352,15 +391,17 @@ export default function Degree() {
                     <Box sx={{ width: '100%', typography: 'body1' }}>
                         <TabContext value={value}>
                             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                            <TabList onChange={handleChange} aria-label="lab API tabs example" centered>
+                            <TabList style={{overflow:'auto'}} onChange={handleChange} aria-label="lab API tabs example" centered>
                                 <Tab label="University of California Requirements" value="1"/>
                                 <Tab label="General Education Requirements" value="2" />
                                 <Tab label="Major Requirements" value="3" />
+                                <Tab label="College Affiliate Requirements" value="4" />
                             </TabList>
                             </Box>
                             <TabPanel value="1">{universityReq()}</TabPanel>
                             <TabPanel value="2">{generalReq()}</TabPanel>
                             <TabPanel value="3">{majorReq()}</TabPanel>
+                            <TabPanel value="4">{affiliateReq()}</TabPanel>
                         </TabContext>
                     </Box>
                     </div>

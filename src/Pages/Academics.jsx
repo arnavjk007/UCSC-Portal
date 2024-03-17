@@ -17,70 +17,70 @@ export default function Academics() {
     
     let navigate = useNavigate();
 
-    const academics_data = [
+    const academics_titles = [
         {
             title: 'Advisors',
             icon: <FaChalkboardTeacher size={125}/>,
-            link: "advisors"
+            path: "advisors"
         },
         {
             title: "Academic Committees",
             icon: <MdGroups size={125}/>,
-            link: 'committees'
+            path: 'committees'
         }, 
         {
             title: "Course History",
             icon: <MdOutlineClass size={125}/>,
-            link: 'coursehistory'
+            path: 'coursehistory'
         },
         {
             title: "Degree Progress",
             icon: <FaChartLine size={125}/>,
-            link: 'degreeprogress'
+            path: 'degreeprogress'
         },
         {
             title: "Evaluations",
             icon: <PiListMagnifyingGlassBold size={125}/>,
-            link: 'evaluations'
+            path: 'evaluations'
         },
         {
             title: "Grades",
             icon: <GoChecklist size={125}/>,
-            link: 'grades'
+            path: 'grades'
         },
         {
             title: "Planner",
             icon: <GrPlan size={125}/>,
-            link: 'planner'
+            path: 'planner'
         },
         {
             title: "Test Scores",
             icon:  <PiExam size={125}/>,
-            link: 'testscores'
+            path: 'testscores'
         },
         {
             title: "Credit Report",
             icon: <HiOutlineDocumentReport size={125}/>,
-            link: 'creditreport'
+            path: 'creditreport'
         },
         {
             title: "Unofficial Transcript",
             icon: <IoDocumentOutline size={125}/>,
-            link: 'unofficialtranscript'
+            path: 'unofficialtranscript'
         },
         {
             title: "What-if Report",
             icon: <FaFileCircleQuestion size={125}/>,
-            link: 'whatifreport'
+            path: 'whatifreport'
         },
     ]
 
     return (
         <div className="wrapper">
             <div className="cards">
-                {academics_data.map((item) => {
+                {academics_titles.map((item) => {
                     return (
-                        <div className="sub-card" onClick={() => {navigate(item.link)}}>
+                        <div className="sub-card" onClick={() => {navigate(item.path)}}>
                             <h1 style={{fontSize:'30px'}}>{item.title}</h1>
                             {item.icon}
                         </div>
