@@ -108,7 +108,7 @@ body {
 }
 
 .wrapper {
-  width: 87%;
+  width: 85%;
   resize: both;
   overflow: auto;
 }
@@ -143,7 +143,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2%;
+  padding: 1.9%;
 }
 
 .nav .btn button:focus {
@@ -180,7 +180,7 @@ body {
 
 .nav .logout-btn  {
   width: 100%;
-  padding: 2.5%;
+  padding: 2%;
 }
 
 .nav button:hover {
@@ -216,7 +216,7 @@ body {
   position: relative;
   flex-wrap: wrap;
   width: 100%;
-  height: 50vh;
+  height: 45vh;
   justify-content: space-around;
   background-color: rgb(173, 200, 231);
 }
@@ -227,8 +227,7 @@ body {
   justify-content: center;
   text-align: center;
   width: 100%;
-  height: 50vh;
-  max-height: 450px;
+  height: 100%;
   background-color: #20598e;
   border-bottom: 1px solid black;
 }
@@ -243,10 +242,8 @@ body {
 }
 
 .wrapper .cards {
-  position: relative;
   display: grid;
   grid-gap: 2rem;
-  min-width: 1300px;
   width: 100%;
   height: 100%;
   grid-template-columns: repeat(auto-fit, 250px);
@@ -256,11 +253,14 @@ body {
 }
 
 .wrapper .wcards {
-  display: flex;
+  display: grid;
+  grid-gap: 2rem;
   width: 100%;
-  height: 50vh;
-  justify-content: center;
+  min-height: 55vh;
+  grid-template-columns: repeat(auto-fit, 400px);
   background-color: rgb(173, 200, 231);
+  align-content: center;
+  justify-content: center;
 }
 
 .wrapper .card {
