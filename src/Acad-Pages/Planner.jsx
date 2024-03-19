@@ -7,9 +7,6 @@ export default function Planner() {
     let navigate = useNavigate();
 
     return (
-        
-        <div className="wrapper">
-
             <div className="container">
 
                 <main class="table" id="table">
@@ -33,9 +30,5 @@ export default function Planner() {
                     </section>
                 </main>
             </div>
-
-
-        </div>
-            
     )
 }

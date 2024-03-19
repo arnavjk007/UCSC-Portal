@@ -38,18 +38,20 @@ export default function FinancialAid() {
     ]
 
     return (
-        <div className="wrapper">
-            <div className="cards">
-                {financial_titles.map((item) => {
-                    return (
-                        <div className="sub-card">
-                            <h1 style={{fontSize:'30px'}}>{item.title}</h1>
-                            {item.icon}
-                        </div>
-                    )
-                })}
+            <div className="container">
+                <div className="cards">
+                    <div className="grid">
+                        {financial_titles.map((item) => {
+                        return (
+                            <div className="sub-card">
+                                <h1 style={{fontSize:'30px'}}>{item.title}</h1>
+                                {item.icon}
+                            </div>
+                            )
+                        })}
+                    </div>
+                </div>
             </div>
-        </div>     
     )
 
 }

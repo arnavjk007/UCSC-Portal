@@ -7,9 +7,6 @@ export default function Unofficial() {
     let navigate = useNavigate();
 
     return (
-        
-        <div className="wrapper">
-
             <div className="container">
 
                 <main class="table" id="table">
@@ -32,10 +29,6 @@ export default function Unofficial() {
                         </table>
                     </section>
                 </main>
-            </div>
-
-
-        </div>
-            
+            </div> 
     )
 }

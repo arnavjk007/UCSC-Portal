@@ -58,17 +58,20 @@ export default function Account() {
     ]
 
     return (
-        <div className="wrapper">
-            <div className="cards">
-                {account_titles.map((item) => {
-                    return (
-                        <div className="sub-card" onClick={() => {navigate(item.path)}}>
-                            <h1 style={{fontSize:'30px'}}>{item.title}</h1>
-                            {item.icon}
-                        </div>
-                    )
-                })}
-            </div>
-        </div>     
+        <div className="container">
+                <div className="cards">
+                    <div className="grid">
+                        {account_titles.map((item) => {
+                        return (
+                            <div className="sub-card" onClick={() => {navigate(item.path)}}>
+                                <h1 style={{fontSize:'30px'}}>{item.title}</h1>
+                                {item.icon}
+                            </div>
+                            )
+                        })}
+                    </div>
+            </div> 
+        </div>
+            
     )
 }

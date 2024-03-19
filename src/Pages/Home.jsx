@@ -8,16 +8,12 @@ export default function Home() {
     let navigate = useNavigate();
 
     return (
-       
-        <div className="wrapper">
-
-        
-            <div className="welcome-cards">
-                <div className="welcome-card">
-                    <img src='https://orientation.ucsc.edu/images/stay-safe-banner-final.png' alt="welcome"></img>
-
+            <div>
+                <div className="welcome-cards">
+                    <div className="welcome-card">
+                        <img src='https://orientation.ucsc.edu/images/stay-safe-banner-final.png' alt="welcome"></img>
+                    </div>
                 </div>
-            </div>
                 <div className="wcards">
                     <div className="card">
                         <h1>Important Dates</h1>
@@ -42,20 +38,7 @@ export default function Home() {
                         <p>Class 3</p>
                     </div>
                 </div>
-            
+            </div>
 
-            
-
-            
-            
-                
-            
-
-
-        </div>
-     
-            
-            
-            
     )
 }

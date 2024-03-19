@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoHome } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
@@ -12,12 +12,15 @@ import { TfiNewWindow } from "react-icons/tfi";
 import { FaIdCard } from "react-icons/fa";
 import { FaBuildingColumns } from "react-icons/fa6";
 import { BsPencilSquare } from "react-icons/bs";
+import { IoLogInOutline } from "react-icons/io5";
 import './App.css';
 import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
 
     let navigate = useNavigate();
+    const [isOpen, setIsOpen] = useState(false);
+    const toggle = () => setIsOpen(!isOpen);
 
     const sidebar_data = [
         {
@@ -87,20 +90,23 @@ const Sidebar = () => {
         }
     ]
     return (
-                <div className="nav">
-                        <div className="image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/The_University_of_California_1868_UCSC.svg/640px-The_University_of_California_1868_UCSC.svg.png" alt="UCSC logo"></img>
+                <div className="nav" style={{width: isOpen ? "13%" : "5%"}}> 
+                        <div className="contents" style={{display: 'block', marginTop: isOpen ? "0%" : "20%"}}>
+                            <div className="image">
+                                <img onClick={toggle} src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/The_University_of_California_1868_UCSC.svg/640px-The_University_of_California_1868_UCSC.svg.png" alt="UCSC logo"></img>   
+                            </div>
+                            {sidebar_data.map((item) => {
+                                return (
+                                    <div className="btn" style={{padding: isOpen ? "2%" : "10%"}}>
+                                        <button style={{justifyContent: isOpen ? "left" : "center"}} onClick={() => {navigate(item.path)}}><item.icon size={isOpen ? "20" : "25"} style={{margin: isOpen ? "2%" : "8%"}} />  <h4 style={{display: isOpen ? "flex": "none"}}>{item.name}</h4> </button>
+                                    </div>
+                                )
+                            })}
+                            <div className="logout-btn" style={{padding: isOpen ? "2%" : "10%", marginTop: isOpen ? "70%" : "70%"}}>
+                                <button style={{justifyContent: "center"}}onClick={() => {navigate("/login")}}>  {isOpen ? <h4> Log Out </h4> : <IoLogInOutline size={35}/>}</button>
+                            </div>
                         </div>
-                        {sidebar_data.map((item) => {
-                            return (
-                                <div className="btn">
-                                    <button onClick={() => {navigate(item.path)}}><item.icon size={20} style={{position:"relative", top:'2.5px'}} />  {item.name}</button>
-                                </div>
-                            )
-                        })}
-                        <div className="logout-btn">
-                            <button onClick={() => {navigate("/login")}}>Log out</button>
-                        </div>
+                       
                 </div>
     )
 }

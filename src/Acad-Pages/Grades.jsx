@@ -7,9 +7,6 @@ export default function Grades() {
     let navigate = useNavigate();
 
     return (
-        
-        <div className="wrapper">
-
             <div className="container">
 
                 <main class="table" id="table">
@@ -33,9 +30,5 @@ export default function Grades() {
                     </section>
                 </main>
             </div>
-
-
-        </div>
-            
     )
 }

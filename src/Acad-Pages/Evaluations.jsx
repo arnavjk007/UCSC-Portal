@@ -39,9 +39,6 @@ export default function Evaluations() {
 
 
     return (
-        
-        <div className="wrapper">
-
             <div className="container">
 
                 <main class="table" id="table">
@@ -71,9 +68,5 @@ export default function Evaluations() {
                     </section>
                 </main>
             </div>
-
-
-        </div>
-            
     )
 }

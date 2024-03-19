@@ -7,8 +7,6 @@ export default function Course() {
     let navigate = useNavigate();
 
     return (
-        
-        <div className="wrapper">
 
             <div className="container">
 
@@ -33,9 +31,6 @@ export default function Course() {
                     </section>
                 </main>
             </div>
-
-
-        </div>
             
     )
 }

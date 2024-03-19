@@ -58,7 +58,6 @@ export default function Enrollment() {
 
 
     return (
-        <div className="wrapper" style={{display:'flex', background: 'rgb(173, 200, 231)'}}>
             <div className="enrollment-container">
                 <div className="search-bar">
                     <input className="bar"type="text" placeholder="Search Classes"></input>
@@ -137,8 +136,7 @@ export default function Enrollment() {
                 <div className="calendar">
                 <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&bgcolor=%23ffffff&mode=WEEK&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%238E24AA" style={{margin: '20px', border:"solid 1px #777", borderRadius:'12px', width:"1440px", height:"400px", frameborder:"0", scrolling:"no"}}></iframe>
                 </div>
-                </div>
-
             </div>
+
     )
 }

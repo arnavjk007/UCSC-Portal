@@ -33,6 +33,7 @@ function App() {
     <div className='original_container' style={{display:'flex', flexDirection:'row'}}>
     <Router>
           <Sidebar />
+          <div className='wrapper'>
           <Routes>
             {/*<Route index element={<Login />} /> */}
             <Route index element={<Home />} />
@@ -60,7 +61,7 @@ function App() {
               <Route path="/resources/login-services" element={<LoginS />} />
             <Route path="/passphrase" element={<Passphrase />} />
           </Routes>
-        
+          </div>
   </Router>
   </div>
   

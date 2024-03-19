@@ -7,9 +7,6 @@ export default function Advisors() {
     let navigate = useNavigate();
 
     return (
-        
-        <div className="wrapper">
-
             <div className="container">
 
                     <div className="info-card-container">
@@ -36,8 +33,6 @@ export default function Advisors() {
                     </div>
             </div>
 
-
-        </div>
             
     )
 }

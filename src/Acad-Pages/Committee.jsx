@@ -7,8 +7,6 @@ export default function Committee() {
     let navigate = useNavigate();
 
     return (
-        
-        <div className="wrapper">
 
             <div className="container">
 
@@ -50,9 +48,6 @@ export default function Committee() {
 
                     </div>
             </div>
-
-
-        </div>
             
     )
 }

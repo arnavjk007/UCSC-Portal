@@ -74,17 +74,19 @@ export default function Resources() {
     ]
 
     return (
-        <div className="wrapper">
-            <div className="cards">
-                {resources_titles.map((item) => {
-                    return (
-                            <div className="sub-card" onClick={() => {{{navigate(item.path)} {openLink(item.link)}}}}>
-                                <h1 style={{fontSize:'30px'}}>{item.title}</h1>
-                                {item.icon}
-                            </div>
-                    );
-                })}
+            <div className="container">
+                <div className="cards">
+                    <div className="grid">
+                            {resources_titles.map((item) => {
+                            return (
+                                    <div className="sub-card" onClick={() => {{{navigate(item.path)} {openLink(item.link)}}}}>
+                                        <h1 style={{fontSize:'30px'}}>{item.title}</h1>
+                                        {item.icon}
+                                    </div>
+                            );
+                        })}
+                    </div>
+                </div>
             </div>
-        </div>     
     )
 }

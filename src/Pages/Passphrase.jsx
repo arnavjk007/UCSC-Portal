@@ -4,9 +4,6 @@ import '../App.css';
 export default function Passphrase() {
 
     return (
-        
-        <div className="wrapper">
-
             <div className="container">
 
                     <div className="info-card-container">
@@ -34,9 +31,6 @@ export default function Passphrase() {
 
                     </div>
             </div>
-
-
-        </div>
             
     )
 }

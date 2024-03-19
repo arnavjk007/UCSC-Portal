@@ -7,9 +7,6 @@ export default function Holds() {
     let navigate = useNavigate();
 
     return (
-        
-        <div className="wrapper">
-
             <div className="container">
 
                 <main class="table" id="table">
@@ -41,9 +38,6 @@ export default function Holds() {
                     </section>
                 </main>
             </div>
-
-
-        </div>
             
     )
 }

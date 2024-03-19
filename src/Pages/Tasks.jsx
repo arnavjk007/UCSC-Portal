@@ -7,9 +7,6 @@ export default function Tasks() {
     let navigate = useNavigate();
 
     return (
-        
-        <div className="wrapper">
-
             <div className="container">
 
                 <main class="table" id="table">
@@ -31,9 +28,6 @@ export default function Tasks() {
                     </section>
                 </main>
             </div>
-
-
-        </div>
             
     )
 }
