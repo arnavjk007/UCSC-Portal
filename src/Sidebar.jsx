@@ -90,23 +90,31 @@ const Sidebar = () => {
         }
     ]
     return (
-                <div className="nav" style={{width: isOpen ? "13%" : "5%"}}> 
+                <div className="nav" style={{width: "5%"}}> 
                         <div className="image">
-                            <img onClick={toggle} src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/The_University_of_California_1868_UCSC.svg/640px-The_University_of_California_1868_UCSC.svg.png" alt="UCSC logo"></img>   
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/The_University_of_California_1868_UCSC.svg/640px-The_University_of_California_1868_UCSC.svg.png" alt="UCSC logo"></img>   
                         </div>
-                        <div className="contents" style={{display: 'block', marginTop: isOpen ? "0%" : "50%"}}>
+                        <div className="contents">
                             <div>
                             {sidebar_data.map((item) => {
                                 return (
-                                    <div className="btn" style={{padding: isOpen ? "2%" : "10%"}}>
-                                        <button title={item.name} style={{justifyContent: isOpen ? "left" : "center"}} onClick={() => {navigate(item.path)}}><item.icon size={25} style={{margin: isOpen ? "2%" : "8%"}} />  <h4 style={{display: isOpen ? "flex": "none"}}>{item.name}</h4> </button>
+                                    <div className="btn">
+                                  
+                                            <button title={item.name}  style={{display:'block'}} onClick={() => {navigate(item.path)}}> 
+                                                <div style={{display:'flex', justifyContent:'center'}}>
+                                                    <item.icon size={25} /> 
+                                                </div>
+                                                <div style={{display:'flex', textAlign:'center', justifyContent:'center'}}>
+                                                    <h4 style={{fontSize:'10px'}}> {item.name} </h4>  
+                                                </div>
+                                            </button>
                                     </div>
                                 )
                             })}
                             </div>
                             <div>
-                            <div className="logout-btn" style={{padding: isOpen ? "2%" : "10%", marginTop: isOpen ? "5%" : "115%"}}>
-                                <button style={{justifyContent: "center"}}onClick={() => {navigate("/login")}}>  {isOpen ? <h4> Log Out </h4> : <IoLogInOutline size={35}/>}</button>
+                            <div className="logout-btn">
+                                <button style={{justifyContent: "center"}}onClick={() => {navigate("/login")}}> <IoLogInOutline size={35}/> </button>
                             </div>
                             </div>
                         </div>

@@ -116,6 +116,7 @@ body {
 }
 
 .nav {
+  width: 5%;
   height: 100vh;
   border-right: 1px solid black;
   background-color: rgb(40, 100, 150);
@@ -129,20 +130,25 @@ body {
   width: 100%;
   background-color: transparent;
   text-align: center;
-  padding: 3%;
   margin: 5% 0% 10% 0%;
 }
 
 
 .nav .image img {
-  width: 90%;
+  width: 100%;
   cursor: pointer;
 }
 
 .btn {
   display: flex;
   justify-content: left;
-  padding: 2%;
+  padding: 5%;
+}
+
+.contents {
+  display: block;
+  margin-top: 40%;
+  justify-content: center;
 }
 
 .btn button:focus {
@@ -214,7 +220,7 @@ body {
 .logout-btn  {
   display: flex;
   justify-content: center;
-  padding: 2%;
+  padding: 10%;
 }
 
 .nav button:hover {
@@ -393,6 +399,26 @@ body {
   background: rgb(244, 237, 237);
   color: rgb(40, 100, 150);
   text-align: center;
+}
+
+.addbtn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.addbtn:hover {
+  color: green;
+}
+
+.swapbtn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.swapbtn:hover {
+  color: rgb(23, 119, 198);
 }
 
 .xbtn {

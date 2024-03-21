@@ -5,11 +5,21 @@ import { FaRegCircleXmark } from "react-icons/fa6";
 import { IoMdMore } from "react-icons/io";
 import { FiPlusCircle } from "react-icons/fi";
 import { Checkmark } from 'react-checkmark'
+import { MdOutlineSwapHorizontalCircle } from "react-icons/md";
 
 export default function Enrollment() {
 
     function deleteClass(index) {
         document.getElementById(index).remove();
+    }
+
+    function selectDropdown() {
+        return (
+            <select>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+            </select>
+        )
     }
 
     const [filterData, setFilterData] = useState([]);
@@ -162,7 +172,7 @@ export default function Enrollment() {
                                                 <td> {item.time} </td>
                                                 <td> {item.lab} </td>
                                                 <td> {item.ge} </td>
-                                                <td> <FiPlusCircle className="add-icon" size={25} onClick={() => changeState(item)}/> </td>
+                                                <td> <FiPlusCircle className="addbtn" size={25} onClick={() => changeState(item)}/> </td>
                                             </tr>
                                         
                                 
@@ -194,6 +204,8 @@ export default function Enrollment() {
                                         <th style={{padding:'5px'}}> Lecture </th>
                                         <th style={{padding:'5px'}}> Lab </th>
                                         <th style={{padding:'5px'}}></th>
+                                        <th style={{padding:'5px'}}></th>
+                                        <th style={{padding:'5px'}}></th>
                                     </tr>
                                 </thead>
                                 <tbody className="no-hover"> 
@@ -206,7 +218,9 @@ export default function Enrollment() {
                                                         <td style={{padding:'5px'}}> {item.status} </td>
                                                         <td style={{padding:'5px'}}> {item.time} </td>
                                                         <td style={{padding:'5px'}}> {item.lab} </td>
-                                                        <td style={{padding:'5px'}}><IoMdMore className="more-btn"onClick={() => deleteClass(item.index)} size={25}/></td>
+                                                        <td style={{padding:'5px'}}><FiPlusCircle className="addbtn"  onClick={() => changeState(item)} size={27}/></td>
+                                                        <td style={{padding:'5px'}}><MdOutlineSwapHorizontalCircle className="swapbtn" onClick={() => selectDropdown()} size={30}/></td>
+                                                        <td style={{padding:'5px'}}><FaRegCircleXmark className="xbtn"onClick={() => deleteClass(item.index)} size={27}/></td>
                                                     </tr>
                                                     )
                                             })}    
