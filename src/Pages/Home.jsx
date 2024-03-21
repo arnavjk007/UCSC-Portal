@@ -16,11 +16,14 @@ export default function Home() {
                 </div>
                 <div className="wcards">
                     <div className="card">
-                        <h1>Important Dates</h1>
-                        <p>These are Dates</p>
-                        <p>These are Dates</p>
-                        <p>These are Dates</p>
-                        <p>These are Dates</p>
+                        <div>
+                            <h1>Important Dates</h1>
+                            <p>These are Dates</p>
+                            <p>These are Dates</p>
+                            <p>These are Dates</p>
+                            <p>These are Dates</p>
+                        </div>
+                        
                     </div>
 
                     <div className="card">
