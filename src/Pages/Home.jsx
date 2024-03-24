@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function Home() {
     
     let navigate = useNavigate();
-
+    // replace with carousel
     return (
             <div>
                 <div className="welcome-cards">
@@ -14,33 +14,45 @@ export default function Home() {
                         <img src='https://orientation.ucsc.edu/images/stay-safe-banner-final.png' alt="welcome"></img>
                     </div>
                 </div>
-                <div className="wcards">
-                    <div className="card">
-                        <div>
-                            <h1>Important Dates</h1>
-                            <p>These are Dates</p>
-                            <p>These are Dates</p>
-                            <p>These are Dates</p>
-                            <p>These are Dates</p>
+                <div className="home-container">
+                    <div className="hstack" style={{margin: '0', maxHeight: '55vh'}}>
+                        <div className="slim-card">
+                            <div className="info-container">
+                                <h2>News 1</h2>
+                                <hr></hr>
+                            </div>
                         </div>
-                        
-                    </div>
 
-                    <div className="card">
-                        <h1>Announcements</h1>
-                        <p>These are Announcements</p>
-                        <p>These are Announcements</p>
-                        <p>These are Announcements</p>
-                        <p>These are Announcements</p>
-                    </div>
+                        <div className="slim-card">
+                            <div className="info-container">
+                                <h2>News 1</h2>
+                                <hr></hr>
+                            </div>
+                        </div>
 
-                    <div className="card">
-                        <h1>Class Schedule</h1>
-                        <p>Class 1</p>
-                        <p>Class 2</p>
-                        <p>Class 3</p>
+                        <div className="slim-card">
+                            <div className="info-container">
+                                <h2>News 1</h2>
+                                <hr></hr>
+                            </div>
+                        </div>
+
+                        <div className="slim-card">
+                            <div className="info-container">
+                                <h2>News 1</h2>
+                                <hr></hr>
+                            </div>
+                        </div>
+
+                        <div className="slim-card">
+                            <div className="info-container">
+                                <h2>News 1</h2>
+                                <hr></hr>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
             </div>
 
     )

@@ -80,7 +80,7 @@ const Sidebar = () => {
         },
         {
             name: 'Student Center',
-            path: '/studentcenter',
+            path: '/student-center',
             icon: FaBuildingColumns
         },
         {
@@ -90,7 +90,7 @@ const Sidebar = () => {
         }
     ]
     return (
-                <div className="nav" style={{width: "5%"}}> 
+                <div className="nav"> 
                         <div className="image">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/The_University_of_California_1868_UCSC.svg/640px-The_University_of_California_1868_UCSC.svg.png" alt="UCSC logo"></img>   
                         </div>
@@ -105,7 +105,7 @@ const Sidebar = () => {
                                                     <item.icon size={25} /> 
                                                 </div>
                                                 <div style={{display:'flex', textAlign:'center', justifyContent:'center'}}>
-                                                    <h4 style={{fontSize:'10px'}}> {item.name} </h4>  
+                                                    <h4> {item.name} </h4>  
                                                 </div>
                                             </button>
                                     </div>
@@ -113,16 +113,17 @@ const Sidebar = () => {
                             })}
                             </div>
                             <div>
+                            </div>
+                            
+                            </div>
                             <div className="logout-btn">
                                 <button style={{justifyContent: "center"}}onClick={() => {navigate("/login")}}> <IoLogInOutline size={35}/> </button>
                             </div>
-                            </div>
-                        </div>
+                            
+                        
                        
                 </div>
     )
 }
 
 export default Sidebar;
-
-

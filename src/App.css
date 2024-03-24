@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+::-webkit-scrollbar {display:none;}
 
 * {
     margin: 0;
@@ -115,8 +116,10 @@ body {
   overflow: auto;
 }
 
+
 .nav {
   width: 5%;
+  min-width: 80px;
   height: 100vh;
   border-right: 1px solid black;
   background-color: rgb(40, 100, 150);
@@ -133,22 +136,19 @@ body {
   margin: 5% 0% 10% 0%;
 }
 
-
 .nav .image img {
   width: 100%;
-  cursor: pointer;
 }
 
 .btn {
   display: flex;
   justify-content: left;
   padding: 5%;
+  margin: 2%;
 }
 
 .contents {
   display: block;
-  margin-top: 40%;
-  justify-content: center;
 }
 
 .btn button:focus {
@@ -180,7 +180,7 @@ body {
   text-align: left;
   width: 100%;
   padding: 3% 2% 3% 2%;
-  border-radius: 16px;
+  border-radius: 8px;
   background: transparent;
   color: rgb(251, 255, 241);
   font-weight: 700;
@@ -190,10 +190,11 @@ body {
   outline: none;
 }
 
-.btn button h4 {
+
+.btn h4 {
   display: flex;
-  font-size: 18px;
-  padding: 4%;
+  font-size: 12px;
+  padding: 1%;
 }
 
 .logout-btn button h4 {
@@ -239,8 +240,8 @@ body {
 }
 
 .submit {
-  width: 13%;
-  padding: 1%;
+  width: 100%;
+  max-width: 13%;
   border-radius: 16px;
   background: rgb(40, 100, 150);
   color: white;
@@ -251,41 +252,34 @@ body {
   outline: none;
 }
 
-.wrapper .welcome-cards {
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 45vh;
-  justify-content: space-around;
-  background-color: rgb(173, 200, 231);
-}
-
 .wrapper .welcome-card {
-  position: relative;
   align-items: center;
   justify-content: center;
   text-align: center;
   width: 100%;
-  height: 100%;
+  height: 45vh;
   background-color: #20598e;
   border-bottom: 1px solid black;
 }
 
 .wrapper .welcome-card img {
-  position: relative;
-  width: 100%;
   height: 50vh;
-  max-width: 1199px;
-  max-height: 400px;
+  max-height: 45vh;
   border: 2px solid transparent;
 }
 
 .container {
   display: flex;
   background-color: rgb(173, 200, 231);
-  padding: 3%;
+  padding: 3% 12% 3% 12%;
   height: 100vh;
+}
+
+.home-container {
+  display: flex;
+  background-color: rgb(173, 200, 231);
+  padding: 3% 8% 3% 8%;
+  height: 55vh;
 }
 
 .cards {
@@ -309,7 +303,7 @@ body {
   height: 55vh;
   background-color: rgb(173, 200, 231);
   padding: 5%;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .wrapper .card {
@@ -346,7 +340,7 @@ body {
   border-color: rgb(40, 100, 150);
   border-width: 5px;
   background: rgb(209, 209, 209);
-  transition: 0.5s;
+  transition: 0.8s;
 }
 
 .wrapper .sub-card h1 {
@@ -438,63 +432,6 @@ body {
   justify-content: center;
 }
 
-.search {
-  width: 80%;
-  border-radius: 16px;
-  align-content: left;
-  padding: 5px;
-  border: solid black;
-  font-size: 18px;
-}
-
-.unit {
-  width: 10%;
-  padding: 5px;
-  border-radius: 16px;
-  align-content: left;
-}
-
-.term {
-  width: 15%;
-  padding: 5px;
-  border-radius: 16px;
-  align-content: left;
-}
-
-.status {
-  width: 10%;
-  padding: 5px;
-  border-radius: 16px;
-  align-content: left;
-}
-
-.subject {
-  width: 30%;
-  padding: 5px;
-  border-radius: 16px;
-  align-content: left;
-}
-
-.gen-ed {
-  width: 8%;
-  padding: 5px;
-  border-radius: 16px;
-  align-content: left;
-}
-
-.meeting-days {
-  width: 15%;
-  padding: 5px;
-  border-radius: 16px;
-  align-content: left;
-}
-
-.meeting-time {
-  width: 14.5%;
-  padding: 5px;
-  border-radius: 16px;
-  align-content: left;
-}
 
 .wrapper .container .enrollment-cards .cart-card {
   width: 50%;
@@ -562,7 +499,6 @@ main.table {
   align-items: center;
   border-bottom: 1px solid black;
   font-size: x-large;
-  
 }
 
 .table__header .input-group {
@@ -613,7 +549,7 @@ thead th {
 }
 
 tbody tr:hover {
-  background-color: rgba(224, 195, 92, 0.623) !important;
+  background-color: rgb(209, 209, 209) !important;
 }
 
 .no-hover tr:hover {
@@ -625,14 +561,27 @@ tbody tr td  {
 }
 
 .enrollment-container {
+  display: flex;
   width: 100%;
+  height: 100vh;
+  padding: 2%;
+}
+
+.enrollment-container h1 {
+  padding: 0%;
+}
+
+.enrollment-block {
+  display: block;
+  width: 50%;
   height: 100%;
+  padding: 1%;
 }
 
 .search-container {
   display: block;
   width: 100%;
-  padding: 1%;
+  padding: 1% 1% 0.5% 1%;
 }
 
 .search-bar {
@@ -643,8 +592,12 @@ tbody tr td  {
 .search-results-container {
   display: flex;
   width: 100%;
-  max-height: fit-content;
+  height: 95%;
   justify-content: center;
+  overflow: auto;
+  background-color: #fffb;
+  border: 2px solid black;
+  border-radius: 16px;
 }
 
 .search-result {
@@ -654,67 +607,41 @@ tbody tr td  {
 
 .search-table {
   width: 100%;
-  height: fit-content;
-  padding: 0%;
+  height: 100%;
+  border-collapse: collapse;
 }
 
 .search-table th {
-  padding: 1%;
   border-bottom: 1px solid black;
 }
 
 .search_table__body {
   width: 100%;
-  max-height: fit-content;
+  height: fit-content;
   background-color: #fffb;
-  border-radius: 16px;
-  border: 2px solid black;
-  overflow: auto;
-  overflow: overlay;
 }
 
 .bar {
-  padding: 1.7%;
-  width: 90%;
+  padding: 1%;
+  width: 100%;
   height: 5vh;
-  margin-bottom: 1%;
   border: 2px solid black;
   border-radius: 16px;
   font-size: large;
   color: black;
-  background-color: rgb(234, 229, 229);
-}
-
-.bar-results {
-  display: block;
-  width: 84%;
-  position: absolute;
-  border: blue;
-  border-radius: 16px;
-  background-color: rgb(234, 229, 229);
-  z-index: 1;
+  background-color: #fffb;
 }
 
 .enroll-cards {
-  display: flex;
+  display: block;
   width: 100%;
-  height: fit-content;
-  justify-content: space-between;
-  max-height: 45vh;
+  height: 100%;
+  justify-content: space-around;
 }
 
 .enrollment-table {
-  width: 50%;
-  height: fit-content;
-  margin: 0% 0.5% 0% 0.5%;
-}
-
-.calendar {
-  display: flex;
   width: 100%;
-  height: 45vh;
-  max-height: 45vh;
-  justify-content: center;
+  height: fit-content;
 }
 
 .more-btn {
@@ -728,10 +655,6 @@ tbody tr td  {
   transition: 0.2s;
 }
 
-.google-calendar {
-  display: flex;
-}
-
 .info-card-container {
   display: flex;
   width: 100%;
@@ -740,6 +663,7 @@ tbody tr td  {
   align-items: center;
   justify-content: space-evenly;
 }
+
 .info-card {
   width: 100%;
   height: fit-content;
@@ -768,13 +692,21 @@ tbody tr td  {
   margin: 30px 0px 30px 0px;
 }
 
+.vstack {
+  display: block;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  margin: 0% 2% 0% 2%;
+}
+
 .hstack {
   display: inline-flex;
   width: 100%;
   height: 100%;
   max-height: 38vh;
   justify-content: space-between;
-  margin: 1% 0px 1% 0px;
+  margin: 0% 0px 1% 0px;
 }
 
 .bttm-hstack {
@@ -801,15 +733,23 @@ tbody tr td  {
 
 .slim-card {
   width: 100%;
-  max-width: 36vh;
+  max-width: 30vh;
   height: 100%;
   background: rgb(244, 237, 237);
   border-radius: 16px;
+  margin: 0.5%;
   padding: 1%;
   font-size: large;
   border: 5px solid transparent;
   color: rgb(40, 100, 150);
   overflow: auto;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.slim-card:hover {
+  border-color: #113d67;
+  background: rgb(209, 209, 209);
+  transition: 1s;
 }
 
 .slimmer-card {
@@ -868,6 +808,10 @@ hr {
   margin: 0;
 }
 
+.legend-item p {
+  font-size: 16px;
+}
+
 .legend-item {
   width: fit-content;
   height: 100%;
@@ -878,6 +822,7 @@ hr {
 .info-table {
   display: block;
   width: 100%;
+  padding: 1%;
 }
 
 .info-table th {
@@ -895,4 +840,3 @@ hr {
   max-height: 43vh;
   overflow: auto;
 }
-

@@ -6,6 +6,9 @@ import { IoMdMore } from "react-icons/io";
 import { FiPlusCircle } from "react-icons/fi";
 import { Checkmark } from 'react-checkmark'
 import { MdOutlineSwapHorizontalCircle } from "react-icons/md";
+import { GoDotFill } from "react-icons/go";
+import { IoIosWarning } from "react-icons/io";
+import { FaSearch } from "react-icons/fa";
 
 export default function Enrollment() {
 
@@ -13,13 +16,15 @@ export default function Enrollment() {
         document.getElementById(index).remove();
     }
 
-    function selectDropdown() {
-        return (
-            <select>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-            </select>
-        )
+    function getStatus(index) {
+        if (index === '0') {
+            return <GoDotFill color="green" size={35} />
+        }
+        if (index === '1') {
+            return <IoIosWarning color="gold" size={30} />
+        }
+        
+        return <GoDotFill color="red" size={35} />
     }
 
     const [filterData, setFilterData] = useState([]);
@@ -33,9 +38,6 @@ export default function Enrollment() {
         })
         setFilterData(updatedFilter);
     }
-
-    const [showResults, setShowResults] = useState(false);
-    const toggle = () => setShowResults(!showResults);
 
     function changeState(value) {
         if (value.state === '1') {
@@ -100,10 +102,9 @@ export default function Enrollment() {
             name: 'Comp Sys & C Prog',
             professor: 'Veenstra, K.',
             credits: '7',
-            status: 'Open 129/240',
+            status: '129/240',
             time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
             lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-            ge: 'N/A',
             state: '0'
         },
         {
@@ -112,10 +113,9 @@ export default function Enrollment() {
             name: 'Walt Disney',
             professor: 'Valdez, K.',
             credits: '5',
-            status: 'Closed 380/380',
+            status: '380/380',
             time: 'Online',
             lab: 'TBA',
-            ge: 'IM',
             state: '0'
         },
         {
@@ -124,26 +124,23 @@ export default function Enrollment() {
             name: 'Social Change',
             professor: 'Stinneford, C.',
             credits: '2',
-            status: 'Closed 90/90',
+            status: '90/90',
             time: 'Online',
             lab: 'TBA',
-            ge: 'PR',
             state: '0'
         },
     ]
 
 
     return (
-            <div className="enrollment-container">
-                
-                <div className="search-container">
-                    
+        <div className="enrollment-container">
+
+                <div className="enrollment-block">
                     <div className="search-bar">
-                            <input className="bar"type="text" placeholder="Search Classes" onChange={handleFilter} onClick={toggle}></input>
+                        <input className="bar" style={{margin: '0% 0% 1% 0%'}}type="text" placeholder="Search Classes" onChange={handleFilter}></input>
                     </div>
 
-                    <div className="search-results-container" style={{display: showResults ? 'flex' : 'none'}}>
-                        <div className="bar-results">
+                    <div className="search-results-container">
                             <section class="search_table__body">
                         <table className="search-table">
                             <thead>
@@ -151,11 +148,9 @@ export default function Enrollment() {
                                     <th> ID </th>
                                     <th> Title </th>
                                     <th> Professor </th>
-                                    <th> Units </th>
                                     <th> Status </th>
                                     <th> Lecture </th>
                                     <th> Lab </th>
-                                    <th> GE </th>
                                     <th> </th>
                                 </tr>
                             </thead>
@@ -163,15 +158,15 @@ export default function Enrollment() {
                             {filterData.map((item) => {
                                 return (
                                         
-                                            <tr style={{borderTop: '1px solid black'}}>
-                                                <td style={{padding:'5px', fontWeight:'bolder'}}> {item.id} </td>
-                                                <td> {item.name} </td>
+                                            <tr style={{borderBottom: '1px solid black'}}>
+                                                <td style={{ fontWeight:'bolder'}}> {item.id} </td>
+                                                <td> {item.name} ({item.credits}) </td>
                                                 <td> {item.professor} </td>
-                                                <td> {item.credits} </td>
-                                                <td> {item.status} </td>
+                                                <td> <div style={{display:'flex',justifyContent:'center'}}> {getStatus(item.index)} </div> 
+                                                <div style={{display:'flex',justifyContent:'center'}}><h5>{item.status}</h5></div></td>
+                                                
                                                 <td> {item.time} </td>
                                                 <td> {item.lab} </td>
-                                                <td> {item.ge} </td>
                                                 <td> <FiPlusCircle className="addbtn" size={25} onClick={() => changeState(item)}/> </td>
                                             </tr>
                                         
@@ -181,15 +176,14 @@ export default function Enrollment() {
                         </tbody>
                         </table>
                         </section>
-                        </div>
-                        
                     </div>
                 </div>
+
                 
 
 
-
-                <div className="enroll-cards">
+                <div className="enrollment-block">
+                <div className="enroll-cards" style={{margin:'5% 0% 5% 0%'}}>
                     <div className="enrollment-table">
                         <h1 style={{textAlign:'center'}}>Shopping Cart</h1>
                     
@@ -219,7 +213,7 @@ export default function Enrollment() {
                                                         <td style={{padding:'5px'}}> {item.time} </td>
                                                         <td style={{padding:'5px'}}> {item.lab} </td>
                                                         <td style={{padding:'5px'}}><FiPlusCircle className="addbtn"  onClick={() => changeState(item)} size={27}/></td>
-                                                        <td style={{padding:'5px'}}><MdOutlineSwapHorizontalCircle className="swapbtn" onClick={() => selectDropdown()} size={30}/></td>
+                                                        <td style={{padding:'5px'}}><MdOutlineSwapHorizontalCircle className="swapbtn" size={30}/></td>
                                                         <td style={{padding:'5px'}}><FaRegCircleXmark className="xbtn"onClick={() => deleteClass(item.index)} size={27}/></td>
                                                     </tr>
                                                     )
@@ -262,10 +256,13 @@ export default function Enrollment() {
                             </section>
                     </div>
                 </div>
-
-                <div className="calendar">
-                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&bgcolor=%23ffffff&mode=WEEK&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%238E24AA" style={{margin: '20px', border:"solid 1px #777", borderRadius:'12px', width:"1440px", height:"400px", frameborder:"0", scrolling:"no"}}></iframe>
                 </div>
-            </div>
+
+        </div>
+                
+                
+
+
+                
     )
 }
