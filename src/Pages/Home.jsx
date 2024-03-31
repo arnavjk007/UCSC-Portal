@@ -1,58 +1,67 @@
 import React from "react";
 import '../App.css';
 import { useNavigate } from "react-router-dom";
-
+import { RiNumber1 } from "react-icons/ri";
 
 export default function Home() {
     
     let navigate = useNavigate();
+
     // replace with carousel
     return (
-            <div>
-                <div className="welcome-cards">
-                    <div className="welcome-card">
-                        <img src='https://orientation.ucsc.edu/images/stay-safe-banner-final.png' alt="welcome"></img>
-                    </div>
-                </div>
-                <div className="home-container">
-                    <div className="hstack" style={{margin: '0', maxHeight: '55vh'}}>
-                        <div className="slim-card">
-                            <div className="info-container">
-                                <h2>News 1</h2>
-                                <hr></hr>
-                            </div>
-                        </div>
+            <div className="home-container">
+                <div className="banner">
+                    <div className="banner-card">
+                        <div className="welcome-box">
 
-                        <div className="slim-card">
-                            <div className="info-container">
-                                <h2>News 1</h2>
-                                <hr></hr>
-                            </div>
-                        </div>
-
-                        <div className="slim-card">
-                            <div className="info-container">
-                                <h2>News 1</h2>
-                                <hr></hr>
-                            </div>
-                        </div>
-
-                        <div className="slim-card">
-                            <div className="info-container">
-                                <h2>News 1</h2>
-                                <hr></hr>
-                            </div>
-                        </div>
-
-                        <div className="slim-card">
-                            <div className="info-container">
-                                <h2>News 1</h2>
-                                <hr></hr>
-                            </div>
                         </div>
                     </div>
                 </div>
-                
+
+                <div className="home-cards">
+                    <div className="home-grid">
+                            <div className="card">
+                                <h1>Messages</h1>
+                                <hr></hr>
+                                <RiNumber1 size={150}/>
+                            </div>
+
+                            <div className="card">
+                                <h1>Messages</h1>
+                                <hr></hr>
+                                <RiNumber1 size={150}/>
+                            </div>
+
+                            <div className="card">
+                                <h1>Messages</h1>
+                                <hr></hr>
+                                <RiNumber1 size={150}/>
+                            </div>
+
+                            <div className="card">
+                                <h1>Messages</h1>
+                                <hr></hr>
+                                <RiNumber1 size={150}/>
+                            </div>
+
+                            <div className="card">
+                                <h1>Messages</h1>
+                                <hr></hr>
+                                <RiNumber1 size={150}/>
+                            </div>
+
+                            <div className="card">
+                                <h1>Messages</h1>
+                                <hr></hr>
+                                <RiNumber1 size={150}/>
+                            </div>
+                        
+                    </div>
+
+                    <div className="home-misc">
+                        
+                    </div>
+                </div>
             </div>
 
     )

@@ -30,7 +30,7 @@ import Passphrase from './Pages/Passphrase';
 function App() {
   return (
     
-    <div className='original_container' style={{display:'flex', flexDirection:'row'}}>
+    <div className='original_container' style={{display:'flex', flexDirection:'row', overflowY:'hidden'}}>
     <Router>
           <Sidebar />
           <div className='wrapper'>

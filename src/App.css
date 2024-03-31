@@ -116,6 +116,14 @@ body {
   overflow: auto;
 }
 
+.container {
+  display: flex;
+  background-color: rgb(173, 200, 231);
+  padding: 3% 12% 3% 12%;
+  height: 100%;
+  max-height: 100vh;
+  overflow: auto;
+}
 
 .nav {
   width: 5%;
@@ -180,7 +188,7 @@ body {
   text-align: left;
   width: 100%;
   padding: 3% 2% 3% 2%;
-  border-radius: 8px;
+  border-radius: 16px;
   background: transparent;
   color: rgb(251, 255, 241);
   font-weight: 700;
@@ -239,6 +247,61 @@ body {
   color: rgba(255, 255, 255, 0.609);
 }
 
+.home-container {
+  display: block;
+  background-color: rgb(173, 200, 231);
+  padding: 2%;
+  height: 100%;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.banner {
+  display: flex;
+  width: 100%;
+  height: 30%;
+}
+
+.banner-card {
+  display: flex;
+  width: 100%;
+  padding: 1%;
+  background-color: rgb(40, 100, 150);
+  border-radius: 64px;
+}
+
+.welcome-box {
+  width: 50%;
+}
+
+.image-box {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+
+.home-cards {
+  display: flex;
+  height: 70%;
+  width: 100%;
+}
+
+.home-grid {
+  display: grid;
+  width: 60%;
+  max-height: 90vh;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, 250px);
+  padding: 2%;
+  justify-content: center;
+  overflow: auto;
+}
+
+.home-misc {
+  width: 40%;
+  padding: 2%;
+}
+
 .submit {
   width: 100%;
   max-width: 13%;
@@ -252,36 +315,6 @@ body {
   outline: none;
 }
 
-.wrapper .welcome-card {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  height: 45vh;
-  background-color: #20598e;
-  border-bottom: 1px solid black;
-}
-
-.wrapper .welcome-card img {
-  height: 50vh;
-  max-height: 45vh;
-  border: 2px solid transparent;
-}
-
-.container {
-  display: flex;
-  background-color: rgb(173, 200, 231);
-  padding: 3% 12% 3% 12%;
-  height: 100vh;
-}
-
-.home-container {
-  display: flex;
-  background-color: rgb(173, 200, 231);
-  padding: 3% 8% 3% 8%;
-  height: 55vh;
-}
-
 .cards {
   display: flex;
   width: 100%;
@@ -293,7 +326,7 @@ body {
   display: grid;
   width: 100%;
   grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, 225px);
+  grid-template-columns: repeat(auto-fit, 220px);
   justify-content: center;
 }
 
@@ -306,11 +339,9 @@ body {
   justify-content: space-between;
 }
 
-.wrapper .card {
-  width: 100%;
-  max-width: 400px;
-  min-height: fit-content;
-  max-height: 400px;
+.card {
+  width: 250px;
+  height: 250px;
   border-radius: 16px;
   padding: 2%;
   text-align: center;
@@ -318,7 +349,6 @@ body {
   border: 4px solid transparent;
   background: rgb(244, 237, 237);
   color: rgb(40, 100, 150);
-  text-align: center;
 }
 
 .wrapper .card:hover {
@@ -339,8 +369,7 @@ body {
 .wrapper .sub-card:hover {
   border-color: rgb(40, 100, 150);
   border-width: 5px;
-  background: rgb(209, 209, 209);
-  transition: 0.8s;
+  transition: 0.5s;
 }
 
 .wrapper .sub-card h1 {
@@ -712,9 +741,9 @@ tbody tr td  {
 .bttm-hstack {
   display: flex;
   width: 100%;
-  height: 50vh;
+  height: 53vh;
   justify-content: center;
-  padding: 0%;
+  padding: 1%;
 }
 
 .new-card {
@@ -725,6 +754,7 @@ tbody tr td  {
   background: rgb(244, 237, 237);
   border-radius: 16px;
   padding: 1%;
+  margin: 0% 1% 0% 1%;
   font-size: large;
   border: 5px solid transparent;
   color: rgb(40, 100, 150);
@@ -737,7 +767,6 @@ tbody tr td  {
   height: 100%;
   background: rgb(244, 237, 237);
   border-radius: 16px;
-  margin: 0.5%;
   padding: 1%;
   font-size: large;
   border: 5px solid transparent;
@@ -759,6 +788,7 @@ tbody tr td  {
   background: rgb(244, 237, 237);
   border-radius: 16px;
   padding: 1%;
+  margin: 0% 1% 0% 1%;
   font-size: large;
   border: 5px solid transparent;
   color: rgb(40, 100, 150);
@@ -837,6 +867,6 @@ hr {
 
 .req-container {
   width: 100%;
-  max-height: 43vh;
+  max-height: 42vh;
   overflow: auto;
 }

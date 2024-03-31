@@ -337,13 +337,13 @@ export default function Degree() {
                         </div>
                     </div>
 
-                    <div className="slim-card">
+                    <div className="new-card">
                         <div className="info-container">
                             <h2> Degree Progress Report Information </h2>
                             <hr></hr>
 
                             <div className="info">
-                                <p style={{fontSize:'15px'}}>The Degree Progress Report (DPR) is a tool to help track your progress toward graduation. <a href="https://ue.ucsc.edu/degree-audit-project/resources/index.html" target="_blank" rel="noreferrer">Resources are available </a> for all users to aid in the use of the DPR. 
+                                <p>The Degree Progress Report (DPR) is a tool to help track your progress toward graduation. <a href="https://ue.ucsc.edu/degree-audit-project/resources/index.html" target="_blank" rel="noreferrer">Resources are available </a> for all users to aid in the use of the DPR. 
                                     Contact your major or college advisor with any questions about graduation requirements. The DPR is being updated as part of the Degree Audit Initiative. 
                                     More information <a href="https://ue.ucsc.edu/degree-audit-project/about.html" target="_blank" rel="noreferrer">about the initiative</a>, as well as the <a href="https://ue.ucsc.edu/degree-audit-project/progress.html" target="_blank" rel="noreferrer">current status</a> of each program, is available on the initiative website. (RG2398)</p>
                             </div>
@@ -389,7 +389,7 @@ export default function Degree() {
                     <Box sx={{ width: '100%', typography: 'body1' }}>
                         <TabContext value={value}>
                             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                            <TabList style={{overflow:'auto'}} onChange={handleChange} aria-label="lab API tabs example" centered>
+                            <TabList style={{overflowY:'auto'}} onChange={handleChange} centered>
                                 <Tab label="University of California Requirements" value="1"/>
                                 <Tab label="General Education Requirements" value="2" />
                                 <Tab label="Major Requirements" value="3" />
