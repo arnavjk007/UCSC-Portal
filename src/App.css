@@ -173,7 +173,7 @@ body {
   background-color: transparent;
   outline: none;
   border: transparent;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 .arrow {
@@ -198,11 +198,11 @@ body {
   outline: none;
 }
 
-
 .btn h4 {
   display: flex;
-  font-size: 12px;
+  font-size: 11px;
   padding: 1%;
+  margin: 1% 0% 1% 0%;
 }
 
 .logout-btn button h4 {
@@ -250,56 +250,62 @@ body {
 .home-container {
   display: block;
   background-color: rgb(173, 200, 231);
-  padding: 2%;
   height: 100%;
   max-height: 100vh;
+  padding: 2%;
+  background-image: url('https://www.ucsc.edu/wp-content/uploads/2022/10/campus-and-monterey-bay-scaled.jpg');
   overflow: auto;
 }
 
 .banner {
   display: flex;
   width: 100%;
-  height: 30%;
+  height: 40%;
 }
 
-.banner-card {
+.banner .image {
   display: flex;
   width: 100%;
-  padding: 1%;
-  background-color: rgb(40, 100, 150);
-  border-radius: 64px;
-}
-
-.welcome-box {
-  width: 50%;
-}
-
-.image-box {
-  display: flex;
-  width: 50%;
+  padding: 0% 3% 0% 3%;
   justify-content: center;
+}
+
+.image img {
+  width: 90%;
+  height: 95%;
 }
 
 .home-cards {
   display: flex;
-  height: 70%;
   width: 100%;
+  height: 60%;
 }
 
-.home-grid {
-  display: grid;
-  width: 60%;
-  max-height: 90vh;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, 250px);
+.announcements {
+  display: flex;
+  width: 100%;
+  background-color: rgba(173, 200, 231, 0.832);
+  border-radius: 16px;
   padding: 2%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  padding: 2% 5% 2% 5%;
+
+  /* Center slide text vertically */
+  display: flex;
   justify-content: center;
-  overflow: auto;
+  align-items: center;
 }
 
-.home-misc {
-  width: 40%;
-  padding: 2%;
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
 }
 
 .submit {

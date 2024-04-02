@@ -19,8 +19,7 @@ import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
 
     let navigate = useNavigate();
-    const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!isOpen);
+    //use <footer> tag for logout button
 
     const sidebar_data = [
         {
@@ -90,39 +89,32 @@ const Sidebar = () => {
         }
     ]
     return (
-                <div className="nav"> 
-                        <div className="image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/The_University_of_California_1868_UCSC.svg/640px-The_University_of_California_1868_UCSC.svg.png" alt="UCSC logo"></img>   
-                        </div>
-                        <div className="contents">
-                            <div>
-                            {sidebar_data.map((item) => {
-                                return (
-                                    <div className="btn">
-                                  
-                                            <button title={item.name}  style={{display:'block'}} onClick={() => {navigate(item.path)}}> 
-                                                <div style={{display:'flex', justifyContent:'center'}}>
-                                                    <item.icon size={25} /> 
-                                                </div>
-                                                <div style={{display:'flex', textAlign:'center', justifyContent:'center'}}>
-                                                    <h4> {item.name} </h4>  
-                                                </div>
-                                            </button>
-                                    </div>
-                                )
-                            })}
-                            </div>
-                            <div>
-                            </div>
-                            
-                            </div>
-                            <div className="logout-btn">
-                                <button style={{justifyContent: "center"}}onClick={() => {navigate("/login")}}> <IoLogInOutline size={35}/> </button>
-                            </div>
-                            
-                        
-                       
+            <div className="nav"> 
+                <div className="image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/The_University_of_California_1868_UCSC.svg/640px-The_University_of_California_1868_UCSC.svg.png" alt="UCSC logo"></img>   
                 </div>
+                <div className="contents">
+                    <div>
+                    {sidebar_data.map((item) => {
+                        return (
+                            <div className="btn">
+                                <button title={item.name}  style={{display:'block'}} onClick={() => {navigate(item.path)}}> 
+                                    <div style={{display:'flex', justifyContent:'center'}}>
+                                        <item.icon size={25} /> 
+                                    </div>
+                                    <div style={{display:'flex', textAlign:'center', justifyContent:'center'}}>
+                                        <h4> {item.name} </h4>  
+                                    </div>
+                                </button>
+                            </div>
+                        )
+                    })}
+                    </div> 
+                </div>
+                <footer className="logout-btn">
+                    <button style={{justifyContent: "center"}}onClick={() => {navigate("/login")}}> <IoLogInOutline size={35}/> </button>
+                </footer>     
+            </div>
     )
 }
 
