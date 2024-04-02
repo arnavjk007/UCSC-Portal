@@ -126,8 +126,8 @@ body {
 }
 
 .nav {
-  width: 5%;
-  min-width: 80px;
+  width: 7%;
+  min-width: 90px;
   height: 100vh;
   border-right: 1px solid black;
   background-color: rgb(40, 100, 150);
@@ -136,12 +136,10 @@ body {
 
 .nav .image {
   display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   background-color: transparent;
-  text-align: center;
   margin: 5% 0% 10% 0%;
+  justify-content: center;
 }
 
 .nav .image img {
