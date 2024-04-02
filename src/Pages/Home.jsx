@@ -17,7 +17,7 @@ export default function Home() {
             <div className="home-container">
                 <div className="banner">
                     <div className="image">
-                        <img src="https://images.squarespace-cdn.com/content/v1/5b49a84f5b409b250d87a8a8/1585471853957-74GVJ580CX7XKAZ4PBKM/UCSC-Logo.png" alt="slug"></img>
+                        <img src="https://www.altsystems.com/wp-content/uploads/2021/08/UCSC-Logo-1-768x212.png" alt="slug"></img>
                     </div>
                 </div>
 
