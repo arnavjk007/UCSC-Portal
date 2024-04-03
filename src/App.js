@@ -25,6 +25,8 @@ import Personal from './Pages/Personal';
 import Resources from './Pages/Resources';
 import LoginS from './Resource-Pages/LoginS';
 import Passphrase from './Pages/Passphrase';
+import Forms from './Pages/Forms';
+
 
 
 function App() {
@@ -60,6 +62,7 @@ function App() {
             <Route path="/resources" element={<Resources />} />
               <Route path="/resources/login-services" element={<LoginS />} />
             <Route path="/passphrase" element={<Passphrase />} />
+            <Route path="/eforms" element={<Forms />} />
           </Routes>
           </div>
   </Router>

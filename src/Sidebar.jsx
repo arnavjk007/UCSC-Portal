@@ -12,6 +12,7 @@ import { TfiNewWindow } from "react-icons/tfi";
 import { FaIdCard } from "react-icons/fa";
 import { FaBuildingColumns } from "react-icons/fa6";
 import { BsPencilSquare } from "react-icons/bs";
+import { CiLogout } from "react-icons/ci";
 import { IoLogInOutline } from "react-icons/io5";
 import './App.css';
 import { useNavigate } from "react-router-dom";
@@ -112,7 +113,7 @@ const Sidebar = () => {
                     </div> 
                 </div>
                 <footer className="logout-btn">
-                    <button style={{justifyContent: "center"}}onClick={() => {navigate("/login")}}> <IoLogInOutline size={35}/> </button>
+                    <button style={{justifyContent: "center"}}onClick={() => {navigate("/login")}}> <CiLogout size={35} /> </button>
                 </footer>     
             </div>
     )

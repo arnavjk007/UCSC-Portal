@@ -5,7 +5,7 @@ import { TbClockDollar } from "react-icons/tb";
 import { LiaMoneyCheckAltSolid } from "react-icons/lia";
 import { IoDocumentsOutline } from "react-icons/io5";
 import { FaFileInvoiceDollar } from "react-icons/fa6";
-import { SiContactlesspayment } from "react-icons/si";
+import { MdOutlinePayments } from "react-icons/md";
 import { PiStudent } from "react-icons/pi";
 import { FaWpforms } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
@@ -42,7 +42,7 @@ export default function Account() {
         },
         {
             title: "Payments",
-            icon: <SiContactlesspayment size={125}/>,
+            icon: <MdOutlinePayments size={125}/>,
             path: 'payments'
         },
         {

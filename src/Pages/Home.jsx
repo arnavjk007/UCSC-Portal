@@ -16,7 +16,7 @@ export default function Home() {
     return (
             <div className="home-container">
                 <div className="banner">
-                    <div className="image">
+                    <div className="logo">
                         <img src="https://www.altsystems.com/wp-content/uploads/2021/08/UCSC-Logo-1-768x212.png" alt="slug"></img>
                     </div>
                 </div>
