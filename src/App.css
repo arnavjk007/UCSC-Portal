@@ -125,7 +125,7 @@ body {
   overflow: auto;
 }
 
-.nav {
+.sidebar {
   width: 5.5%;
   min-width: 90px;
   height: 100vh;
@@ -134,7 +134,7 @@ body {
   overflow: auto;
 }
 
-.nav .image {
+.sidebar .image {
   display: flex;
   width: 100%;
   background-color: transparent;
@@ -142,11 +142,11 @@ body {
   justify-content: center;
 }
 
-.nav .image img {
+.sidebar .image img {
   width: 100%;
 }
 
-.btn {
+.sidebar .btn {
   display: flex;
   justify-content: left;
   padding: 5%;
@@ -157,7 +157,7 @@ body {
   display: block;
 }
 
-.btn button:focus {
+.sidebar .btn button:focus {
   background-color: #113d67;
 }
 
@@ -177,11 +177,12 @@ body {
 .arrow {
   color: white;
 }
+
 .arrow:hover {
   color: #113d67;
 }
 
-.btn button {
+.sidebar .btn button {
   display: flex;
   text-align: left;
   width: 100%;
@@ -196,20 +197,20 @@ body {
   outline: none;
 }
 
-.btn h4 {
+.sidebar .btn h4 {
   display: flex;
   font-size: 11px;
   padding: 1%;
   margin: 1% 0% 1% 0%;
 }
 
-.logout-btn button h4 {
+.sidebar .logout-btn button h4 {
   display: flex;
   padding: 2%;
   justify-content: center;
 }
 
-.logout-btn button {
+.sidebar .logout-btn button {
   display: flex;
   text-align: left;
   width: 100%;
@@ -224,13 +225,13 @@ body {
   outline: none;
 }
 
-.logout-btn  {
+.sidebar .logout-btn  {
   display: flex;
   justify-content: center;
   padding: 10%;
 }
 
-.nav button:hover {
+.sidebar button:hover {
   background-color: rgb(32, 83, 124);
   color: aliceblue;
 }
@@ -240,7 +241,7 @@ body {
   color: aliceblue;
 }
 
-.nav .logout-btn button:hover {
+.sidebar .logout-btn button:hover {
   background-color: rgb(160, 1, 1);
   color: rgba(255, 255, 255, 0.609);
 }

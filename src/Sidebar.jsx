@@ -90,7 +90,7 @@ const Sidebar = () => {
         }
     ]
     return (
-            <div className="nav"> 
+            <div className="sidebar"> 
                 <div className="image">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/The_University_of_California_1868_UCSC.svg/640px-The_University_of_California_1868_UCSC.svg.png" alt="UCSC logo"></img>   
                 </div>
