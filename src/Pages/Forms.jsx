@@ -64,7 +64,7 @@ const form_data = [
 
     return (
         <div className="container">
-            <div className="info-card" style={{maxWidth:'none'}}>
+            <div className="info-card" style={{maxWidth:'none', padding:'3%'}}>
                 <h1> Undergraduate eForms </h1>
                 <hr></hr>
 
@@ -84,7 +84,7 @@ const form_data = [
                             <div className="form">
                                 <h2> {item.title} </h2>
                                 {item.info}   
-                                <button className="form-btn" onClick={item.link}> <div className="btn-text">{item.btn} ‎ ‎ <FiExternalLink size={20} /></div> </button>
+                                <button className="form-btn"> <div className="btn-text">{item.btn} ‎ ‎ <FiExternalLink size={20} /></div> </button>
                             </div>
                         )
                     })} 

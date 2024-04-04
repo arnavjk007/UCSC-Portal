@@ -26,6 +26,7 @@ import Resources from './Pages/Resources';
 import LoginS from './Resource-Pages/LoginS';
 import Passphrase from './Pages/Passphrase';
 import Forms from './Pages/Forms';
+import StudentCenter from './Pages/StudentCenter';
 
 
 
@@ -63,6 +64,7 @@ function App() {
               <Route path="/resources/login-services" element={<LoginS />} />
             <Route path="/passphrase" element={<Passphrase />} />
             <Route path="/eforms" element={<Forms />} />
+            <Route path="/student-center" element={<StudentCenter />} />
           </Routes>
           </div>
   </Router>

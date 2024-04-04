@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { IoHome } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
@@ -13,7 +13,6 @@ import { FaIdCard } from "react-icons/fa";
 import { FaBuildingColumns } from "react-icons/fa6";
 import { BsPencilSquare } from "react-icons/bs";
 import { CiLogout } from "react-icons/ci";
-import { IoLogInOutline } from "react-icons/io5";
 import './App.css';
 import { useNavigate } from "react-router-dom";
 
@@ -24,6 +23,7 @@ const Sidebar = () => {
 
     const sidebar_data = [
         {
+            id: 0,
             name: 'Home',
             path: '/',
             icon: IoHome

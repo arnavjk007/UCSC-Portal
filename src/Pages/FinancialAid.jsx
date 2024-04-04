@@ -1,8 +1,8 @@
 import React from "react";
 import '../App.css';
 import { useNavigate } from "react-router-dom";
-import { GiReceiveMoney } from "react-icons/gi";
-import { TbMoneybag } from "react-icons/tb";
+import { MdAttachMoney } from "react-icons/md";
+import { CiMoneyCheck1 } from "react-icons/ci";
 import { MdOutlinePendingActions } from "react-icons/md";
 import { TbReportMoney } from "react-icons/tb";
 import { PiStudent } from "react-icons/pi";
@@ -12,12 +12,12 @@ export default function FinancialAid() {
     const financial_titles = [
         {
             title: 'View Financial Aid',
-            icon: <GiReceiveMoney size={125}/>,
+            icon: <MdAttachMoney size={125}/>,
             path: "charges-due"
         },
         {
             title: "Rewards",
-            icon: <TbMoneybag size={125}/>,
+            icon: <CiMoneyCheck1 size={125}/>,
             path: 'epay'
         }, 
         {
