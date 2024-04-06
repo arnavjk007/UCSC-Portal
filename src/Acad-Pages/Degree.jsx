@@ -274,12 +274,12 @@ export default function Degree() {
     // FIX OVERFLOW 
     return (
 
-            <div className="container" style={{display:'block'}}>
+            <div className="container" style={{display:'grid'}}>
             
                 <div className="hstack">
                     <div className="new-card">
                         <div className="info-container">
-                            <h2> Academic Summary </h2>
+                            <h2 style={{textAlign:'center'}}> Academic Summary </h2>
                             <hr></hr>
                             
                             <div className="info">
@@ -313,7 +313,7 @@ export default function Degree() {
 
                     <div className="new-card">
                         <div className="info-container">
-                            <h2> Academic Objectives </h2>
+                            <h2 style={{textAlign:'center'}}> Academic Objectives </h2>
                             <hr></hr>
 
                             <table className="info-table">
@@ -339,7 +339,7 @@ export default function Degree() {
 
                     <div className="new-card">
                         <div className="info-container">
-                            <h2> Degree Progress Report Information </h2>
+                            <h2 style={{textAlign:'center'}}> Degree Progress Report Information </h2>
                             <hr></hr>
 
                             <div className="info">
@@ -352,7 +352,7 @@ export default function Degree() {
 
                     <div className="slimmer-card">
                         <div className="info-container">
-                            <h2> Legend </h2>
+                            <h2 style={{textAlign:'center'}}> Legend </h2>
                             <hr></hr>
                             
 

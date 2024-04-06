@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoHome } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { FaLock } from "react-icons/fa";
@@ -19,6 +19,13 @@ import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
 
     let navigate = useNavigate();
+
+    const [btnState, setBtnState] = useState(null);
+
+    function handleState(id) {
+        setBtnState(id);
+    }
+
     //use <footer> tag for logout button
 
     const sidebar_data = [
@@ -29,61 +36,73 @@ const Sidebar = () => {
             icon: IoHome
         },
         {
+            id: 1,
             name: 'Messages',
             path: '/messages',
             icon: MdEmail 
         },
         {
+            id: 2,
             name: 'Holds',
             path: '/holds',
             icon: FaLock
         },
         {
+            id: 3,
             name: 'Tasks',
             path: '/tasks',
             icon: FaList 
         },
         {
+            id: 4,
             name: 'Academics',
             path: '/academics',
             icon: FaGraduationCap
         },
         {
+            id: 5,
             name: 'Account',
             path: '/account',
             icon: FaDollarSign 
         },
         {
+            id: 6,
             name: 'Enrollment',
             path: '/enrollment',
             icon: IoMdCheckboxOutline
         },
         {
+            id: 7,
             name: 'Financial Aid',
             path: '/financial-aid',
             icon: FaRegMoneyBillAlt 
         },
         {
+            id: 8,
             name: 'Personal Info',
             path: '/personal-info',
             icon: FaUser
         },
         {
+            id: 9,
             name: 'Resources',
             path: '/resources',
             icon: TfiNewWindow
         },
         {
+            id: 10,
             name: 'Passphrase',
             path: '/passphrase',
             icon: FaIdCard 
         },
         {
+            id: 11,
             name: 'Student Center',
             path: '/student-center',
             icon: FaBuildingColumns
         },
         {
+            id: 12,
             name: 'eForms',
             path: '/eforms',
             icon: BsPencilSquare
@@ -99,7 +118,7 @@ const Sidebar = () => {
                     {sidebar_data.map((item) => {
                         return (
                             <div className="btn">
-                                <button title={item.name}  style={{display:'block'}} onClick={() => {navigate(item.path)}}> 
+                                <button className={btnState === item.id ? 'active' : ''} title={item.name}  style={{display:'block'}} onClick={() => {navigate(item.path); handleState(item.id)}}> 
                                     <div style={{display:'flex', justifyContent:'center'}}>
                                         <item.icon size={25} /> 
                                     </div>

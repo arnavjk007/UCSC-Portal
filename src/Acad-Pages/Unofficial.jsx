@@ -41,22 +41,28 @@ export default function Unofficial() {
                             <table id="table" >
                                 <thead>
                                     <tr style={{color: 'black', borderBottom:'2px solid black'}}>
-                                        <th style={{padding:'5px'}}>  </th>
                                         <th style={{padding:'5px'}}> Request Date </th>
                                         <th style={{padding:'5px'}}> Description </th>
                                         <th style={{padding:'5px'}}> Institution </th>
                                         <th style={{padding:'5px'}}> User ID </th>
+                                        <th style={{padding:'5px'}}>  </th>
                                     </tr>
                                 </thead>
                                 <tbody className="no-hover"> 
                                         <tr style={{borderTop: '1px solid black', borderBottom:'1px solid black', fontSize:'13px', color:'black'}}>
-                                            <td style={{padding:'5px', fontWeight:'bolder'}}> <button className="report-btn" > View Report </button></td>
                                             <td style={{padding:'5px'}}> 03/30/2024 </td>
                                             <td style={{padding:'5px'}}> Printable Transcript (PDF) </td>
                                             <td style={{padding:'5px'}}> UCSCM </td>
                                             <td style={{padding:'5px'}}> 11111111 </td>
+                                            <td style={{padding:'5px', fontWeight:'bolder'}}> <button className="report-btn" > View Report </button></td>
                                         </tr>
-                                            
+                                        <tr style={{borderTop: '1px solid black', borderBottom:'1px solid black', fontSize:'13px', color:'black'}}>
+                                            <td style={{padding:'5px'}}> 03/30/2024 </td>
+                                            <td style={{padding:'5px'}}> Printable Transcript (PDF) </td>
+                                            <td style={{padding:'5px'}}> UCSCM </td>
+                                            <td style={{padding:'5px'}}> 11111111 </td>
+                                            <td style={{padding:'5px', fontWeight:'bolder'}}> <button className="report-btn" > View Report </button></td>
+                                        </tr>                        
                                 </tbody>
                             </table>
                         </section>

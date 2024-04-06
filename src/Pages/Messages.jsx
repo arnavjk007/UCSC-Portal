@@ -11,7 +11,7 @@ export default function Messages() {
 
                 <main class="table" id="table">
                     <section class="table__header">
-                        <h1>My Messages</h1>
+                        <h1>Messages</h1>
                     </section>
                     <section class="table__body">
                         <table>
