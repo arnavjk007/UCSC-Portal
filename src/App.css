@@ -183,7 +183,7 @@ body {
   color: #113d67;
 }
 
-.sidebar .btn button {
+.btn button {
   display: flex;
   text-align: left;
   width: 100%;
@@ -198,7 +198,7 @@ body {
   outline: none;
 }
 
-.sidebar .btn h4 {
+.btn h4 {
   display: flex;
   font-size: 11px;
   padding: 1%;
@@ -206,13 +206,13 @@ body {
 }
 
 
-.sidebar .logout-btn button h4 {
+.logout-btn button h4 {
   display: flex;
   padding: 2%;
   justify-content: center;
 }
 
-.sidebar .logout-btn button {
+.logout-btn button {
   display: flex;
   text-align: left;
   width: 100%;
@@ -227,13 +227,13 @@ body {
   outline: none;
 }
 
-.sidebar .logout-btn  {
+.logout-btn  {
   display: flex;
   justify-content: center;
   padding: 10%;
 }
 
-.sidebar button:hover {
+.btn button:hover {
   background-color: rgb(32, 83, 124);
   color: aliceblue;
 }
@@ -250,7 +250,6 @@ body {
 
 .home-container {
   display: block;
-  background-color: rgb(173, 200, 231);
   height: 100%;
   max-height: 100vh;
   background-color: rgb(40, 100, 150);
@@ -284,14 +283,14 @@ body {
 .announcements {
   display: flex;
   width: 100%;
-  background-color: rgba(245, 245, 245, 0.922);
+  background-color: rgb(173, 200, 231);
   padding: 2%;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  padding: 2% 5% 2% 5%;
+  padding: 2% 10% 2% 10%;
 
   /* Center slide text vertically */
   display: flex;
@@ -304,7 +303,47 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
 
+.text {
+  max-height: 100%;
+  width: 100%;
+  padding: 1%;
+  overflow: auto;
+}
+
+.image-box {
+  padding: 1%;
+}
+
+.image-box img {
+  border-radius: 8px;
+}
+
+.read-more-btn {
+  display: flex;
+  width: 50%;
+  margin: 2% 0% 2% 0%;
+}
+
+.read-more-btn button {
+  display: flex;
+  text-align: left;
+  width: 30%;
+  padding: 3% 2% 3% 2%;
+  border-radius: 8px;
+  background: rgb(40, 100, 150);
+  color: rgb(251, 255, 241);
+  font-weight: 700;
+  cursor: pointer;
+  font-size: large;
+  border: none;
+  outline: none;
+}
+
+.read-more-btn button:hover {
+  background-color: rgb(32, 83, 124);
+  color: aliceblue;
 }
 
 .submit {
