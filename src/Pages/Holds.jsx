@@ -6,6 +6,62 @@ export default function Holds() {
 
     let navigate = useNavigate();
 
+    const holds_titles = [
+        {
+            title:'From',
+        },
+        {
+            title:'Date Sent',
+        },
+        {
+            title:'Date Read',
+        },
+        {
+            title:'Expiration Date',
+        },
+        {
+            title:'Subject',
+        },
+    ]
+
+    var holds_data = [
+        {
+           from: 'Financial Services',
+           sent: 'April 1',
+           read: 'New Message',
+           expiration: '05/05/2024',
+           subject: 'Tuition Fees'
+        },
+        {
+            from: 'Financial Services',
+            sent: 'April 1',
+            read: 'New Message',
+            expiration: '05/05/2024',
+            subject: 'Tuition Fees'
+         },
+         {
+            from: 'Financial Services',
+            sent: 'April 1',
+            read: 'New Message',
+            expiration: '05/05/2024',
+            subject: 'Tuition Fees'
+         },
+         {
+            from: 'Financial Services',
+            sent: 'April 1',
+            read: 'New Message',
+            expiration: '05/05/2024',
+            subject: 'Tuition Fees'
+         },
+         {
+            from: 'Financial Services',
+            sent: 'April 1',
+            read: 'New Message',
+            expiration: '05/05/2024',
+            subject: 'Tuition Fees'
+         },
+    ]
+
     return (
             <div className="container">
 
@@ -17,22 +73,25 @@ export default function Holds() {
                         <table>
                             <thead>
                                 <tr>
-                                    <th> From </th>
-                                    <th> Date Sent </th>
-                                    <th> Date Read </th>
-                                    <th> Expiration Date </th>
-                                    <th> Subject </th>
+                                    {holds_titles.map((item) => {
+                                        return (
+                                            <th> {item.title} </th>
+                                        )
+                                    })}
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr onClick={() => navigate('/home')}>
-                                    <td> Student Housing Services</td>
-                                    <td> January 21</td>
-                                    <td> New Hold</td>
-                                    <td> 03/04/2024</td>
-                                    <td> PAY YO BILLS FOO</td>
-                                </tr>
-                                
+                                {holds_data.map((item) => {
+                                    return (
+                                        <tr>
+                                            <td> {item.from} </td>
+                                            <td> {item.sent} </td>
+                                            <td> {item.read} </td>
+                                            <td> {item.expiration} </td>
+                                            <td> {item.subject} </td>
+                                        </tr>
+                                    )
+                                })}
                             </tbody>
                         </table>
                     </section>

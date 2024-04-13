@@ -77,7 +77,6 @@ export default function Academics() {
 
     return (
             <div className="container">
-
                 <div className="cards">
                     <div className="grid">
                         {academics_titles.map((item) => {
@@ -86,7 +85,7 @@ export default function Academics() {
                                     <h1 style={{fontSize:'30px'}}>{item.title}</h1>
                                     {item.icon}
                                 </div>
-                            );
+                            )
                         })}
                     </div>
                 </div>  

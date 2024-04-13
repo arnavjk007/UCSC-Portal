@@ -389,17 +389,18 @@ export default function Degree() {
                     <Box sx={{ width: '100%', typography: 'body1' }}>
                         <TabContext value={value}>
                             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                            <TabList style={{overflowY:'auto'}} onChange={handleChange} centered>
-                                <Tab label="University of California Requirements" value="1"/>
-                                <Tab label="General Education Requirements" value="2" />
+                            <TabList style={{overflowY:'auto', width:'100%'}} onChange={handleChange} centered>
+                                <Tab label="UC Requirements" value="1"/>
+                                <Tab label="GE Requirements" value="2" />
                                 <Tab label="Major Requirements" value="3" />
-                                <Tab label="College Affiliate Requirements" value="4" />
+                                <Tab label="College Requirements" value="4" />
                             </TabList>
                             </Box>
                             <TabPanel value="1">{universityReq()}</TabPanel>
                             <TabPanel value="2">{generalReq()}</TabPanel>
                             <TabPanel value="3">{majorReq()}</TabPanel>
                             <TabPanel value="4">{affiliateReq()}</TabPanel>
+                            
                         </TabContext>
                     </Box>
                     </div>

@@ -72,16 +72,13 @@ export default function Home() {
                                 <SwiperSlide>
                                     <div className="info-card" style={{display:'flex', maxWidth:'none', height:'95%', margin:'0', boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)'}}>
                                         <div className="text">
-                                            <h1> {item.title} </h1>
+                                            <h1> <a style={{border:'none', outline:'none', textDecoration:'none', color:'rgb(40, 100, 150)'}}href="#"> {item.title} </a></h1>
                                             <p> {item.date} </p>
                                             <hr></hr>
 
                                             <p style={{color:'black'}}>
                                                 {item.description}
-                                            </p>
-                                            <div className="read-more-btn">
-                                                <button> Read More » </button>
-                                            </div>                                        
+                                            </p>                                     
                                         </div>
                                     </div>
                                 </SwiperSlide>

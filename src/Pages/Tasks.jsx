@@ -6,6 +6,62 @@ export default function Tasks() {
 
     let navigate = useNavigate();
 
+    const tasks_titles = [
+        {
+            title:'From',
+        },
+        {
+            title:'Date Sent',
+        },
+        {
+            title:'Date Read',
+        },
+        {
+            title:'Expiration Date',
+        },
+        {
+            title:'Subject',
+        },
+    ]
+
+    var tasks_data = [
+        {
+           from: 'Financial Services',
+           sent: 'April 1',
+           read: 'New Message',
+           expiration: '05/05/2024',
+           subject: 'Tuition Fees'
+        },
+        {
+            from: 'Financial Services',
+            sent: 'April 1',
+            read: 'New Message',
+            expiration: '05/05/2024',
+            subject: 'Tuition Fees'
+         },
+         {
+            from: 'Financial Services',
+            sent: 'April 1',
+            read: 'New Message',
+            expiration: '05/05/2024',
+            subject: 'Tuition Fees'
+         },
+         {
+            from: 'Financial Services',
+            sent: 'April 1',
+            read: 'New Message',
+            expiration: '05/05/2024',
+            subject: 'Tuition Fees'
+         },
+         {
+            from: 'Financial Services',
+            sent: 'April 1',
+            read: 'New Message',
+            expiration: '05/05/2024',
+            subject: 'Tuition Fees'
+         },
+    ]
+
     return (
             <div className="container">
 
@@ -17,12 +73,25 @@ export default function Tasks() {
                         <table>
                             <thead>
                                 <tr>
-                                    
-                                
+                                    {tasks_titles.map((item) => {
+                                            return (
+                                                <th> {item.title} </th>
+                                            )
+                                    })}        
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                                {tasks_data.map((item) => {
+                                    return (
+                                        <tr>
+                                            <td> {item.from} </td>
+                                            <td> {item.sent} </td>
+                                            <td> {item.read} </td>
+                                            <td> {item.expiration} </td>
+                                            <td> {item.subject} </td>
+                                        </tr>
+                                    )
+                                })}  
                             </tbody>
                         </table>
                     </section>

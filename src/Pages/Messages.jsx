@@ -4,6 +4,63 @@ import { useNavigate } from "react-router-dom";
 
 export default function Messages() {
 
+    const messages_titles = [
+        {
+            title:'From',
+        },
+        {
+            title:'Date Sent',
+        },
+        {
+            title:'Date Read',
+        },
+        {
+            title:'Expiration Date',
+        },
+        {
+            title:'Subject',
+        },
+    ]
+
+    var messages_data = [
+        {
+           from: 'Student Housing Services',
+           sent: 'April 1',
+           read: 'New Message',
+           expiration: '05/05/2024',
+           subject: 'Housing App. Period Now Open!'
+        },
+        {
+            from: 'Student Housing Services',
+            sent: 'April 1',
+            read: 'New Message',
+            expiration: '05/05/2024',
+            subject: 'Housing App. Period Now Open!'
+         },
+         {
+            from: 'Student Housing Services',
+            sent: 'April 1',
+            read: 'New Message',
+            expiration: '05/05/2024',
+            subject: 'Housing App. Period Now Open!'
+         },
+         {
+            from: 'Student Housing Services',
+            sent: 'April 1',
+            read: 'New Message',
+            expiration: '05/05/2024',
+            subject: 'Housing App. Period Now Open!'
+         },
+         {
+            from: 'Student Housing Services',
+            sent: 'April 1',
+            read: 'New Message',
+            expiration: '05/05/2024',
+            subject: 'Housing App. Period Now Open!'
+         }
+    ]
+
+
     let navigate = useNavigate();
 
     return (      
@@ -17,61 +74,25 @@ export default function Messages() {
                         <table>
                             <thead>
                                 <tr>
-                                    <th> From </th>
-                                    <th> Date Sent </th>
-                                    <th> Date Read </th>
-                                    <th> Expiration Date </th>
-                                    <th> Subject </th>
+                                    {messages_titles.map((item) => {
+                                            return (
+                                                <th> {item.title} </th>
+                                            )
+                                    })}
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr onClick={() => navigate('/home')}>
-                                    <td> Student Housing Services</td>
-                                    <td> January 21</td>
-                                    <td> New Message</td>
-                                    <td> 03/04/2024</td>
-                                    <td> Housing App. Period Now Open!</td>
-                                </tr>
-                                
-                                <tr>
-                                    <td> Student Housing Services</td>
-                                    <td> January 21</td>
-                                    <td> New Message</td>
-                                    <td> 03/04/2024</td>
-                                    <td> Housing App. Period Now Open!</td>
-                                </tr>
-
-                                <tr>
-                                    <td> Student Housing Services</td>
-                                    <td> January 21</td>
-                                    <td> New Message</td>
-                                    <td> 03/04/2024</td>
-                                    <td> Housing App. Period Now Open!</td>
-                                </tr>
-
-                                <tr>
-                                    <td> Student Housing Services</td>
-                                    <td> January 21</td>
-                                    <td> New Message</td>
-                                    <td> 03/04/2024</td>
-                                    <td> Housing App. Period Now Open!</td>
-                                </tr>
-
-                                <tr>
-                                    <td> Student Housing Services</td>
-                                    <td> January 21</td>
-                                    <td> New Message</td>
-                                    <td> 03/04/2024</td>
-                                    <td> Housing App. Period Now Open!</td>
-                                </tr>
-
-                                <tr>
-                                    <td> Student Housing Services</td>
-                                    <td> January 21</td>
-                                    <td> New Message</td>
-                                    <td> 03/04/2024</td>
-                                    <td> Housing App. Period Now Open!</td>
-                                </tr>
+                                {messages_data.map((item) => {
+                                    return (
+                                        <tr>
+                                            <td> {item.from} </td>
+                                            <td> {item.sent} </td>
+                                            <td> {item.read} </td>
+                                            <td> {item.expiration} </td>
+                                            <td> {item.subject} </td>
+                                        </tr>
+                                    )
+                                })}
                             </tbody>
                         </table>
                     </section>
