@@ -23,11 +23,16 @@ import Enrollment from './Pages/Enrollment';
 import FinancialAid from './Pages/FinancialAid';
 import Personal from './Pages/Personal';
 import Resources from './Pages/Resources';
-import LoginS from './Resource-Pages/LoginS';
+import LoginS from './Sub-Pages/LoginS';
 import Passphrase from './Pages/Passphrase';
 import Forms from './Pages/Forms';
 import StudentCenter from './Pages/StudentCenter';
-
+import Charges from './Acc-Pages/Charges';
+import Summary from './Acc-Pages/Summary';
+import Activity from './Acc-Pages/Activity';
+import Payments from './Acc-Pages/Payments';
+import DirectDeposit from './Acc-Pages/DirectDeposit';
+import BillingStatements from './Acc-Pages/BillingStatements';
 
 
 function App() {
@@ -44,6 +49,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/holds" element={<Holds />} />
             <Route path="/tasks" element={<Tasks />} />
+
             <Route path="/academics" element={<Academics />} />
                 <Route path="/academics/advisors" element={<Advisors />} />
                 <Route path="/academics/committees" element={<Committee />} />
@@ -56,7 +62,16 @@ function App() {
                 <Route path="/academics/creditreport" element={<Credit />} />
                 <Route path="/academics/unofficialtranscript" element={<Unofficial />} />
                 <Route path="/academics/whatifreport" element={<Whatif />} />
+
             <Route path="/account" element={<Account />} />
+              <Route path='/account/charges-due' element={<Charges />} />
+
+              <Route path='/account/direct-deposit' element={<DirectDeposit />} />
+              <Route path='/account/billing-statements' element={<BillingStatements />} />
+              <Route path='/account/summary' element={<Summary />} />
+              <Route path='/account/activity' element={<Activity />} />
+              <Route path='/account/payments' element={<Payments />} />
+
             <Route path="/enrollment" element={<Enrollment />} />
             <Route path="/financial-aid" element={<FinancialAid />} />
             <Route path="/personal-info" element={<Personal />} />
