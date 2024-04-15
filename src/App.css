@@ -980,3 +980,17 @@ h5 {
   cursor: pointer;
 }
 
+.bill {
+  display: block;
+  margin: 2% 0% 2% 0%;
+  font-size: 14px;
+}
+
+.bill p {
+  margin: 0;
+  padding: 0;
+}
+
+.dotted {
+  border-top: dotted 3px;
+}
