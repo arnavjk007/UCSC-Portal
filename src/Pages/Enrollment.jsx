@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import '../App.css';
 import { useNavigate } from "react-router-dom";
 import { FaRegCircleXmark } from "react-icons/fa6";
-import { IoMdMore } from "react-icons/io";
 import { FiPlusCircle } from "react-icons/fi";
 import { Checkmark } from 'react-checkmark'
 import { MdOutlineSwapHorizontalCircle } from "react-icons/md";
 import { GoDotFill } from "react-icons/go";
 import { IoIosWarning } from "react-icons/io";
-import { FaSearch } from "react-icons/fa";
 
 export default function Enrollment() {
 
@@ -48,6 +46,9 @@ export default function Enrollment() {
         }
         return
     }
+
+   
+
     
     var cart_data = [
         {
@@ -148,6 +149,7 @@ export default function Enrollment() {
                                     <th> ID </th>
                                     <th> Title </th>
                                     <th> Professor </th>
+                                    <th> Units </th>
                                     <th> Status </th>
                                     <th> Lecture </th>
                                     <th> Lab </th>
@@ -160,8 +162,9 @@ export default function Enrollment() {
                                         
                                             <tr style={{borderBottom: '1px solid black'}}>
                                                 <td style={{ fontWeight:'bolder'}}> {item.id} </td>
-                                                <td> {item.name} ({item.credits}) </td>
+                                                <td> {item.name} </td>
                                                 <td> {item.professor} </td>
+                                                <td> {item.credits}</td>
                                                 <td> <div style={{display:'flex',justifyContent:'center'}}> {getStatus(item.index)} </div> 
                                                 <div style={{display:'flex',justifyContent:'center'}}><h5>{item.status}</h5></div></td>
                                                 
@@ -169,8 +172,6 @@ export default function Enrollment() {
                                                 <td> {item.lab} </td>
                                                 <td> <FiPlusCircle className="addbtn" size={25} onClick={() => changeState(item)}/> </td>
                                             </tr>
-                                        
-                                
                                 )
                             })}
                         </tbody>
@@ -183,11 +184,11 @@ export default function Enrollment() {
 
 
                 <div className="enrollment-block">
-                <div className="enroll-cards" style={{margin:'5% 0% 5% 0%'}}>
+                <div className="enroll-cards">
                     <div className="enrollment-table">
                         <h1 style={{textAlign:'center'}}>Shopping Cart</h1>
                     
-                        <section class="table__body" style={{height: '35vh', width:'100%', fontSize:'15px', border:'1px solid black'}}>
+                        <section class="table__body" style={{width:'100%', fontSize:'15px', border:'1px solid black'}}>
                             <table id="table" >
                                 <thead>
                                     <tr style={{color: 'black', borderBottom:'2px solid black'}}>
@@ -225,7 +226,7 @@ export default function Enrollment() {
 
                     <div className="enrollment-table">
                         <h1 style={{textAlign:'center'}}> Class Schedule </h1>
-                            <section class="table__body" style={{height: '35vh', width:'100%', fontSize:'15px', border:'1px solid black'}}>
+                            <section class="table__body" style={{width:'100%', fontSize:'15px', border:'1px solid black'}}>
                                 <table>
                                     <thead>
                                         <tr style={{color: 'black', borderBottom:'2px solid black'}}>

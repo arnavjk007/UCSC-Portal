@@ -86,6 +86,15 @@ export default function BillingStatements() {
             statementDate: '',
             lateAfter: '',
             amountDue: '100',
+        },
+        {
+            date: '04/23/2023',
+            name: 'Arnav Kumar',
+            address: 'Somewhere in California',
+            accountNumber: '',
+            statementDate: '',
+            lateAfter: '',
+            amountDue: '100',
         }
     ]
 
@@ -112,7 +121,7 @@ export default function BillingStatements() {
 
                         {billing_statments_data.map((item) => {
                             return (
-                                <>
+                                <div style={{display:'block', padding:'1%'}}>
                                     <button className="submit"onClick={handleOpen}> {item.date} </button>
                                     <Modal
                                         aria-labelledby="transition-modal-title"
@@ -198,7 +207,7 @@ export default function BillingStatements() {
                                         </Box>
                                         </Fade>
                                     </Modal>
-                                </>
+                                </div>
                             )
                         })}
 

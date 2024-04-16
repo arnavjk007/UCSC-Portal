@@ -43,51 +43,49 @@ export default function Home() {
         },
     ]
 
-    // replace with carousel
     return (
-            <div className="home-container">
-                <div className="banner">
-                    <div className="logo">
-                        <img src="https://www.altsystems.com/wp-content/uploads/2021/08/UCSC-Logo-1-768x212.png" alt="slug"></img>
-                    </div>
-                </div>
-
-                <div className="home-cards">
-                    <div className="announcements">
-                    <Swiper
-                        slidesPerView={1}
-                        spaceBetween={30}
-                        keyboard={{
-                        enabled: true,
-                        }}
-                        pagination={{
-                        clickable: true,
-                        }}
-                        navigation={true}
-                        modules={[Keyboard, Pagination, Navigation]}
-                        className="mySwiper"
-                    >
-                        {temp_news_data.map((item => {
-                            return (
-                                <SwiperSlide>
-                                    <div className="info-card" style={{display:'flex', maxWidth:'none', height:'95%', margin:'0', boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)'}}>
-                                        <div className="text">
-                                            <h1> <a style={{border:'none', outline:'none', textDecoration:'none', color:'rgb(40, 100, 150)'}}href="#"> {item.title} </a></h1>
-                                            <p> {item.date} </p>
-                                            <hr></hr>
-
-                                            <p style={{color:'black'}}>
-                                                {item.description}
-                                            </p>                                     
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                            )
-                        }))}
-                    </Swiper>
-                    </div>
+        <div className="home-container">
+            <div className="banner">
+                <div className="logo">
+                    <img src="https://www.altsystems.com/wp-content/uploads/2021/08/UCSC-Logo-1-768x212.png" alt="slug"></img>
                 </div>
             </div>
 
+            <div className="home-cards">
+                <div className="announcements">
+                <Swiper
+                    slidesPerView={1}
+                    spaceBetween={30}
+                    keyboard={{
+                    enabled: true,
+                    }}
+                    pagination={{
+                    clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Keyboard, Pagination, Navigation]}
+                    className="mySwiper"
+                >
+                    {temp_news_data.map((item => {
+                        return (
+                            <SwiperSlide>
+                                <div className="info-card" style={{display:'flex', maxWidth:'none', height:'95%', margin:'0', boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)'}}>
+                                    <div className="text">
+                                        <h1> <a style={{border:'none', outline:'none', textDecoration:'none', color:'rgb(40, 100, 150)'}}href="#"> {item.title} </a></h1>
+                                        <p> {item.date} </p>
+                                        <hr></hr>
+
+                                        <p style={{color:'black'}}>
+                                            {item.description}
+                                        </p>                                     
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        )
+                    }))}
+                </Swiper>
+                </div>
+            </div>
+        </div>
     )
 }
