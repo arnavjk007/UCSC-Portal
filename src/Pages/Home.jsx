@@ -64,7 +64,6 @@ export default function Home() {
                     }}
                     navigation={true}
                     modules={[Keyboard, Pagination, Navigation]}
-                    className="mySwiper"
                 >
                     {temp_news_data.map((item => {
                         return (

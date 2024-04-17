@@ -274,124 +274,133 @@ export default function Degree() {
     // FIX OVERFLOW 
     return (
 
-            <div className="container" style={{display:'grid'}}>
+            <div className="container" style={{display:'block'}}>
             
-                <div className="hstack">
-                    <div className="new-card">
-                        <div className="info-container">
-                            <h2 style={{textAlign:'center'}}> Academic Summary </h2>
-                            <hr></hr>
-                            
-                            <div className="info">
-                                <h3> UC GPA: </h3>
-                                <p> 2.0 minimum required </p>
-                            </div>
+                
+                    <div className="cards">
 
-                            <div className="info">
-                                <h3> Total Credits: </h3>
-                                <p> 180 credits minimum required </p>
-                            </div>
+                    
+                        <div className="degree-grid">
+                            <div className="new-card">
+                                <div className="info-container">
+                                    <h2 style={{textAlign:'center'}}> Academic Summary </h2>
+                                    <hr></hr>
+                                    
+                                    <div className="info">
+                                        <h3> UC GPA: </h3>
+                                        <p> 2.0 minimum required </p>
+                                    </div>
 
-                            <div className="info">
-                                <h3> % Graded Pass(P): </h3>
-                                <p> No more than 25% </p>
-                            </div>
+                                    <div className="info">
+                                        <h3> Total Credits: </h3>
+                                        <p> 180 credits minimum required </p>
+                                    </div>
 
-                            <div className="info">
-                                <h3> Senior Residency: </h3>
-                                <p> <a href="https://ucsc.smartcatalogiq.com/en/current/general-catalog/undergraduate-information/undergraduate-academic-program/university-requirements/residence/" target="_blank" rel="noreferrer">Learn more </a> about senior residency. </p>
-                            </div>
+                                    <div className="info">
+                                        <h3> % Graded Pass(P): </h3>
+                                        <p> No more than 25% </p>
+                                    </div>
 
-                            <div className="info">
-                                <p> *Metrics are based on completed coursework* </p>
-                                <p> <a href="https://ue.ucsc.edu/degree-audit-project/resources/basics/academicsummary.html" target="_blank" rel="noreferrer">Learn more </a> about senior residency. </p>
-                                <p> <a href="https://ucsc.smartcatalogiq.com/current/general-catalog/undergraduate-information/undergraduate-academic-program/graduation-requirements/" target="_blank" rel="noreferrer">Learn more </a> about senior residency. </p>
-                            </div>
-                        </div>
+                                    <div className="info">
+                                        <h3> Senior Residency: </h3>
+                                        <p> <a href="https://ucsc.smartcatalogiq.com/en/current/general-catalog/undergraduate-information/undergraduate-academic-program/university-requirements/residence/" target="_blank" rel="noreferrer">Learn more </a> about senior residency. </p>
+                                    </div>
 
-                    </div>
-
-                    <div className="new-card">
-                        <div className="info-container">
-                            <h2 style={{textAlign:'center'}}> Academic Objectives </h2>
-                            <hr></hr>
-
-                            <table className="info-table">
-                                <tr>
-                                    <th> Expected Graduation Date </th>
-                                    <td> 2080 Spring Quarter </td>
-                                </tr>
-                                <tr>
-                                    <th> Program </th>
-                                    <td> Undergraduate </td>
-                                </tr>
-                                <tr>
-                                    <th> Plan </th>
-                                    <td> Computer Science (BS) </td>
-                                </tr>
-                                <tr>
-                                    <th> Req (Catalog) Term </th>
-                                    <td> 2023 Fall Quarter </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div className="new-card">
-                        <div className="info-container">
-                            <h2 style={{textAlign:'center'}}> Degree Progress Report Information </h2>
-                            <hr></hr>
-
-                            <div className="info">
-                                <p>The Degree Progress Report (DPR) is a tool to help track your progress toward graduation. <a href="https://ue.ucsc.edu/degree-audit-project/resources/index.html" target="_blank" rel="noreferrer">Resources are available </a> for all users to aid in the use of the DPR. 
-                                    Contact your major or college advisor with any questions about graduation requirements. The DPR is being updated as part of the Degree Audit Initiative. 
-                                    More information <a href="https://ue.ucsc.edu/degree-audit-project/about.html" target="_blank" rel="noreferrer">about the initiative</a>, as well as the <a href="https://ue.ucsc.edu/degree-audit-project/progress.html" target="_blank" rel="noreferrer">current status</a> of each program, is available on the initiative website. (RG2398)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="slimmer-card">
-                        <div className="info-container">
-                            <h2 style={{textAlign:'center'}}> Legend </h2>
-                            <hr></hr>
-                            
-
-                            <div className="legend-container">
-                            <div className="legend-item">
-                                    <FaCheck style={{color:'green'}} size={30}/>
-                                    <p>Satisfied</p>
+                                    <div className="info">
+                                        <p> *Metrics are based on completed coursework* </p>
+                                        <p> <a href="https://ue.ucsc.edu/degree-audit-project/resources/basics/academicsummary.html" target="_blank" rel="noreferrer">Learn more </a> about senior residency. </p>
+                                        <p> <a href="https://ucsc.smartcatalogiq.com/current/general-catalog/undergraduate-information/undergraduate-academic-program/graduation-requirements/" target="_blank" rel="noreferrer">Learn more </a> about senior residency. </p>
+                                    </div>
                                 </div>
 
-                                <div className="legend-item">
-                                    <ImCross style={{color:'red'}} size={30}/>
-                                    <p>Not Satisfied</p>
-                                </div>
+                            </div>
 
-                                <div className="legend-item">
-                                    <FaDiamond style={{color:'rgb(232, 171, 16)'}} size={30}/>
-                                    <p>In Progress</p>
-                                </div>
+                            <div className="new-card">
+                                <div className="info-container">
+                                    <h2 style={{textAlign:'center'}}> Academic Objectives </h2>
+                                    <hr></hr>
 
-                                <div className="legend-item">
-                                    <FaStarOfLife size={30}/>
-                                    <p>Exception</p>
+                                    <table className="info-table">
+                                        <tr>
+                                            <th> Expected Graduation Date </th>
+                                            <td> 2080 Spring Quarter </td>
+                                        </tr>
+                                        <tr>
+                                            <th> Program </th>
+                                            <td> Undergraduate </td>
+                                        </tr>
+                                        <tr>
+                                            <th> Plan </th>
+                                            <td> Computer Science (BS) </td>
+                                        </tr>
+                                        <tr>
+                                            <th> Req (Catalog) Term </th>
+                                            <td> 2023 Fall Quarter </td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
+
+                            <div className="new-card">
+                                <div className="info-container">
+                                    <h2 style={{textAlign:'center'}}> Degree Progress Report Information </h2>
+                                    <hr></hr>
+
+                                    <div className="info">
+                                        <p style={{fontSize:'16px'}}>The Degree Progress Report (DPR) is a tool to help track your progress toward graduation. <a href="https://ue.ucsc.edu/degree-audit-project/resources/index.html" target="_blank" rel="noreferrer">Resources are available </a> for all users to aid in the use of the DPR. 
+                                            Contact your major or college advisor with any questions about graduation requirements. The DPR is being updated as part of the Degree Audit Initiative. 
+                                            More information <a href="https://ue.ucsc.edu/degree-audit-project/about.html" target="_blank" rel="noreferrer">about the initiative</a>, as well as the <a href="https://ue.ucsc.edu/degree-audit-project/progress.html" target="_blank" rel="noreferrer">current status</a> of each program, is available on the initiative website. (RG2398)</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="new-card">
+                                <div className="info-container">
+                                    <h2 style={{textAlign:'center'}}> Legend </h2>
+                                    <hr></hr>
+                                    
+
+                                    <div className="legend-container">
+                                    <div className="legend-item">
+                                            <FaCheck style={{color:'green'}} size={30}/>
+                                            <p>Satisfied</p>
+                                        </div>
+
+                                        <div className="legend-item">
+                                            <ImCross style={{color:'red'}} size={30}/>
+                                            <p>Not Satisfied</p>
+                                        </div>
+
+                                        <div className="legend-item">
+                                            <FaDiamond style={{color:'rgb(232, 171, 16)'}} size={30}/>
+                                            <p>In Progress</p>
+                                        </div>
+
+                                        <div className="legend-item">
+                                            <FaStarOfLife size={30}/>
+                                            <p>Exception</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
                         </div>
-
-                        
                     </div>
-
-                </div>
+                
 
                 <div className="bttm-hstack">
                     <div className="l-card">
                     <Box sx={{ width: '100%', typography: 'body1' }}>
                         <TabContext value={value}>
                             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                            <TabList style={{overflowY:'auto', width:'100%'}} onChange={handleChange} centered>
-                                <Tab label="UC Requirements" value="1"/>
-                                <Tab label="GE Requirements" value="2" />
+                            <TabList 
+                                style={{display:'flex', justifyContent:'center', overflow:'auto', width:'100%'}} 
+                                onChange={handleChange} 
+                                variant="scrollable"
+                                scrollButtons="auto">
+                                <Tab label="University of California" value="1"/>
+                                <Tab label="General Education" value="2" />
                                 <Tab label="Major Requirements" value="3" />
                                 <Tab label="College Requirements" value="4" />
                             </TabList>

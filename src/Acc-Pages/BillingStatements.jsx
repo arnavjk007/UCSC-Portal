@@ -77,7 +77,7 @@ export default function BillingStatements() {
         p: 4,
     }
 
-    var billing_statments_data = [
+    var billing_statements_data = [
         {
             date: '07/27/2023',
             name: 'Arnav Kumar',
@@ -119,10 +119,10 @@ export default function BillingStatements() {
                             )
                         })}
 
-                        {billing_statments_data.map((item) => {
+                        {billing_statements_data.map((item) => {
                             return (
                                 <div style={{display:'block', padding:'1%'}}>
-                                    <button className="submit"onClick={handleOpen}> {item.date} </button>
+                                    <button className="submit" onClick={handleOpen}> {item.date} </button>
                                     <Modal
                                         aria-labelledby="transition-modal-title"
                                         aria-describedby="transition-modal-description"

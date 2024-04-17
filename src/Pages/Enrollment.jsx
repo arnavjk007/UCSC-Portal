@@ -7,6 +7,11 @@ import { Checkmark } from 'react-checkmark'
 import { MdOutlineSwapHorizontalCircle } from "react-icons/md";
 import { GoDotFill } from "react-icons/go";
 import { IoIosWarning } from "react-icons/io";
+import Box from '@mui/material/Box';
+import Tab from '@mui/material/Tab';
+import TabContext from '@mui/lab/TabContext';
+import TabList from '@mui/lab/TabList';
+import TabPanel from '@mui/lab/TabPanel';
 
 export default function Enrollment() {
 
@@ -46,6 +51,12 @@ export default function Enrollment() {
         }
         return
     }
+
+    const [value, setValue] = React.useState('1');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
 
    
 
@@ -130,13 +141,55 @@ export default function Enrollment() {
             lab: 'TBA',
             state: '0'
         },
+        {
+            index: '2',
+            id: 'COWL 168',
+            name: 'Social Change',
+            professor: 'Stinneford, C.',
+            credits: '2',
+            status: '90/90',
+            time: 'Online',
+            lab: 'TBA',
+            state: '0'
+        },
+        {
+            index: '2',
+            id: 'COWL 168',
+            name: 'Social Change',
+            professor: 'Stinneford, C.',
+            credits: '2',
+            status: '90/90',
+            time: 'Online',
+            lab: 'TBA',
+            state: '0'
+        },
+        {
+            index: '2',
+            id: 'COWL 168',
+            name: 'Social Change',
+            professor: 'Stinneford, C.',
+            credits: '2',
+            status: '90/90',
+            time: 'Online',
+            lab: 'TBA',
+            state: '0'
+        },
+        {
+            index: '2',
+            id: 'COWL 168',
+            name: 'Social Change',
+            professor: 'Stinneford, C.',
+            credits: '2',
+            status: '90/90',
+            time: 'Online',
+            lab: 'TBA',
+            state: '0'
+        },
     ]
 
-
-    return (
-        <div className="enrollment-container">
-
-                <div className="enrollment-block">
+    function searchTab() {
+        return (
+            <div className="enrollment-block">
                     <div className="search-bar">
                         <input className="bar" style={{margin: '0% 0% 1% 0%'}}type="text" placeholder="Search Classes" onChange={handleFilter}></input>
                     </div>
@@ -145,7 +198,7 @@ export default function Enrollment() {
                             <section class="search_table__body">
                         <table className="search-table">
                             <thead>
-                                <tr>
+                                <tr style={{color:'black'}}>
                                     <th> ID </th>
                                     <th> Title </th>
                                     <th> Professor </th>
@@ -160,7 +213,7 @@ export default function Enrollment() {
                             {filterData.map((item) => {
                                 return (
                                         
-                                            <tr style={{borderBottom: '1px solid black'}}>
+                                            <tr style={{borderBottom: '1px solid black', color:'black'}}>
                                                 <td style={{ fontWeight:'bolder'}}> {item.id} </td>
                                                 <td> {item.name} </td>
                                                 <td> {item.professor} </td>
@@ -170,7 +223,7 @@ export default function Enrollment() {
                                                 
                                                 <td> {item.time} </td>
                                                 <td> {item.lab} </td>
-                                                <td> <FiPlusCircle className="addbtn" size={25} onClick={() => changeState(item)}/> </td>
+                                                <td> <FiPlusCircle className="addbtn" size={30} onClick={() => changeState(item)}/> </td>
                                             </tr>
                                 )
                             })}
@@ -179,43 +232,42 @@ export default function Enrollment() {
                         </section>
                     </div>
                 </div>
+        )
+    }
 
-                
-
-
-                <div className="enrollment-block">
-                <div className="enroll-cards">
-                    <div className="enrollment-table">
+    function cartTab() {
+        return (
+            <div className="enrollment-table">
                         <h1 style={{textAlign:'center'}}>Shopping Cart</h1>
                     
-                        <section class="table__body" style={{width:'100%', fontSize:'15px', border:'1px solid black'}}>
+                        <section class="table__body" style={{width:'100%', border:'1px solid black', maxHeight:'60vh'}}>
                             <table id="table" >
                                 <thead>
                                     <tr style={{color: 'black', borderBottom:'2px solid black'}}>
-                                        <th style={{padding:'5px'}}> ID </th>
-                                        <th style={{padding:'5px'}}> Professor </th>
-                                        <th style={{padding:'5px'}}> Units </th>
-                                        <th style={{padding:'5px'}}> Status </th>
-                                        <th style={{padding:'5px'}}> Lecture </th>
-                                        <th style={{padding:'5px'}}> Lab </th>
-                                        <th style={{padding:'5px'}}></th>
-                                        <th style={{padding:'5px'}}></th>
-                                        <th style={{padding:'5px'}}></th>
+                                        <th > ID </th>
+                                        <th > Professor </th>
+                                        <th > Units </th>
+                                        <th > Status </th>
+                                        <th > Lecture </th>
+                                        <th> Lab </th>
+                                        <th ></th>
+                                        <th ></th>
+                                        <th ></th>
                                     </tr>
                                 </thead>
                                 <tbody className="no-hover"> 
                                             {cart_data.map((item) => {
                                                 return (
-                                                    <tr  id={item.index} style={{borderTop: '1px solid black', borderBottom:'1px solid black', fontSize:'13px'}}>
-                                                        <td style={{padding:'5px', fontWeight:'bolder'}}> {item.id} </td>
-                                                        <td style={{padding:'5px'}}> {item.professor} </td>
-                                                        <td style={{padding:'5px'}}> {item.credits} </td>
-                                                        <td style={{padding:'5px'}}> {item.status} </td>
-                                                        <td style={{padding:'5px'}}> {item.time} </td>
-                                                        <td style={{padding:'5px'}}> {item.lab} </td>
-                                                        <td style={{padding:'5px'}}><FiPlusCircle className="addbtn"  onClick={() => changeState(item)} size={27}/></td>
-                                                        <td style={{padding:'5px'}}><MdOutlineSwapHorizontalCircle className="swapbtn" size={30}/></td>
-                                                        <td style={{padding:'5px'}}><FaRegCircleXmark className="xbtn"onClick={() => deleteClass(item.index)} size={27}/></td>
+                                                    <tr  id={item.index} style={{borderTop: '1px solid black', borderBottom:'1px solid black', color:'black'}}>
+                                                        <td style={{fontWeight:'bolder'}}> {item.id} </td>
+                                                        <td > {item.professor} </td>
+                                                        <td > {item.credits} </td>
+                                                        <td > {item.status} </td>
+                                                        <td > {item.time} </td>
+                                                        <td > {item.lab} </td>
+                                                        <td ><FiPlusCircle className="addbtn"  onClick={() => changeState(item)} size={30}/></td>
+                                                        <td ><MdOutlineSwapHorizontalCircle className="swapbtn" size={33}/></td>
+                                                        <td ><FaRegCircleXmark className="xbtn"onClick={() => deleteClass(item.index)} size={30}/></td>
                                                     </tr>
                                                     )
                                             })}    
@@ -223,32 +275,36 @@ export default function Enrollment() {
                             </table>
                         </section>
                     </div>
-
-                    <div className="enrollment-table">
+        )
+    }
+    
+    function scheduleTab() {
+        return (
+            <div className="enrollment-table">
                         <h1 style={{textAlign:'center'}}> Class Schedule </h1>
-                            <section class="table__body" style={{width:'100%', fontSize:'15px', border:'1px solid black'}}>
+                            <section class="table__body" style={{width:'100%', fontSize:'15px', border:'1px solid black', maxHeight:'60vh'}}>
                                 <table>
                                     <thead>
                                         <tr style={{color: 'black', borderBottom:'2px solid black'}}>
-                                            <th style={{padding:'5px'}}> ID </th>
-                                            <th style={{padding:'5px'}}> Professor </th>
-                                            <th style={{padding:'5px'}}> Units </th>
-                                            <th style={{padding:'5px'}}> Lecture </th>
-                                            <th style={{padding:'5px'}}> Lab </th>
-                                            <th style={{padding:'5px'}}></th>
+                                            <th > ID </th>
+                                            <th > Professor </th>
+                                            <th > Units </th>
+                                            <th > Lecture </th>
+                                            <th > Lab </th>
+                                            <th ></th>
                                         </tr>
                                     </thead>
 
                                     <tbody className="no-hover">
                                     {enrollment_data.map((item) => {
                                                             return (
-                                                                <tr  id={item.index}style={{borderTop: '1px solid black', borderBottom:'1px solid black', fontSize:'13px'}}>
-                                                                    <td style={{padding:'5px', fontWeight:'bolder'}}> {item.id} </td>
-                                                                    <td style={{padding:'5px'}}> {item.professor} </td>
-                                                                    <td style={{padding:'5px'}}> {item.credits} </td>
-                                                                    <td style={{padding:'5px'}}> {item.time} </td>
-                                                                    <td style={{padding:'5px'}}> {item.lab} </td>
-                                                                    <td style={{padding:'5px'}}><FaRegCircleXmark className="xbtn"onClick={() => deleteClass(item.index)} size={25}/></td>
+                                                                <tr  id={item.index}style={{borderTop: '1px solid black', borderBottom:'1px solid black', color:'black'}}>
+                                                                    <td style={{fontWeight:'bolder'}}> {item.id} </td>
+                                                                    <td > {item.professor} </td>
+                                                                    <td > {item.credits} </td>
+                                                                    <td > {item.time} </td>
+                                                                    <td >{item.lab} </td>
+                                                                    <td ><FaRegCircleXmark className="xbtn"onClick={() => deleteClass(item.index)} size={30}/></td>
                                                                 </tr>
                                                                 )
                                                         })}  
@@ -256,14 +312,38 @@ export default function Enrollment() {
                                 </table>
                             </section>
                     </div>
-                </div>
-                </div>
 
+        )
+    }
+
+    
+    return (
+        
+        <div className="container">
+            <div className="info-card" style={{maxWidth:'none', height:'100%'}}>
+                <h1>Enrollment</h1>
+                <hr></hr>
+
+                <Box sx={{ width: '100%', typography: 'body1' }}>
+                    <TabContext value={value}>
+                        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                        <TabList 
+                            style={{display:'flex', justifyContent:'center', overflow:'auto', width:'100%'}} 
+                            onChange={handleChange} 
+                            variant="scrollable"
+                            scrollButtons="auto">
+                            <Tab label="Class Search" value="1"/>
+                            <Tab label="Shopping Cart" value="2" />
+                            <Tab label="Class Schedule" value="3" />
+                        </TabList>
+                        </Box>
+                        <TabPanel value="1">{searchTab()}</TabPanel>
+                        <TabPanel value="2">{cartTab()}</TabPanel>
+                        <TabPanel value="3">{scheduleTab()}</TabPanel>                        
+                    </TabContext>
+                </Box>
+            </div>
         </div>
-                
-                
-
-
-                
+                        
     )
 }
