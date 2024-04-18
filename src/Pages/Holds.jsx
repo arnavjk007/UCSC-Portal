@@ -2,27 +2,26 @@ import React from "react";
 import '../App.css';
 import { useNavigate } from "react-router-dom";
 
+const holds_titles = [
+    {
+        title:'From',
+    },
+    {
+        title:'Date Sent',
+    },
+    {
+        title:'Date Read',
+    },
+    {
+        title:'Expiration Date',
+    },
+    {
+        title:'Subject',
+    },
+]
 export default function Holds() {
 
     let navigate = useNavigate();
-
-    const holds_titles = [
-        {
-            title:'From',
-        },
-        {
-            title:'Date Sent',
-        },
-        {
-            title:'Date Read',
-        },
-        {
-            title:'Expiration Date',
-        },
-        {
-            title:'Subject',
-        },
-    ]
 
     var holds_data = [
         {
@@ -64,7 +63,6 @@ export default function Holds() {
 
     return (
             <div className="container">
-
                 <main class="table" id="table">
                     <section class="table__header">
                         <h1>Holds </h1>

@@ -13,67 +13,66 @@ import { FaChartLine } from "react-icons/fa";
 import { IoDocumentOutline } from "react-icons/io5";
 import { FaFileCircleQuestion } from "react-icons/fa6";
 
+const academics_titles = [
+    {
+        title: 'Advisors',
+        icon: <FaChalkboardTeacher size={125}/>,
+        path: "advisors"
+    },
+    {
+        title: "Academic Committees",
+        icon: <MdGroups size={125}/>,
+        path: 'committees'
+    }, 
+    {
+        title: "Course History",
+        icon: <MdOutlineClass size={125}/>,
+        path: 'coursehistory'
+    },
+    {
+        title: "Degree Progress",
+        icon: <FaChartLine size={125}/>,
+        path: 'degreeprogress'
+    },
+    {
+        title: "Evaluations",
+        icon: <PiListMagnifyingGlassBold size={125}/>,
+        path: 'evaluations'
+    },
+    {
+        title: "Grades",
+        icon: <GoChecklist size={125}/>,
+        path: 'grades'
+    },
+    {
+        title: "Planner",
+        icon: <GrPlan size={125}/>,
+        path: 'planner'
+    },
+    {
+        title: "Test Scores",
+        icon:  <PiExam size={125}/>,
+        path: 'testscores'
+    },
+    {
+        title: "Credit Report",
+        icon: <HiOutlineDocumentReport size={125}/>,
+        path: 'creditreport'
+    },
+    {
+        title: "Unofficial Transcript",
+        icon: <IoDocumentOutline size={125}/>,
+        path: 'unofficialtranscript'
+    },
+    {
+        title: "What-if Report",
+        icon: <FaFileCircleQuestion size={125}/>,
+        path: 'whatifreport'
+    },
+]
 export default function Academics() {
     
     let navigate = useNavigate();
-
-    const academics_titles = [
-        {
-            title: 'Advisors',
-            icon: <FaChalkboardTeacher size={125}/>,
-            path: "advisors"
-        },
-        {
-            title: "Academic Committees",
-            icon: <MdGroups size={125}/>,
-            path: 'committees'
-        }, 
-        {
-            title: "Course History",
-            icon: <MdOutlineClass size={125}/>,
-            path: 'coursehistory'
-        },
-        {
-            title: "Degree Progress",
-            icon: <FaChartLine size={125}/>,
-            path: 'degreeprogress'
-        },
-        {
-            title: "Evaluations",
-            icon: <PiListMagnifyingGlassBold size={125}/>,
-            path: 'evaluations'
-        },
-        {
-            title: "Grades",
-            icon: <GoChecklist size={125}/>,
-            path: 'grades'
-        },
-        {
-            title: "Planner",
-            icon: <GrPlan size={125}/>,
-            path: 'planner'
-        },
-        {
-            title: "Test Scores",
-            icon:  <PiExam size={125}/>,
-            path: 'testscores'
-        },
-        {
-            title: "Credit Report",
-            icon: <HiOutlineDocumentReport size={125}/>,
-            path: 'creditreport'
-        },
-        {
-            title: "Unofficial Transcript",
-            icon: <IoDocumentOutline size={125}/>,
-            path: 'unofficialtranscript'
-        },
-        {
-            title: "What-if Report",
-            icon: <FaFileCircleQuestion size={125}/>,
-            path: 'whatifreport'
-        },
-    ]
 
     return (
             <div className="container">
@@ -81,7 +80,7 @@ export default function Academics() {
                     <div className="grid">
                         {academics_titles.map((item) => {
                             return (
-                                <div className="sub-card" onClick={() => {navigate(item.path)}}>
+                                <div className="card" onClick={() => {navigate(item.path)}}>
                                     <h1 style={{fontSize:'30px'}}>{item.title}</h1>
                                     {item.icon}
                                 </div>

@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import '../App.css';
 import { useNavigate } from "react-router-dom";
 import { FaRegCircleXmark } from "react-icons/fa6";
 import { FiPlusCircle } from "react-icons/fi";
 import { Checkmark } from 'react-checkmark'
+import { IoSearch } from "react-icons/io5";
 import { MdOutlineSwapHorizontalCircle } from "react-icons/md";
 import { GoDotFill } from "react-icons/go";
 import { IoIosWarning } from "react-icons/io";
@@ -12,6 +13,7 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
+
 
 export default function Enrollment() {
 
@@ -191,7 +193,8 @@ export default function Enrollment() {
         return (
             <div className="enrollment-block">
                     <div className="search-bar">
-                        <input className="bar" style={{margin: '0% 0% 1% 0%'}}type="text" placeholder="Search Classes" onChange={handleFilter}></input>
+                        <IoSearch style={{justifyContent:'center'}} size={50}/>
+                        <input className="bar" style={{margin: '0% 0% 30px 0%'}}type="text" placeholder="Search Classes" onChange={handleFilter}></input>
                     </div>
 
                     <div className="search-results-container">
@@ -211,20 +214,19 @@ export default function Enrollment() {
                             </thead>
                             <tbody> 
                             {filterData.map((item) => {
-                                return (
+                                return (    
+                                    <tr style={{borderBottom: '1px solid black', color:'black'}}>
+                                        <td style={{ fontWeight:'bolder'}}> {item.id} </td>
+                                        <td> {item.name} </td>
+                                        <td> {item.professor} </td>
+                                        <td> {item.credits}</td>
+                                        <td> <div style={{display:'flex',justifyContent:'center'}}> {getStatus(item.index)} </div> 
+                                        <div style={{display:'flex',justifyContent:'center'}}><h5>{item.status}</h5></div></td>
                                         
-                                            <tr style={{borderBottom: '1px solid black', color:'black'}}>
-                                                <td style={{ fontWeight:'bolder'}}> {item.id} </td>
-                                                <td> {item.name} </td>
-                                                <td> {item.professor} </td>
-                                                <td> {item.credits}</td>
-                                                <td> <div style={{display:'flex',justifyContent:'center'}}> {getStatus(item.index)} </div> 
-                                                <div style={{display:'flex',justifyContent:'center'}}><h5>{item.status}</h5></div></td>
-                                                
-                                                <td> {item.time} </td>
-                                                <td> {item.lab} </td>
-                                                <td> <FiPlusCircle className="addbtn" size={30} onClick={() => changeState(item)}/> </td>
-                                            </tr>
+                                        <td> {item.time} </td>
+                                        <td> {item.lab} </td>
+                                        <td><FiPlusCircle className="addbtn" title="Add Class" size={30} onClick={() => changeState(item)}/></td>
+                                    </tr>
                                 )
                             })}
                         </tbody>
@@ -265,11 +267,11 @@ export default function Enrollment() {
                                                         <td > {item.status} </td>
                                                         <td > {item.time} </td>
                                                         <td > {item.lab} </td>
-                                                        <td ><FiPlusCircle className="addbtn"  onClick={() => changeState(item)} size={30}/></td>
-                                                        <td ><MdOutlineSwapHorizontalCircle className="swapbtn" size={33}/></td>
-                                                        <td ><FaRegCircleXmark className="xbtn"onClick={() => deleteClass(item.index)} size={30}/></td>
+                                                        <td ><FiPlusCircle className="addbtn" title="Add Class"onClick={() => changeState(item)} size={30}/></td>
+                                                        <td ><MdOutlineSwapHorizontalCircle className="swapbtn" title="Swap Class"size={33}/></td>
+                                                        <td ><FaRegCircleXmark className="xbtn" title="Delete Class" onClick={() => deleteClass(item.index)} size={30}/></td>
                                                     </tr>
-                                                    )
+                                                )
                                             })}    
                                 </tbody>
                             </table>
@@ -297,17 +299,17 @@ export default function Enrollment() {
 
                                     <tbody className="no-hover">
                                     {enrollment_data.map((item) => {
-                                                            return (
-                                                                <tr  id={item.index}style={{borderTop: '1px solid black', borderBottom:'1px solid black', color:'black'}}>
-                                                                    <td style={{fontWeight:'bolder'}}> {item.id} </td>
-                                                                    <td > {item.professor} </td>
-                                                                    <td > {item.credits} </td>
-                                                                    <td > {item.time} </td>
-                                                                    <td >{item.lab} </td>
-                                                                    <td ><FaRegCircleXmark className="xbtn"onClick={() => deleteClass(item.index)} size={30}/></td>
-                                                                </tr>
-                                                                )
-                                                        })}  
+                                        return (
+                                            <tr  id={item.index}style={{borderTop: '1px solid black', borderBottom:'1px solid black', color:'black'}}>
+                                                <td style={{fontWeight:'bolder'}}> {item.id} </td>
+                                                <td > {item.professor} </td>
+                                                <td > {item.credits} </td>
+                                                <td > {item.time} </td>
+                                                <td >{item.lab} </td>
+                                                <td ><FaRegCircleXmark className="xbtn" title="Add Class" onClick={() => deleteClass(item.index)} size={30}/></td>
+                                            </tr>
+                                        )
+                                    })}  
                                     </tbody>
                                 </table>
                             </section>

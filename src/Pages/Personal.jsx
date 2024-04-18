@@ -64,7 +64,7 @@ export default function Personal() {
                     <div className="grid">
                         {personal_titles.map((item) => {
                         return (
-                            <div className="sub-card" onClick={() => {navigate(item.path)}}>
+                            <div className="card" onClick={() => {navigate(item.path)}}>
                                 <h1 style={{fontSize:'30px'}}>{item.title}</h1>
                                 {item.icon}
                             </div>

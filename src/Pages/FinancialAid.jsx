@@ -43,7 +43,7 @@ export default function FinancialAid() {
                     <div className="grid">
                         {financial_titles.map((item) => {
                         return (
-                            <div className="sub-card">
+                            <div className="card">
                                 <h1 style={{fontSize:'30px'}}>{item.title}</h1>
                                 {item.icon}
                             </div>

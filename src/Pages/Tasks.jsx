@@ -2,27 +2,28 @@ import React from "react";
 import '../App.css';
 import { useNavigate } from "react-router-dom";
 
+const tasks_titles = [
+    {
+        title:'From',
+    },
+    {
+        title:'Date Sent',
+    },
+    {
+        title:'Date Read',
+    },
+    {
+        title:'Expiration Date',
+    },
+    {
+        title:'Subject',
+    },
+]
+
 export default function Tasks() {
 
     let navigate = useNavigate();
 
-    const tasks_titles = [
-        {
-            title:'From',
-        },
-        {
-            title:'Date Sent',
-        },
-        {
-            title:'Date Read',
-        },
-        {
-            title:'Expiration Date',
-        },
-        {
-            title:'Subject',
-        },
-    ]
 
     var tasks_data = [
         {

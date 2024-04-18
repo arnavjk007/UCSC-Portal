@@ -281,7 +281,7 @@ export default function Degree() {
 
                     
                         <div className="degree-grid">
-                            <div className="new-card">
+                            <div className="small-info-card">
                                 <div className="info-container">
                                     <h2 style={{textAlign:'center'}}> Academic Summary </h2>
                                     <hr></hr>
@@ -315,7 +315,7 @@ export default function Degree() {
 
                             </div>
 
-                            <div className="new-card">
+                            <div className="small-info-card">
                                 <div className="info-container">
                                     <h2 style={{textAlign:'center'}}> Academic Objectives </h2>
                                     <hr></hr>
@@ -341,7 +341,7 @@ export default function Degree() {
                                 </div>
                             </div>
 
-                            <div className="new-card">
+                            <div className="small-info-card">
                                 <div className="info-container">
                                     <h2 style={{textAlign:'center'}}> Degree Progress Report Information </h2>
                                     <hr></hr>
@@ -354,7 +354,7 @@ export default function Degree() {
                                 </div>
                             </div>
 
-                            <div className="new-card">
+                            <div className="small-info-card">
                                 <div className="info-container">
                                     <h2 style={{textAlign:'center'}}> Legend </h2>
                                     <hr></hr>
@@ -390,7 +390,7 @@ export default function Degree() {
                 
 
                 <div className="bttm-hstack">
-                    <div className="l-card">
+                    <div className="bottom-card">
                     <Box sx={{ width: '100%', typography: 'body1' }}>
                         <TabContext value={value}>
                             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>

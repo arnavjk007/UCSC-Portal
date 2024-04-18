@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 ::-webkit-scrollbar {display:none;}
 
-
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +12,8 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/*START OF LOGIN PAGE.. NOT INCLUDED IN APP*/
 
 .login-background {
     font-family: 'Poppins, sans-serif';
@@ -109,6 +110,10 @@ body {
     cursor: pointer;
 }
 
+/*END OF LOGIN CSS*/
+
+/*START OF APP CSS*/
+
 .wrapper {
   display: block;
   width: 100%;
@@ -147,7 +152,7 @@ body {
   width: 100%;
 }
 
-.sidebar .btn {
+.btn {
   display: flex;
   justify-content: left;
   padding: 5%;
@@ -176,14 +181,6 @@ body {
   border-radius: 8px;
 }
 
-.arrow {
-  color: white;
-}
-
-.arrow:hover {
-  color: #113d67;
-}
-
 .btn button {
   display: flex;
   text-align: left;
@@ -197,7 +194,6 @@ body {
   font-size: large;
   border: none;
   outline: none;
-  
 }
 
 .btn h4 {
@@ -206,7 +202,6 @@ body {
   padding: 1%;
   margin: 1% 0% 1% 0%;
 }
-
 
 .logout-btn button h4 {
   display: flex;
@@ -240,12 +235,7 @@ body {
   color: aliceblue;
 }
 
-.submit:hover {
-  background-color: rgb(32, 83, 124);
-  color: aliceblue;
-}
-
-.sidebar .logout-btn button:hover {
+.logout-btn button:hover {
   background-color: rgb(160, 1, 1);
   color: rgba(255, 255, 255, 0.609);
 }
@@ -300,11 +290,24 @@ body {
   align-items: center;
 }
 
-.swiper-slide img {
-  display: block;
+.news-card {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 95%;
+  background: rgb(244, 237, 237);
+  border-radius: 16px;
+  padding: 2%;
+  margin: 0;
+  font-size: large;
+  border: 5px solid transparent;
+  color: rgb(40, 100, 150);
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: 0.5s;
+}
+
+.news-card:hover {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  transition: 0.5s;
 }
 
 .text {
@@ -326,32 +329,6 @@ body {
   border-radius: 8px;
 }
 
-.read-more-btn {
-  display: flex;
-  width: 50%;
-  margin: 2% 0% 2% 0%;
-}
-
-.read-more-btn button {
-  display: flex;
-  text-align: left;
-  width: 30%;
-  padding: 3% 2% 3% 2%;
-  border-radius: 8px;
-  background: rgb(40, 100, 150);
-  color: rgb(251, 255, 241);
-  font-weight: 700;
-  cursor: pointer;
-  font-size: large;
-  border: none;
-  outline: none;
-}
-
-.read-more-btn button:hover {
-  background-color: rgb(32, 83, 124);
-  color: aliceblue;
-}
-
 .submit {
   width: 200px;
   height: 50px;
@@ -363,6 +340,11 @@ body {
   font-size: large;
   border: none;
   outline: none;
+}
+
+.submit:hover {
+  background-color: rgb(32, 83, 124);
+  color: aliceblue;
 }
 
 .cards {
@@ -389,55 +371,30 @@ body {
   justify-content: center;
 }
 
-.wrapper .wcards {
-  display: flex;
-  width: 100%;
-  height: 55vh;
-  background-color: rgb(173, 200, 231);
-  padding: 5%;
-  justify-content: space-between;
-}
-
 .card {
-  width: 250px;
-  height: 250px;
-  border-radius: 16px;
-  padding: 2%;
-  text-align: center;
-  font-size: large;
-  border: 4px solid transparent;
-  background: rgb(244, 237, 237);
-  color: rgb(40, 100, 150);
-}
-
-.wrapper .card:hover {
-  border-color: rgb(29, 121, 227);
-  border-width: 4px;
-}
-
-.wrapper .sub-card {
   background: rgb(244, 237, 237);
   border-radius: 16px;
   padding: 2%;
   font-size: large;
-  border: 5px solid transparent;
+  border: 2px solid transparent;
   color: rgb(40, 100, 150);
   text-align: center;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
-.wrapper .sub-card:hover {
-  border-color: rgb(40, 100, 150);
-  border-width: 5px;
   transition: 0.5s;
 }
 
-.wrapper .sub-card h1 {
+.card:hover {
+  box-shadow: 0 45px 65px rgba(0,0,0,0.50), 0 35px 22px rgba(0,0,0,0.16);
+  transition: 0.5s;
+
+}
+
+.card h1 {
   text-align: left;
   padding: 10px;
 }
 
-.wrapper .container .enrollment-cards {
+.enrollment-cards {
   position: relative;
   display: flex;
   width: 100%;
@@ -447,7 +404,7 @@ body {
   justify-content: center;
 }
 
-.wrapper .container .enrollment-cards .search-card {
+.search-card {
   width: 50%;
   height: 100%;
   border-radius: 16px 0px 0px 16px;;
@@ -456,32 +413,6 @@ body {
   background: rgb(244, 237, 237);
   color: rgb(40, 100, 150);
   border-right: 1px solid black;
-}
-
-.inner-search-inputs {
-  width: 100%;
-  height: fit-content;
-  border-radius: 16px;
-  padding: 5px;
-  text-align: center;
-  font-size: large;
-  border: 4px solid transparent;
-  background: rgb(244, 237, 237);
-  color: rgb(40, 100, 150);
-  text-align: center;
-}
-
-.inner-search-results {
-  width: 100%;
-  height: 70vh;
-  border-radius: 16px;
-  padding: 5px;
-  text-align: center;
-  font-size: large;
-  border: 4px transparent;
-  background: rgb(244, 237, 237);
-  color: rgb(40, 100, 150);
-  text-align: center;
 }
 
 .addbtn {
@@ -521,8 +452,7 @@ body {
   justify-content: center;
 }
 
-
-.wrapper .container .enrollment-cards .cart-card {
+.cart-card {
   width: 50%;
   height: 100%;
   border-radius: 0px 16px 16px 0px;
@@ -536,7 +466,6 @@ body {
 }
 
 h1 {
-  font: 100;
   padding: 5px;
   text-align: left;
 }
@@ -557,7 +486,7 @@ p {
   font-weight: 500;
 }
 
-.wrapper .container .contact {
+.contact {
   position: relative;
   width: 100%;
   max-width: 350px;
@@ -680,10 +609,11 @@ tbody tr td  {
   justify-content: center;
 }
 
+/*fix max-height style...*/
 .search-results-container {
   display: flex;
   width: 100%;
-  max-height:60vh;
+  max-height: 60vh;
   justify-content: center;
   overflow: auto;
   background-color: #fffb;
@@ -691,14 +621,8 @@ tbody tr td  {
   border-radius: 16px;
 }
 
-.search-result {
-  display: flex;
-  width: 100%;
-}
-
 .search-table {
   width: 100%;
-  height: 100%;
   border-collapse: collapse;
 }
 
@@ -708,7 +632,6 @@ tbody tr td  {
 
 .search_table__body {
   width: 100%;
-  height: 100%;
   background-color: #fffb;
 }
 
@@ -757,7 +680,6 @@ tbody tr td  {
 .info-card {
   width: 100%;
   height: fit-content;
-  max-width: 75vh;
   background: rgb(244, 237, 237);
   border-radius: 16px;
   padding: 2%;
@@ -776,28 +698,6 @@ tbody tr td  {
   color: black;
   font-weight: 500;
   margin: 20px 0px 20px 0px;
-}
-
-.row {
-  height: 10vh;
-  margin: 1% 0% 1% 0%;
-  background-color: rgb(40, 100, 150);
-  border-radius: 8px;
-  color: aliceblue;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
-.row:hover {
-  background-color: rgb(32, 83, 120);
-  border-radius: 16px;
-  transition: 0.5s;
-}
-
-.row-text {
-  display:flex;
-  width: 100%;
-  padding: 0% 1% 0% 1%;
-  justify-content: space-between
 }
 
 .info-block {
@@ -829,7 +729,7 @@ tbody tr td  {
   padding: 2% 1.5% 2% 2%;
 }
 
-.new-card {
+.small-info-card {
   width: 100%;
   max-width: 40vh;
   height: 100%;
@@ -878,7 +778,7 @@ tbody tr td  {
   overflow: auto;
 }
 
-.l-card {
+.bottom-card {
   display: block;
   width: 100%;
   height:100%;
@@ -1028,3 +928,80 @@ h5 {
 .dotted {
   border-top: dotted 3px;
 }
+
+.info-grid {
+  display: grid;
+  width: 100%;
+  grid-gap: 2rem;
+  padding: 2%;
+  margin: 2% 0% 0% 0%;
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: center;
+}
+
+.buttons {
+  display:flex;
+  width:100%;
+}
+
+.row-text {
+  max-height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.sc-card {
+  width: 300px;
+  height: 300px;
+  background: rgb(242, 242, 242);
+  border-radius: 16px;
+  padding: 3%;
+  margin: 0;
+  font-size: large;
+  border: 5px solid transparent;
+  color: rgb(40, 100, 150);
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.sc-body {
+  display:block;
+  max-width: 300px;
+  max-height: 230px;
+  margin: auto;
+  overflow:auto;
+}
+
+.sc-btns {
+  display:flex;
+  margin: 3% 0% 3% 0%;
+}
+
+.sc-btn {
+  width: 100%;
+  padding: 3%;
+  margin: 0% 1% 0% 1%;
+  border-radius: 16px;
+  background: rgb(40, 100, 150);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: large;
+  border: none;
+  outline: none;
+}
+
+.row {
+  height: 5vh;
+  margin: 3% 0% 3% 0%;
+  background-color: rgb(40, 100, 150);
+  border-radius: 8px;
+  color: aliceblue;
+}
+
+.row-text {
+  display:flex;
+  padding: 0% 3% 0% 3%;
+  justify-content:space-between;
+}
+

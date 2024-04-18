@@ -2,25 +2,25 @@ import React from "react";
 import '../App.css';
 import { useNavigate } from "react-router-dom";
 
-export default function Messages() {
+const messages_titles = [
+    {
+        title:'From',
+    },
+    {
+        title:'Date Sent',
+    },
+    {
+        title:'Date Read',
+    },
+    {
+        title:'Expiration Date',
+    },
+    {
+        title:'Subject',
+    },
+]
 
-    const messages_titles = [
-        {
-            title:'From',
-        },
-        {
-            title:'Date Sent',
-        },
-        {
-            title:'Date Read',
-        },
-        {
-            title:'Expiration Date',
-        },
-        {
-            title:'Subject',
-        },
-    ]
+export default function Messages() {
 
     var messages_data = [
         {
@@ -59,7 +59,6 @@ export default function Messages() {
             subject: 'Housing App. Period Now Open!'
          }
     ]
-
 
     let navigate = useNavigate();
 
