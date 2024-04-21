@@ -202,14 +202,14 @@ export default function Enrollment() {
                         <table className="search-table">
                             <thead>
                                 <tr style={{color:'black'}}>
-                                    <th> ID </th>
-                                    <th> Title </th>
-                                    <th> Professor </th>
-                                    <th> Units </th>
-                                    <th> Status </th>
-                                    <th> Lecture </th>
-                                    <th> Lab </th>
-                                    <th> </th>
+                                    <th style={{padding: '7px'}}> ID </th>
+                                    <th style={{padding: '7px'}}> Title </th>
+                                    <th style={{padding: '7px'}}> Professor </th>
+                                    <th style={{padding: '7px'}}> Units </th>
+                                    <th style={{padding: '7px'}}> Status </th>
+                                    <th style={{padding: '7px'}}> Lecture </th>
+                                    <th style={{padding: '7px'}}> Lab </th>
+                                    <th style={{padding: '7px'}}> </th>
                                 </tr>
                             </thead>
                             <tbody> 
@@ -217,7 +217,7 @@ export default function Enrollment() {
                                 return (    
                                     <tr style={{borderBottom: '1px solid black', color:'black'}}>
                                         <td style={{ fontWeight:'bolder'}}> {item.id} </td>
-                                        <td> {item.name} </td>
+                                        <td > {item.name} </td>
                                         <td> {item.professor} </td>
                                         <td> {item.credits}</td>
                                         <td> <div style={{display:'flex',justifyContent:'center'}}> {getStatus(item.index)} </div> 
@@ -306,7 +306,7 @@ export default function Enrollment() {
                                                 <td > {item.credits} </td>
                                                 <td > {item.time} </td>
                                                 <td >{item.lab} </td>
-                                                <td ><FaRegCircleXmark className="xbtn" title="Add Class" onClick={() => deleteClass(item.index)} size={30}/></td>
+                                                <td><FaRegCircleXmark className="xbtn" title="Add Class" onClick={() => deleteClass(item.index)} size={30}/></td>
                                             </tr>
                                         )
                                     })}  

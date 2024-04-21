@@ -12,7 +12,7 @@ import { TfiNewWindow } from "react-icons/tfi";
 import { FaIdCard } from "react-icons/fa";
 import { FaBuildingColumns } from "react-icons/fa6";
 import { BsPencilSquare } from "react-icons/bs";
-import { CiLogout } from "react-icons/ci";
+import { HiOutlineLogin } from "react-icons/hi";
 import './App.css';
 import { useNavigate } from "react-router-dom";
 
@@ -111,7 +111,7 @@ const Sidebar = () => {
     return (
             <div className="sidebar"> 
                 <div className="image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/The_University_of_California_1868_UCSC.svg/640px-The_University_of_California_1868_UCSC.svg.png" alt="UCSC logo"></img>   
+                    <img src="https://bpb-us-e1.wpmucdn.com/sites.ucsc.edu/dist/6/210/files/2015/06/ucsc-slug-logo.png" alt="UCSC logo" onClick={() => window.open("https://www.ucsc.edu/")}></img>   
                 </div>
                 <div className="contents">
                     <div>
@@ -132,7 +132,7 @@ const Sidebar = () => {
                     </div> 
                 </div>
                 <footer className="logout-btn">
-                    <button style={{justifyContent: "center"}}onClick={() => {navigate("/login")}}> <CiLogout size={35} /> </button>
+                    <button style={{justifyContent: "center"}}onClick={() => {navigate("/login")}}> <HiOutlineLogin size={35} /> </button>
                 </footer>     
             </div>
     )

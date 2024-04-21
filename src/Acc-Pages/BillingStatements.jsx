@@ -20,6 +20,7 @@ const style = {
     boxShadow: 24,
     p: 4,
 }
+
 //information/text in the card
 const statements_info = [
     {
@@ -71,14 +72,13 @@ const student_billing_statements = [
 ]
 export default function BillingStatements() {
 
-    const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
-
-    
+    const [open, setOpen] = useState(null);
+    const handleOpen = (id) => setOpen(id);
+    const handleClose = () => setOpen(null);
 
     var billing_statements_data = [
         {
+            id: 0,
             date: '07/27/2023',
             name: 'Arnav Kumar',
             address: 'Somewhere in California',
@@ -86,8 +86,10 @@ export default function BillingStatements() {
             statementDate: '',
             lateAfter: '',
             amountDue: '100',
+            open: useState(false)
         },
         {
+            id: 1,
             date: '04/23/2023',
             name: 'Arnav Kumar',
             address: 'Somewhere in California',
@@ -95,6 +97,7 @@ export default function BillingStatements() {
             statementDate: '',
             lateAfter: '',
             amountDue: '100',
+            open: useState(false)
         }
     ]
 
@@ -122,28 +125,26 @@ export default function BillingStatements() {
                     {billing_statements_data.map((item) => {
                         return (
                             <div style={{display:'block', padding:'1%'}}>
-                                <button className="submit" onClick={handleOpen}> {item.date} </button>
+                                <button key={item.index} className="submit" onClick={() => handleOpen(item.id)}> {item.date} </button>
                                 <Modal
-                                    aria-labelledby="transition-modal-title"
-                                    aria-describedby="transition-modal-description"
-                                    open={open}
+                                    open={open === item.id}
                                     onClose={handleClose}
                                     closeAfterTransition
                                     slots={{ backdrop: Backdrop }}
-                                    className="modal"
+                                    key={item.id}
                                     slotProps={{
                                     backdrop: {
                                         timeout: 500,
                                     },
                                     }}
                                 >
-                                    <Fade in={open}>
+                                    <Fade in={open===item.id}>
                                     <Box sx={style}>
-                                        <Typography id="transition-modal-title" variant="h6" component="h2">
+                                        <Typography variant="h6" component="h2">
                                         Billing Statement for {item.date}
                                         <hr></hr>
                                         </Typography>
-                                        <Typography id="transition-modal-description" sx={{ mt: 2 }}>
+                                        <Typography sx={{ mt: 2 }}>
 
                                         <p>{item.name}</p>
                                         <p>{item.address}</p>
@@ -155,8 +156,7 @@ export default function BillingStatements() {
                                             )
                                         })}
                                         <hr className="dotted"></hr>
-                                        
-                    
+                                    
                                         {student_billing_statements.map((value) => {
                                             return (
                                                 <div className="bill">
