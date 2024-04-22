@@ -11,15 +11,16 @@ const style = {
     position: 'absolute',
     top: '50%',
     left: '50%',
-    width: '80%',
-    height: '90%',
+    width: '60%',
+    height: '80%',
     overflow: 'auto',
     transform: 'translate(-50%, -50%)',
     bgcolor: 'background.paper',
     border: '2px solid #000',
+    borderRadius: '16px',
     boxShadow: 24,
     p: 4,
-}
+};
 
 //information/text in the card
 const statements_info = [

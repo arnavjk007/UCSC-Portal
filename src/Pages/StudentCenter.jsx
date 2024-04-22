@@ -109,54 +109,7 @@ export default function StudentCenter() {
 
     return (
         <div className="container">
-            <div className="info-card" style={{height:'100%', overflow:'auto'}}>
-                <h1>Student Center</h1>
-                <hr></hr>
-
-                <div className="cards">
-                    <div className="info-grid">
-                        {student_center_data.map((item) => {
-                            return (
-                                <div className="sc-card">
-                                    <h2> {item.title} </h2>
-                                    <hr></hr>
-                                    <div className="sc-body">
-                                        <div className="sc-btns">
-                                            {item.buttons.map((value) => {
-                                                return (
-                                                    <button className="sc-btn"> {value} </button>
-                                                )
-                                            })}
-                                            
-                                        </div>
-                                        
-                                        <div className="rows">
-                                            {item.rows.map((value) => {
-                                                return (
-                                                    <div className="row" onClick={() => navigate(value.link)}>
-                                                        <div className="row-text">
-                                                            <h5> {value.first} </h5>
-                                                            <h5> {value.second}</h5>
-                                                        </div>
-                                                    </div>
-                                                )
-                                            })}
-                                            
-
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                        })}
-                        
-
-
-                    </div>
-                </div>
-                
-             
-                
-            </div>
+            
         </div>
     )
 }

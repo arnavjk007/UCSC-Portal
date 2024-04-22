@@ -5,7 +5,7 @@ export default function Passphrase() {
 
     return (
             <div className="container">
-                <div className="info-card" style={{maxWidth:'none', padding:'3%', margin:'auto'}}>
+                <div className="info-card" style={{maxWidth:'50vw', padding:'3%', margin:'auto'}}>
                     <h1>Passphrase</h1>
                     <hr></hr>
                     
