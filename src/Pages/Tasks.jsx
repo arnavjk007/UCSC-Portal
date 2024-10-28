@@ -1,6 +1,12 @@
 import React from "react";
 import '../App.css';
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Box from '@mui/material/Box';
+import Backdrop from '@mui/material/Backdrop';
+import Modal from '@mui/material/Modal';
+import Fade from '@mui/material/Fade';
+import Typography from '@mui/material/Typography';
 
 const tasks_titles = [
     {
@@ -20,28 +26,34 @@ const tasks_titles = [
     },
 ]
 
+//style for modal
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    width: '60%',
+    height: '80%',
+    overflow: 'auto',
+    transform: 'translate(-46%, -50%)',
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    borderRadius: '16px',
+    boxShadow: 24,
+    p: 4,
+};
+
 export default function Tasks() {
 
     let navigate = useNavigate();
+    const [open, setOpen] = useState(null);
+    const handleOpen = (id) => setOpen(id);
+    const handleClose = () => setOpen(null);
 
-    //style for modal
-    const style = {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        width: '60%',
-        height: '80%',
-        overflow: 'auto',
-        transform: 'translate(-50%, -50%)',
-        bgcolor: 'background.paper',
-        border: '2px solid #000',
-        borderRadius: '16px',
-        boxShadow: 24,
-        p: 4,
-    };
     
+
     var tasks_data = [
         {
+           id: 0, 
            from: 'Financial Services',
            sent: 'April 1',
            read: 'New Message',
@@ -49,6 +61,7 @@ export default function Tasks() {
            subject: 'Tuition Fees'
         },
         {
+            id: 1, 
             from: 'Financial Services',
             sent: 'April 1',
             read: 'New Message',
@@ -56,6 +69,7 @@ export default function Tasks() {
             subject: 'Tuition Fees'
          },
          {
+            id: 2, 
             from: 'Financial Services',
             sent: 'April 1',
             read: 'New Message',
@@ -63,6 +77,7 @@ export default function Tasks() {
             subject: 'Tuition Fees'
          },
          {
+            id: 3, 
             from: 'Financial Services',
             sent: 'April 1',
             read: 'New Message',
@@ -70,6 +85,7 @@ export default function Tasks() {
             subject: 'Tuition Fees'
          },
          {
+            id: 4, 
             from: 'Financial Services',
             sent: 'April 1',
             read: 'New Message',
@@ -99,13 +115,47 @@ export default function Tasks() {
                             <tbody>
                                 {tasks_data.map((item) => {
                                     return (
-                                        <tr>
-                                            <td> {item.from} </td>
-                                            <td> {item.sent} </td>
-                                            <td> {item.read} </td>
-                                            <td> {item.expiration} </td>
-                                            <td> {item.subject} </td>
-                                        </tr>
+                                        <>
+                                            <tr onClick={() => handleOpen(item.id)}>
+                                                <td> {item.from} </td>
+                                                <td> {item.sent} </td>
+                                                <td> {item.read} </td>
+                                                <td> {item.expiration} </td>
+                                                <td> {item.subject} </td>
+                                            </tr>
+                                            <Modal
+                                            open={open === item.id}
+                                            onClose={handleClose}
+                                            closeAfterTransition
+                                            slots={{ backdrop: Backdrop }}
+                                            key={item.id}
+                                            slotProps={{
+                                            backdrop: {
+                                                timeout: 500,
+                                            },
+                                            }}
+                                            >
+                                            <Fade in={open===item.id}>
+                                            <Box sx={style}>
+                                                <Typography variant="h6" component="h2">
+                                                {item.subject}
+                                                <hr></hr>
+                                                </Typography>
+                                                <Typography sx={{ mt: 2 }}>
+                                                <div className="modal">
+                                                    <div className="modal-tb">
+                                                        <h4>{item.from}</h4>
+                                                        <h4>{item.sent}</h4>
+                                                    </div>
+                                                    <div className="modal-body">
+                                                        {item.desc}
+                                                    </div>
+                                                </div>
+                                                </Typography>
+                                            </Box>
+                                            </Fade>
+                                            </Modal>
+                                        </>
                                     )
                                 })}  
                             </tbody>

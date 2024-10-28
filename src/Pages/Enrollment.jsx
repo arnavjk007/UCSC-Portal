@@ -17,11 +17,6 @@ import Backdrop from '@mui/material/Backdrop';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-
 
 export default function Enrollment() {
 
@@ -51,10 +46,10 @@ export default function Enrollment() {
         return
     }
 
-    function getAvailability(str) {
-        if (str === 'Open' || str === 'open') {return <GoDotFill color="green" size={35} />}
-        if (str === 'Waitlist' || str === 'waitlist') {return <IoIosWarning color="gold" size={30} />}
-        return <GoDotFill color="red" size={35} />
+    function getAvailability(str, size) {
+        if (str.toLowerCase() === 'open') {return <GoDotFill color="green" size={size} />}
+        if (str.toLowerCase() === 'waitlist') {return <IoIosWarning color="gold" size={size} />}
+        return <GoDotFill color="red" size={size} />
     }
 
     const [value, setValue] = React.useState('1');
@@ -73,15 +68,19 @@ export default function Enrollment() {
     const handleOpen = (index) => setOpen(index);
     const handleClose = () => setOpen(null);
 
+    const [add, setAdd] = useState(null);
+    const openAdd = (index) => setAdd(index);
+    const closeAdd = () => setAdd(null);
+
    //style for modal
     const style = {
         position: 'absolute',
         top: '50%',
         left: '50%',
-        width: '60%',
-        height: '80%',
+        width: '80%',
+        height: '85%',
         overflow: 'auto',
-        transform: 'translate(-50%, -50%)',
+        transform: 'translate(-47%, -50%)',
         bgcolor: 'background.paper',
         border: '2px solid #000',
         borderRadius: '16px',
@@ -136,84 +135,19 @@ export default function Enrollment() {
         },
     ]
 
-    var searchData = [
+    var term_data = [
         {
-            index: '0',
-            id: 'CSE 13S',
-            name: 'Comp Sys & C Prog',
-            professor: 'Veenstra, K.',
-            credits: '7',
-            status: '129/240',
-            time: 'MWF 9:20 ⁠—⁠ 10:25AM @ Earth&Marine B206',
-            lab: 'Th 2:00 ⁠—⁠⁠ 3:00PM @ Kresge Acad 3401',
-            state: '0'
+            term: '2024 Summer'
         },
         {
-            index: '1',
-            id: 'THEA 80N',
-            name: 'Walt Disney',
-            professor: 'Valdez, K.',
-            credits: '5',
-            status: '380/380',
-            time: 'Online',
-            lab: 'TBA',
-            state: '0'
+            term: '2024 Spring'
         },
         {
-            index: '2',
-            id: 'COWL 168',
-            name: 'Social Change',
-            professor: 'Stinneford, C.',
-            credits: '2',
-            status: '90/90',
-            time: 'Online',
-            lab: 'TBA',
-            state: '0'
+            term: '2024 Winter'
         },
         {
-            index: '2',
-            id: 'COWL 168',
-            name: 'Social Change',
-            professor: 'Stinneford, C.',
-            credits: '2',
-            status: '90/90',
-            time: 'Online',
-            lab: 'TBA',
-            state: '0'
-        },
-        {
-            index: '2',
-            id: 'COWL 168',
-            name: 'Social Change',
-            professor: 'Stinneford, C.',
-            credits: '2',
-            status: '90/90',
-            time: 'Online',
-            lab: 'TBA',
-            state: '0'
-        },
-        {
-            index: '2',
-            id: 'COWL 168',
-            name: 'Social Change',
-            professor: 'Stinneford, C.',
-            credits: '2',
-            status: '90/90',
-            time: 'Online',
-            lab: 'TBA',
-            state: '0'
-        },
-        {
-            index: '2',
-            id: 'COWL 168',
-            name: 'Social Change',
-            professor: 'Stinneford, C.',
-            credits: '2',
-            status: '90/90',
-            time: 'Online',
-            lab: 'TBA',
-            state: '0'
-        },
+            term: '2023 Fall'
+        }
     ]
 
     var classData = [
@@ -239,7 +173,26 @@ export default function Enrollment() {
             professor: 'Kerry Veenstra',
             desc: 'Focuses on C programming, command line, shell programming, editors, debuggers, source code control, and other tools. Examines basic computer systems, algorithm design, and development, data types, and program structures. Develops understanding of process model, compile-link-execute build cycle, language-machine interface, memory, and data representation. Students cannot receive credit for CSE 13S, CSE 13E, and ECE 13. Course is 7 credits with integrated laboratory.',
             lecture: 'MWF 9:20AM-10:25AM',
-            lab: ['Th 2:00-3:00PM @ Kresge Acad 3401'],
+            lab: [
+                    {
+                        id: '#50924 LBS 01A',
+                        time: 'Th 2:00-3:00PM',
+                        location:'Kresge Acad 3401',
+                        status: 'Open',
+                        enrolled: '24',
+                        max: '35',
+                        waitlist: '0'
+                    },
+                    {
+                        id: '#50924 LBS 01A',
+                        time: 'Th 2:00-3:00PM',
+                        location:'Kresge Acad 3401',
+                        status: 'Open',
+                        enrolled: '24',
+                        max: '35',
+                        waitlist: '0'
+                    },
+                ],
             location: '	Earth&Marine B206'
         },
         {
@@ -264,7 +217,26 @@ export default function Enrollment() {
             professor: 'Patrick Tantalo',
             desc: 'Introduction to applications of discrete mathematical systems. Topics include sets, functions, relations, graphs, predicate calculus, mathematical proof methods (induction, contraposition, contradiction), counting methods (permutations, combinations), and recurrences. Examples are drawn from computer science and computer engineering. Knowledge of computer programming is useful before taking this course. Students who do not have prior programming experience are strongly recommended to take CSE 20 or CSE 30 before taking this course.',
             lecture: 'TuTh 03:20PM-04:55PM',
-            lab: ['M 08:00AM-09:05AM @ Oakes Acad 102'],
+            lab: [
+                    {
+                        id: '#50924 LBS 01A',
+                        time: 'M 08:00AM-09:05AM ',
+                        location:'Oakes Acad 102',
+                        status: 'Open',
+                        enrolled: '24',
+                        max: '35',
+                        waitlist: '0'
+                    },
+                    {
+                        id: '#50924 LBS 01A',
+                        time: 'M 08:00AM-09:05AM ',
+                        location:'Oakes Acad 102',
+                        status: 'Open',
+                        enrolled: '24',
+                        max: '35',
+                        waitlist: '0'
+                    },
+                    ],
             location: 'ClassroomUnit 002'
         },
         {
@@ -289,7 +261,26 @@ export default function Enrollment() {
             professor: 'Marcelo Siero',
             desc: 'Introduction to computer systems and assembly language and how computers compute in hardware and software. Topics include digital logic, number systems, data structures, compiling/assembly process, basics of the system software, and computer architecture. Course is 7 credits with integrated laboratories illustrating concepts covered in lecture. Note that CSE 12 assumes some programming experience. Students can show programming experience by taking one of the courses listed in the prerequisite list below or by taking the CSE python Test-out Exam: https://undergrad.soe.ucsc.edu/cse-20-testout-exam (Formerly CSE 12 and CSE 12L)',
             lecture: 'MW 05:20PM-06:55PM',
-            lab: ['M 12:15PM-02:00PM @ J Baskin Engr 109'],
+            lab: [
+                    {
+                        id: '#50924 LBS 01A',
+                        time: 'M 12:15PM-02:00PM',
+                        location:'J Baskin Engr 109',
+                        status: 'Open',
+                        enrolled: '24',
+                        max: '35',
+                        waitlist: '0'
+                    },
+                    {
+                        id: '#50924 LBS 01A',
+                        time: 'M 12:15PM-02:00PM',
+                        location:'J Baskin Engr 109',
+                        status: 'Open',
+                        enrolled: '24',
+                        max: '35',
+                        waitlist: '0'
+                    },
+                 ],
             location: 'Remote'
         },
         {
@@ -314,10 +305,28 @@ export default function Enrollment() {
             notes: 'Enroll in lecture and associated secondary lab. Enrollment restricted to frosh, sophomores, or computer science, computer engineering, computer game design, bioinformatics, biomolecular engineering and bioinformatics, electrical engineering, network and digital technology, robotics engineering, and technology information management majors and computer science, computer game design, computer engineering, and robotics proposed majors during First Pass enrollment.',
             desc: 'Introduction to software development in Python focusing on structuring software in terms of objects endowed with primitive operations. Introduces concepts and techniques via a sequence of concrete case studies. Coursework consists of programming assignments and a final examination. Note that CSE 30 assumes some Python experience, students trained in a different language should self-study Python to prepare for CSE 30. See CSE Testout Exam for resources and further information.',
             lecture: 'TuTh 05:20PM-06:55PM',
-            lab: ['M 08:00AM-09:05AM @ Cowell Com 134'],
+            lab: [
+                    {
+                        id: '#50924 LBS 01A',
+                        time: 'M 12:15PM-02:00PM',
+                        location:'J Baskin Engr 109',
+                        status: 'Open',
+                        enrolled: '24',
+                        max: '35',
+                        waitlist: '0'
+                    },
+                    {
+                        id: '#50924 LBS 01A',
+                        time: 'M 12:15PM-02:00PM',
+                        location:'J Baskin Engr 109',
+                        status: 'Open',
+                        enrolled: '24',
+                        max: '35',
+                        waitlist: '0'
+                    },
+                ],
             location: 'Remote'
         },
-        
     ]
 
     function searchTab() {
@@ -326,20 +335,13 @@ export default function Enrollment() {
                     <div className="search-bar">
                         <IoSearch style={{justifyContent:'center'}} size={50}/>
                         <input className="bar" style={{margin: '0% 0% 30px 0%'}}type="text" placeholder="Search Classes" onChange={handleFilter}></input>
-                        <FormControl required sx={{mx: 1, maxWidth: 150, borderRadius: '16px', width: '100%'}}>
-                            <InputLabel>Term</InputLabel>
-                            <Select
-                            value={term}
-                            label="Term *"
-                            onChange={handleChange}
-                            autoWidth
-                            size="medium"
-                            >
-                            <MenuItem value={'2024 Summer'}>2024 Summer</MenuItem>
-                            <MenuItem value={'2024 Spring'}>2024 Spring</MenuItem>
-                            <MenuItem value={'2023 Winter'}>2023 Winter</MenuItem>
-                            </Select>
-                        </FormControl>
+                        <select className="term">
+                            {term_data.map((item) => {
+                                return (
+                                    <option className="option" value={item.term}>{item.term}</option>
+                                )
+                            })}
+                        </select>
                     </div>
 
                     <div className="search-results-container">
@@ -354,7 +356,6 @@ export default function Enrollment() {
                                     <th style={{padding: '7px'}}> Status </th>
                                     <th style={{padding: '7px'}}> Lecture </th>
                                     <th style={{padding: '7px'}}> Room </th>
-                                    <th style={{padding: '7px'}}> Lab </th>
                                     <th style={{padding: '7px'}}> </th>
                                 </tr>
                             </thead>
@@ -369,7 +370,7 @@ export default function Enrollment() {
                                             <td onClick={() => handleOpen(item.index)}> {item.credits[0]}</td>
                                             <td onClick={() => handleOpen(item.index)}> 
                                                 <div style={{display:'flex',justifyContent:'center'}}> 
-                                                    {getAvailability(item.status)} 
+                                                    {getAvailability(item.status, 30)} 
                                                 </div> 
                                                 <div style={{display:'flex',justifyContent:'center'}}>
                                                     <h5>{item.status}</h5>
@@ -377,8 +378,7 @@ export default function Enrollment() {
                                             </td>
                                             <td onClick={() => handleOpen(item.index)}> {item.lecture}</td>
                                             <td onClick={() => handleOpen(item.index)}> {item.location}</td>
-                                            <td onClick={() => handleOpen(item.index)}> {item.lab} </td>
-                                            <td><FiPlusCircle className="addbtn" title="Add Class" size={30} onClick={() => changeState(item)}/></td>
+                                            <td><FiPlusCircle className="addbtn" title="Add Class" size={30} onClick={() => openAdd(item.index)}/></td>
                                         </tr>
                                         <Modal
                                             open={open === item.index}
@@ -395,7 +395,7 @@ export default function Enrollment() {
                                             <Fade in={open===item.index}>
                                             <Box sx={style}>
                                                 <Typography variant="h6" component="h2">
-                                                    <h1 style={{color: 'rgb(40, 100, 150)'}}>{item.title}</h1>
+                                                    <h1 style={{color: 'rgb(40, 100, 150)'}}>{item.id} - {item.title}</h1>
                                                     <hr></hr>
                                                 </Typography>
                                                 <Typography sx={{ mt: 2 }}>
@@ -571,6 +571,77 @@ export default function Enrollment() {
                                             </Box>
                                             </Fade>
                                         </Modal>
+                                        <Modal
+                                            open={add === item.index}
+                                            onClose={closeAdd}
+                                            closeAfterTransition
+                                            slots={{ backdrop: Backdrop }}
+                                            key={item.index}
+                                            slotProps={{
+                                            backdrop: {
+                                                timeout: 500,
+                                            },
+                                            }}
+                                            >
+                                            <Fade in={add===item.index}>
+                                            <Box sx={style}>
+                                                <Typography variant="h6" component="h2">
+                                                    <h1 style={{color: 'rgb(40, 100, 150)'}}>Discussion Section/Lab Selection</h1>
+                                                    <hr></hr>
+                                                </Typography>
+                                                <Typography sx={{ mt: 2 }}>
+                                                <div className="sub-title">
+                                                    <h2>Select a discussion section/lab for: {item.id} - {item.title}</h2>
+                                                </div>
+                                                <div className="class-body">
+                                                    <section class="table__body" style={{border: '2px solid black'}}>
+                                                        <table>
+                                                            <tbody className="no-hover">
+                                                                {item.lab.map((value) => {
+                                                                    return (
+                                                                        <tr style={{borderBottom: '1px solid black'}}>
+                                                                            <td>
+                                                                                <div className="meeting-info-block">
+                                                                                    <h4>{value.id}</h4>
+                                                                                    <h4>Enrl: {value.enrolled} / {value.max}</h4>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div className="meeting-info-block">
+                                                                                    <h4>{value.time}</h4>
+                                                                                    <h4>Wait: {value.waitlist} / 0</h4>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td> 
+                                                                                <div className="meeting-info-block">
+                                                                                    <h4>Staff</h4>
+                                                                                    <div style={{display:'flex', margin: 'auto'}}>
+                                                                                        {getAvailability(value.status, 24)}
+                                                                                        <h4>{value.status}</h4>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td> 
+                                                                                <div className="meeting-info-block">
+                                                                                    <h4>Loc: {value.location}</h4>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td> 
+                                                                                <div className="meeting-info-block">
+                                                                                    <FiPlusCircle className="addbtn" title="Add Class" size={35} onClick={closeAdd}/>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>     
+                                                                    )
+                                                                })}
+                                                            </tbody>
+                                                        </table>
+                                                    </section>
+                                                </div>
+                                                </Typography>
+                                            </Box>
+                                            </Fade>
+                                        </Modal>
                                     </>
                                 )
                             })}
@@ -670,7 +741,7 @@ export default function Enrollment() {
                 <h1>Enrollment</h1>
                 <hr></hr>
 
-                <Box sx={{ width: '100%', typography: 'body1' }}>
+                <Box sx={{ width: '100%', typography: 'body1'}}>
                     <TabContext value={value}>
                         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <TabList 
@@ -678,9 +749,9 @@ export default function Enrollment() {
                             onChange={handleValue} 
                             variant="scrollable"
                             scrollButtons="auto">
-                            <Tab label="Class Search" value="1"/>
-                            <Tab label="Shopping Cart" value="2" />
-                            <Tab label="Class Schedule" value="3" />
+                            <Tab label="Class Search" color="rgb(40, 100, 150)" value="1"/>
+                            <Tab label="Shopping Cart" color="rgb(40, 100, 150)" value="2" />
+                            <Tab label="Class Schedule" color="rgb(40, 100, 150)" value="3" />
                         </TabList>
                         </Box>
                         <TabPanel value="1">{searchTab()}</TabPanel>

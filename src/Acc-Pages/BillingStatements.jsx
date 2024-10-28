@@ -14,7 +14,7 @@ const style = {
     width: '60%',
     height: '80%',
     overflow: 'auto',
-    transform: 'translate(-50%, -50%)',
+    transform: 'translate(-47%, -50%)',
     bgcolor: 'background.paper',
     border: '2px solid #000',
     borderRadius: '16px',

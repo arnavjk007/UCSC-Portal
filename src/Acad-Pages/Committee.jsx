@@ -11,7 +11,7 @@ export default function Committee() {
             <div className="container">
 
                     <div className="info-card-container">
-                        <div className="info-card" style={{maxWidth:'50vw'}}>
+                        <div className="info-card" style={{maxWidth:'60vw'}}>
                             <h1>Academic Committees</h1>
                             <hr></hr>
                             

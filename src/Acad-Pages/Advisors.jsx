@@ -10,7 +10,7 @@ export default function Advisors() {
             <div className="container">
 
                     <div className="info-card-container">
-                        <div className="info-card" style={{maxWidth:'50vw'}}>
+                        <div className="info-card" style={{maxWidth:'40vw'}}>
                             <h1>Advisors</h1>
                             <hr></hr>
                             
